@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+
+<chapter>
+  <title>Geo Protection</title>
+
+  <para>The Geo Protection system is based on an improvement RedBorder has developed for Snort&apos;s existing reputation preprocessor. In addition to its ability to apply black or white lists by IP, the preprocessor has also been enhanced with the capacity to apply black or white lists by countries and with a series of optimizations for decision making. It should be kept in mind that this preprocessor does not have status control.</para>
+  <para>The patch source code for Snort 2.9.4 is available at https://github.com/redBorder/ under GPL license. The library used for IPs geolocalization is the MaxMind library (http://www.maxmind.com). </para>
+
+  <para>To access the Geoprotection system setup it is necessary to visit two areas:</para>
+
+<orderedlist>
+  <listitem><para><literal>Config.-</literal> In the sensor/domain configuration window, activation of certain parameters will generally be required.</para></listitem>
+  <listitem><para><literal>B/W Lists.-</literal> Specific lists configuration.</para></listitem>
+</orderedlist>
+
+  <para>Using this preprocessor may significantly lighten the sensor&apos;s load, and thus increase its performance, since the option is given to accept or reject a package, depending on its origin or destination without entering into it to analyse it in depth.</para>
+
+  <section>
+	<title>Config</title>
+
+  <para>In the sensors/domain view, enter the option, enter into the <literal>Config</literal>.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_00.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>In the <literal>General</literal> area, two parameters will appear that are important from a Geoprotection point of view:</para>
+
+<orderedlist>
+  <listitem><para><literal>Operational mode.-</literal> For the Geoprotection system to work properly the system must be set to &quot;IPS&quot; mode. If it set to a different mode it may help reduce the general system load but it will not have an effect on traffic. This mode may be inherited from a superior domain.</para></listitem>
+  <listitem><para><literal>Default action.-</literal> This option only applies if the reputation preprocessor is active. If so it will be necessary to state the operational mode. This parameter may be inherited from a superior domain.</para></listitem>
+</orderedlist>
+
+<para>The default action options that may be used are:</para>
+<orderedlist>
+  <listitem><para><literal>Bypass.-</literal> The default option for letting the traffic pass by without analysing it. There must be, therefore, a specific rule that blocks the traffic or sends it to be analysed. This would be equivalent to operating by <literal>black list</literal>, where everything is allowed, except what is explicitly prohibited or controlled.</para></listitem>
+  <listitem><para><literal>Drop.-</literal> The default action would be to stop the traffic. There must be, therefore, a specific rule that authorises the traffic or sends it to be analysed. This would be equivalent to operating by <literal>white list</literal>, where everything is prohibited except for what is explicitly allowed or controlled.</para></listitem>
+  <listitem><para><literal>Analyze.-</literal> The default option would be to send the traffic to be analysed. This is the usual mode for understanding an IDS/IPS. The specific rules will be used for lightening the load of this analysis.</para></listitem>
+</orderedlist>
+
+<para>In the <literal>Preprocessors</literal> area you must make sure that the reputation preprocessor has already been enabled (either because it has been inherited or set up by the user), as the Geoprotection system is based on it.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_01.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>Next, the B/W Lists option should be selected in the Sensors view in order to access the configuration for the specific rules.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_1.png"/>
+    </imageobject>
+  </mediaobject>
+
+  </section>
+
+  <section>
+	<title>IP/Networks</title>
+
+	<para>The first option offered is to create rules for IPs or networks. Since this system is faster than the Geoprotection system and there is no possibility of error, it should be used whenever feasible. As with the other rules, these ones may be inherited from a configuration in a parent domain. Networks should be entered in CIDR format.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_2.png"/>
+    </imageobject>
+  </mediaobject>
+
+<para>The list is given in an orderly manner, executing the option selected in the first match. The possible actions are:</para>
+
+	<orderedlist>
+		<listitem><para><literal>Analyze.-</literal> No decision is made on the package and it is sent for inspection by the other analytic mechanisms. This option is executed by default if neither this preprocessor nor the packages not explicitly listed in one of the lists are used. Using it makes sense when the related IP or network later appears covered by another rule with a bypass/drop action.</para></listitem>
+		<listitem><para><literal>Bypass.-</literal> Accepts the package, preventing it from being analysed. This is the equivalent of a white list. In IPS mode the package is forwarded.</para></listitem>
+		<listitem><para><literal>Drop.-</literal> The package is rejected without having to be analyzed later.</para></listitem>
+	</orderedlist>
+
+ <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_3.png"/>
+    </imageobject>
+  </mediaobject>
+
+	<para>Using the Bypass and Drop options in a smart way makes it possible to prevent false positives and to increase the system&apos;s performance, since it will have fewer packages to analyse.</para>
+  </section>
+  <section>
+	<title>Countries</title>
+	<para>This involves the same philosophy as in the previous case but specifying countries here. It should be borne in mind that Geolocalization is not always exact and errors may occur, although its precision on a country level is high.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_4.png"/>
+    </imageobject>
+  </mediaobject>
+
+	<para>The countries with the Bypass option chosen for them will be highlighted in green; those with the Analyze option will appear in orange, and those with the Drop option will appear in red.</para><para/><para/>
+  </section>
+</chapter>

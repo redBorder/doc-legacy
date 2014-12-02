@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+  <title>Sensors</title>
+  <para>From the Sensors window, the sensors can be configured, their status monitored and their rules managed.</para>
+  <para>It is important first to understand both the sensors hierarchy process and the process for registering them.</para>
+  <para>The process for registering a sensor is automatic, since it is controlled by the sensor itself during installation. This means that when a specific Manager is registered from a sensor, the sensor is created in that Manager. It is therefore important to be aware that sensors CANNOT be created from the Manager. The primary reason for this is the distributed configuration system selected for the solution which is based on public domain infrastructure, where clients can only register in the server if they have the proper RSA password. Once they have done this successfully, they can enter their data into the central structure and request configurations that are generated based on the data provided and the existing templates. Once this process has been completed, the Manager detects the existence of the new sensor and can start working on it. The registration process was already discussed in the chapter on installation.</para>
+  <para>In order to ease the sensors management, a hierarchical tree structure can be created. This structure allows for relations of dependence to be created between the sensors both when they are configured (inherited rules, roles...) and when the information is displayed.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/manager060.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>As an example, we will create a domain called &apos;Espana&apos; (not España because &apos;ñ&apos; is not allowed), then another one which can be called Andalucia and one more called Madrid. Here the three domains have been created on the same level, without depending on each other.</para>
+  <para>First we will drag Andalucia under Espana and then do the same with Madrid. Lastly, we will drag the sensor to the Andalucia subdomain to get the desired structure. This example follows a &apos;geographical&apos; structure, but any other structure could be used. The number of domains and subdomains and their levels are originally unlimited, but it must be kept in mind that the more complex the domain hierarchy is, the more processing time will be required when the configurations are processed recursively. It is not recommended to have more than five subordinate levels.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/manager070.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>From this point on, any change made to the Andalucia domain will be applied to the sensor that was created, but not to the sensors that depend on Madrid. On the other hand, any changes applied to the Espana domain will be applicable to all of the sensors.</para>
+  <para>Having made this clear, we can take a look at the information that is shown:</para>
+  <itemizedlist mark="bullet">
+    <listitem>
+      <para>Domain structure</para>
+    </listitem>
+    <listitem>
+      <para>IP (of the sensor)</para>
+    </listitem>
+    <listitem>
+      <para>Number of sensors within the domain</para>
+    </listitem>
+    <listitem>
+      <para>Number of pending/active rules</para>
+    </listitem>
+    <listitem>
+      <para>Time of last event</para>
+    </listitem>
+    <listitem>
+      <para>Number of events</para>
+    </listitem>
+    <listitem>
+      <para>% of events</para>
+    </listitem>
+    <listitem>
+      <para>Tools button</para>
+    </listitem>
+    <listitem>
+      <para>Destroy button</para>
+    </listitem>
+  </itemizedlist>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/manager080.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>Clicking on the Tools button will display:</para>
+
+  <itemizedlist mark="bullet">
+    <listitem>
+      <para><literal>Info--</literal> Generic information for a sensor (not available for domains)</para>
+    </listitem>
+    <listitem>
+      <para><literal>Events--</literal> To access the events for this sensor/domain</para>
+    </listitem>
+    <listitem>
+      <para><literal>Config--</literal> For configuring the sensors</para>
+    </listitem>
+    <listitem>
+      <para><literal>Rules--</literal> For managing the rules</para>
+    </listitem>
+    <listitem>
+      <para><literal>SNMP--</literal> To see information obtained by snmp and during the sensor&apos;s registration process</para>
+    </listitem>
+    <listitem>
+      <para><literal>IPS Stats--</literal> Statistics from Snort parameters</para>
+    </listitem>
+  </itemizedlist>
+
+  <para>The Events option brings up a screen filtered for the selected sensor/domain which we have already discussed, and will thus not repeat it here.</para>
+
+  <section>
+    <title>Info</title>
+    <para>This option only appears when working directly on a sensor, not in a domain.</para>
+    <para>As can be seen, the screen looks similar to the application&apos;s other panels (dashboards) benefiting from a quick view of the most important information.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager240.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>In the main area, first of all a chart of the &apos;appliance&apos; can be seen. Here all of the network connections of the available segments appear (without the management ports) with the following colour code:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>Green--</literal> Operational port. The port belongs to an active segment and has a link in the connector.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Red--</literal> Not operational port. The port belongs to an active segment but has no link in the connector.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Orange--</literal> Bypassed port. The port belongs to an inactive segment, therefore the pair of ports is bypassed.</para>
+      </listitem>
+    </itemizedlist>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager250.png"/>
+      </imageobject>
+    </mediaobject>
+
+    <para>Below the section is displayed where the information will be shown from the section selected in the accessory area.</para>
+    <para>In addition to the information shown in the different sections of the accessory area, by clicking on the section&apos;s title, related data will be shown in the main area. It is likewise possible to get more information in some sections by clicking on the <keycap>&apos;+&apos;</keycap> direct access button.</para>
+    <para>The first section appearing refers to the system&apos;s basic information: Its IP, MAC, redBorder version installed, and how long the system has been on for. From the main area, graphs can be accessed similar to those shown in the application&apos;s main dashboard, but focusing only on the sensor in question.</para>
+    <para>Right below this, a series of basic information on the rules appear: number of rules compiled, number of rules pending, number of events and number of traps (in the last 24 hrs.). The main area will show the last 10 events and the last 5 traps.</para>
+    <para>Farther down, there will be basic information on the system&apos;s charge: CPU charge (UNIX style), memory usage, hard drive usage. In the main area, this information is expanded using graphs.</para>
+    <para>Next the information on the sensor&apos;s hardware is shown and amplified in the main area.</para>
+    <para>Lastly a section appears referring to the segments that make up the sensor. From the main area it is possible to activate the bypass of the different segments and to access information on their throughput.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager260.png"/>
+      </imageobject>
+    </mediaobject>
+
+  </section>
+
+  <section>
+    <title>Config</title>
+    <para>Here the sensor&apos;s basic parameters can be configured together with other more advanced Snort-specific parameters.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager090.png"/>
+      </imageobject>
+    </mediaobject>
+
+    <para>First there is the name of the sensor/domain, the operational mode, an extra log server (syslog type) and the possibility of recording traffic captures. Some of these values will come preconfigured from the parent and will appear as inherited.</para>
+    <para>In addition, if it is a sensor that is being configured, the IP assigned to it can be viewed, along with the various interfaces in it.</para>
+
+    <para>The operational modes supported by the sensors are:</para>
+
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>IDS Forwarding--</literal> Snort sniffs the traffic that is forwarded autonomously, without intervening in it. A system has been designed internally that is similar to a bridge but with higher performance and the possibility of sharing the analytical load amongst all the system&apos;s cores. It introduces a slight delay into the connection, basically regardless of the charge. In this operational mode there is no intervention in the traffic going through the device. (It basically only sends alerts.)</para>
+      </listitem>
+      <listitem>
+        <para><literal>IDS Span--</literal> Snort sniffs the traffic in a port connected in promiscuous mode to a mirror port or a switch span. This operational mode does not cause any delay in the connection because it is basically working on a copy of the traffic. This operational mode disables the LAN Bypass and segment functions; instead each interface will be considered on its own.</para>
+      </listitem>
+      <listitem>
+        <para><literal>IPS Normal--</literal> IPS in production. In this case Snort makes the decision on the packet, being able to send an alarm, reject the packet or simply silence it.</para>
+      </listitem>
+      <listitem>
+        <para><literal>IPS with Rules in Alert--</literal> This operational mode sets all of the rules on alert, regardless of what was configured.</para>
+      </listitem>
+      <listitem>
+        <para><literal>IPS Test Mode--</literal> IPS in test mode. If a component decides traffic needs be interrupted, it will NOT do so, but it will send out an alert saying it would have interrupted the traffic. This is the mode recommended for starting with IPS in order to detect the environment before launching into operation as normal IPS.</para>
+      </listitem>
+      <listitem>
+        <para><literal>IPS Without Rules--</literal> In this mode, all of the rules are ignored and only the preprocessors work.</para>
+      </listitem>
+    </itemizedlist>
+
+    <section>
+      <title>Preprocessors</title>
+      <para>Continuing down, there is a list of preprocessors. As it occurred earlier, these will be in an inherited mode.</para>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager100.png"/>
+        </imageobject>
+      </mediaobject>
+      <para>The Frag3 and Stream5 preprocessors are mandatory regardless of the operational mode. The Normalize preprocessor is mandatory in any of the IPS modes.</para>
+      <para>The remaining preprocessors are optional and there will surely be others added in future releases. As a general rule, a preprocessor should be activated if its type of traffic is known to exist in the network. If it is certain that this is not the case, it need not be activated, thus improving performance somewhat.</para>
+    </section>
+
+    <section>
+      <title>IP Variables</title>
+      <para>In this part of the form, only the IPs of the servers that are known to provide the services indicated should be added. Properly setting this configuration greatly reduces the system load because it circumscribes the different analyses to more specific traffic.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager110.png"/>
+        </imageobject>
+      </mediaobject>
+
+    </section>
+
+    <section>
+      <title>Port variables</title>
+      <para>Here, the ports in which certain services will be executed are defined. As with the previous case, correctly configuring these variables reduces the system load and the level of false positives.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager120.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+
+    <section>
+      <title>Traps</title>
+      <para>This makes it possible to configure additional trap servers for the Manager.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager280.png"/>
+        </imageobject>
+      </mediaobject>
+
+    </section>
+
+    <section>
+      <title>MTA Server</title>
+      <para>In addition, a Mail Transfer Agent can be indicated.</para>
+    </section>
+
+  </section>
+
+  <section>
+    <title>Rules</title>
+    <para>The rule management panel makes it possible to have hierarchical control over the rules that will be activated in each sensor/domain.</para>
+    <para>As with the other Manager views, there is a search field that can be used for quickly filtering the rules and there is also a magnifying glass for more advanced searches.</para>
+    <para>Upon entering this panel on a domain or server level, a list will first appear with the rule categories. To the right, the number of active rules (and those pending activation) can be seen, together with the total number of rules in the category.</para>
+    <para>By clicking on any category, for example POLICY, it will expand to show the groups it includes: in this example CHAT, MULTIMEDIA, P2P and POLICY. It should be kept in mind that groups do not actually exist for Snort; they are merely a visual aid that makes it easier to manage the categories. Categories, however, do exist.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager140.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>Continuing with the example, it can be seen that of the 45 rules in the POLICY category, 12 belong to the group CHAT, 8 to MULTIMEDIA, 1 to P2P and 24 to POLICY. By clicking on MULTIMEDIA another list expands.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager150.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>The system also automatically groups together rules from the same family, adopting the criteria for grouping together those which share the same first X characters, so that the hierarchy that is created will make it easier to manage the rule system.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager160.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>Later we will take a look at what each field means, but first clicking on an actual rule will show all of its details.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager170.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>In the area highlighted in red in the screenshot, there is the possibility to select the rule, a star to tag it as a favourite (later only the rules tagged with this option can be displayed), a lock to protect the rule&apos;s action from being edited in its subset sensors/domains and the action of the rule or group of rules.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager180.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>The actions are those supported by Snort, which are: </para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>pass--</literal> The packet will be directly accepted without reporting an event.</para>
+      </listitem>
+      <listitem>
+        <para><literal>alert--</literal> The packet will be accepted but an event will be reported.</para>
+      </listitem>
+      <listitem>
+        <para><literal>drop--</literal> The packet will be dropped and an event will be reported.</para>
+      </listitem>
+      <listitem>
+        <para><literal>sdrop--</literal> The packet will be dropped but with no event reported (silent drop).</para>
+      </listitem>
+      <listitem>
+        <para><literal>reject--</literal> The packet will be rejected, and the corresponding ICMP reject message will be sent to the user.</para>
+      </listitem>
+      <listitem>
+        <para><literal>inherited--</literal> The action for the rule is not defined by this sensor or domain. It is the parent&apos;s responsibility to take action on this rule. If the packet is unspecified it will be accepted with no notification (pass).</para>
+      </listitem>
+    </itemizedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager290.png"/>
+      </imageobject>
+    </mediaobject>
+    <note>
+      <title>Note</title>
+      <para>Applying a change to multiple rules at the same time may take the system time to process, which it will shown as a moving bar.</para>
+    </note>
+
+    <para>The inherited option configures the rule the same way as the one &apos;the parent&apos; has, whatever the action is. It must be taken into account that the rules can be configured upstream, but they can also be overwritten at a lower level.</para>
+    <note>
+      <title>Note</title>
+      <para>If an upper level pulls rank or protects a rule (the lock option), its action cannot be overwritten at lower levels.</para>
+    </note>
+
+    <para>As discussed earlier, the most important properties of a rule are marked in the line of the rule itself (action, description...). There are certain properties that are represented by icons (flags) in the right hand side of the rule:</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager185.png"/>
+      </imageobject>
+    </mediaobject>
+
+    <section>
+      <title>Work flow</title>
+      <para>All of the changes made by the rules do not apply directly to the sensor. These changes switch to &apos;pending&apos; status. As long as a rule is not satisfied it will not be sent to the corresponding sensors.</para>
+      <note>
+        <title>Note</title>
+        <para>Changes that are pending are not lost when exiting the interface (logging out).</para>
+      </note>      
+      <para>The rules can be compiled by clicking on the <keycap>Compile</keycap> button. The system will indicate if there are any warnings (if automatic flowbit dependency resolution is not activated) or errors (compiling will not be allowed) and it will prompt for a name to be entered for the compilation as a future reference.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager210.png"/>
+        </imageobject>
+      </mediaobject>
+
+      <para>A process will be initiated where the corresponding downstream changes will be applied and the existing information will be taken into account upstream. This process may take quite some time, depending on the number of new rules involved and on the inheritance. It is therefore performed in the background and no new compilations can be made until it has finished.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager220.png"/>
+        </imageobject>
+      </mediaobject>
+
+      <para>If it becomes necessary to undo rules awaiting compilation (pending rules) pressing Revert, will discard the changes. To restore a previous rule status other than the last one, click on Compilations to bring up a list of the previous compilations. Here the rules are shown from specific restoration points, and it is possible to roll any of them back.</para>
+      <para>Lastly, a simple way to filter the rules that are active in a sensor is by clicking on Active. To view only the rules that are pending compilation, click on Pending, and to go back and see all of the rules click on Config.</para>
+      <para>Another feature accessible from the menu is the ability import and export rules. These are files in .csv format consisting of three columns (action, sid of the rule, gid of the rule) that can be used in different sensors and/or domains.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager200.png"/>
+        </imageobject>
+      </mediaobject>
+
+    </section>
+
+    <section>
+      <title>Search</title>
+      <para>Clicking on the magnifying glass will bring up the search form.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager300.png"/>
+        </imageobject>
+      </mediaobject>
+
+      <para>From this screen, a more exhaustive search of the rules can be made, with the possibility of filtering for an endless number of attributes. As new search parameters are entered, the number of rules that fall within the established criteria will appear in the lower right hand corner.</para>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager310.png"/>
+        </imageobject>
+      </mediaobject>
+
+    </section>
+  </section>
+
+  <section>
+    <title>SNMP</title>
+    <para>The SNMP panel can be used to monitor the load level of a given device or domain. As with the event dashboard, it is divided into a main area and an accessory area.</para>
+    <para>The main area displays the three SNMP charts by level of criticality (low &lt;= 50%, medium 51-85%, high &gt; 85%), as well as the evolution over time of the main parameters.</para>
+
+    <para>Lastly, the accessory area includes the top 5 list of a series of data, such as the last traps received by the system. Clicking on any of these traps will bring up the complete list of traps.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager320.png"/>
+      </imageobject>
+    </mediaobject>
+
+  </section>
+
+  <section>
+    <title>IPS Stats</title>
+    <para>The Snort Statistics provide information on the sensors performance. Entering this view from a sensor will bring up the data from the events; but entering from a domain will show these data grouped by sensor.</para>
+
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>Speed--</literal> expressed in Mbps.</para>
+      </listitem>
+      <listitem>
+        <para><literal>No. of Packets--</literal> expressed in Kbps (thousands of packets per second).</para>
+      </listitem>
+      <listitem>
+        <para><literal>CPU--</literal> percentage of the processor consumed per each instance/sensor.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Packets dropped--</literal> proportion of packets Snort has deleted out of the total packets processed.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Alerts--</literal> events generated by Snort per minute.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Sessions--</literal> the stream5 preprocessor manages the number of sessions controlled by Snort.</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>As with the SNMP data view, it is possible to access a list from the accessory section with the top five instances/services sorted by date.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager450.png"/>
+      </imageobject>
+    </mediaobject>
+
+  </section>
+</chapter>

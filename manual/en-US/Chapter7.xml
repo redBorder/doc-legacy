@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+  <title>Widgets</title>
+  <para>The Widgets window provides access to a summary of all the system&apos;s information from a single location. This window may be configured for each user and is designed to remain active at all times in a control monitor.</para>
+  <para>It can be accessed by clicking on the Widgets tab.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/7_1.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>The first time a user accesses it, it will appear empty as long as no widgets have been created.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/7_2.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>Widgets may be added by clicking on the &quot;Add Widget&quot; tab. To the right there is the option to boost all data reload and a countdown clock indicating the time remaining for them to be downloaded automatically (if activated). This option can be activated by clicking on &quot;More Options.&quot;</para>
+
+  <para>A dialogue box will appear requesting the following information:</para>
+
+  <orderedlist>
+    <listitem>
+      <para><literal>Name.-</literal> Unique name for the widget.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Description.-</literal> A loose description of the widget.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Attribute.-</literal> The value we want to display: Origin IP, Destination IP, Protocol, Sensor, Signature, Severity and Map.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Graph type.-</literal> Lastly, the timeframe for the data to be displayed should be entered: last 24 hours, week, last month, quarter or year.</para>
+    </listitem>
+  </orderedlist>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/7_3.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>Once several widgets have been created, the window will roughly look like this:</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/7_4.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>Moving the cursor to the bottom of each widget will bring up a &quot;Load more...&quot; chart for expanding the data set from which the information was obtained.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" fileref="images/7_5.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>Moving the cursor to the upper right hand corner of the widget will cause the following icons to be displayed:</para>
+
+  <orderedlist>
+    <listitem>
+      <para><literal>Minimise.-</literal> Hides the widget or moves it to the background.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Reload.-</literal> Forces the widget&apos;s data to be reloaded individually.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Edit.-</literal> To edit the widget&apos;s configuration parameters.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Delete.-</literal> To remove the widget.</para>
+    </listitem>
+  </orderedlist>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/7_6.png"/>
+    </imageobject>
+  </mediaobject>
+
+</chapter>

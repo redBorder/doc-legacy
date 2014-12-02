@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+
+<chapter>
+  <title>Geo Protección</title>
+
+  <para>El sistema de Geo Protección se basa en una mejora desarrollada por redBorder al preprocesador de reputación ya existente en Snort. Aparte de la capacidad de aplicar una lista blanca o negra por IPs, se ha extendido la capacidad de dicho preprocesador para poder aplicar una lista blanca o negra por países así como algunas optimizaciones en la toma de decisiones. Hay que tener en cuenta que este preprocesador no tiene control de estado.</para>
+  <para>El código fuente del parche para Snort 2.9.4 está disponible en https://github.com/redBorder/ bajo licencia GPL. La librería que se ha usado para Geolocalizar las IPs es la de MaxMind (http://www.maxmind.com). </para>
+
+  <para>Para acceder a la configuración del sistema de Geoprotección, debemos actuar en dos sitios:</para>
+
+<orderedlist>
+  <listitem><para><literal>Config.-</literal> En la ventana de configuración del sensor / dominio, debemos activar determinados parámetros de manera general.</para></listitem>
+  <listitem><para><literal>B/W Lists.-</literal> Configuración específica de las listas.</para></listitem>
+</orderedlist>
+
+  <para>El correcto uso de este preprocesador puede aligerar mucho la carga del sensor, y por tanto, aumentar su rendimiento, dado que tenemos la opción de aceptar o rechazar un paquete según su destino o procedencia sin entrar a analizarlo en profundidad.</para>
+
+  <section>
+	<title>Config</title>
+
+  <para>En la vista de sensores / dominio, accedemos a la opción de <literal>Config</literal>.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_00.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>En la zona <literal>General</literal> nos aparecen los dos parámetros que son importantes desde el punto de vista de la Geoprotección:</para>
+
+<orderedlist>
+  <listitem><para><literal>Operational mode.-</literal> Para que el sistema de Geoprotección realice su labor correctamente, el sistema debe estar configurado en modo “IPS”. En cualquier otro modo, podrá ayudarnos a reducir la carga general del sistema pero no actuará sobre el tráfico. Este modo puede venir heredado de un dominio superior.</para></listitem>
+  <listitem><para><literal>Default action.-</literal> Está opción se aplica solamente si el preprocesador de reputación está activo. En caso de estarlo, debemos indicar el modo de funcionamiento. Este parámetro puede ser heredado de un dominio superior.</para></listitem>
+</orderedlist>
+
+<para>Las opciones para la acción por defecto que podemos usar son:</para>
+<orderedlist>
+  <listitem><para><literal>Bypass.-</literal> La opción por defecto será dejar pasar el tráfico sin analizar. Por tanto, deberá existir una regla específica que bloquee o que mande a analizar el tráfico. Sería equivalente a un funcionamiento por <literal>lista negra</literal>, donde todo está permitido excepto lo que está explícitamente prohibido o controlado.</para></listitem>
+  <listitem><para><literal>Drop.-</literal> La opción por defecto sería cortar el tráfico. Por tanto, deberá existir una regla específica que lo autorice o lo mande a analizar. Sería equivalente a un funcionamiento por <literal>lista blanca</literal>, donde todo está prohibido excepto lo que está explícitamente permitido o controlado.</para></listitem>
+  <listitem><para><literal>Analyze.-</literal> La opción por defecto sería la de mandar a analizar el tráfico. Este es el modo habitual de entender un IDS / IPS. Las reglas específicas se utilizarán para aligerar la carga de este análisis.</para></listitem>
+</orderedlist>
+
+<para>En la zona <literal>Preprocessors</literal> debemos verificar que el preprocesador de Reputación (Reputation) está habilitado, ya sea porque lo estamos heredando o porque lo configuremos nosotros, dado que el sistema de Geoprotección está basado en él.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_01.png"/>
+    </imageobject>
+  </mediaobject>
+
+  <para>Ahora, en la vista de sensores debemos elegir la opción B/W Lists para acceder a la configuración de reglas específicas.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_1.png"/>
+    </imageobject>
+  </mediaobject>
+
+  </section>
+
+  <section>
+	<title>IP/Networks</title>
+
+	<para>La primera opción que tenemos es la de crear reglas por IPs o redes. Dado que este sistema es más rápido que el de geoprotección y no tiene posibilidad de error, se recomienda usarlo siempre que sea factible. Al igual que el resto de reglas, éstas pueden heredarse de una configuración realizada en un dominio padre. Las redes deben introducirse en formato CIDR.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_2.png"/>
+    </imageobject>
+  </mediaobject>
+
+<para>La lista se recorre de manera ordenada, ejecutando la opción seleccionada en el primer match. Las acciones posibles son:</para>
+
+	<orderedlist>
+		<listitem><para><literal>Analize.-</literal> No toma ninguna decisión sobre el paquete, que pasará luego a ser inspeccionado por el resto de mecanismos de análisis. Esta es la opción que se ejecuta por defecto si no se usa este preprocesador así como para los paquetes que no sean listados de manera explícita en alguna de las listas. Su uso tiene sentido cuando la IP o red en cuestión aparece luego englobada en otra regla con una acción de bypass / drop.</para></listitem>
+		<listitem><para><literal>Bypass.-</literal> Acepta el paquete, evitando que sea analizado. Es el equivalente a una lista blanca. En modo IPS hace un reenvío del paquete.</para></listitem>
+		<listitem><para><literal>Drop.-</literal> El paquete es rechazado sin necesidad de un análisis posterior.</para></listitem>
+	</orderedlist>
+
+ <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_3.png"/>
+    </imageobject>
+  </mediaobject>
+
+	<para>La utilización de las opciones Bypass y Drop de manera inteligente nos permite evitar falso positivos y aumentar el rendimiento del sistema al tener que analizar menos paquetes.</para>
+  </section>
+  <section>
+	<title>Countries</title>
+	<para>La misma filosofía que en el caso anterior pero ahora especificando países. Hay que tener en cuenta que la Geolocalización no siempre es exacta y puede dar lugar a error, aunque la precisión a nivel de país es alta.</para>
+
+  <mediaobject>
+    <imageobject>
+      <imagedata scalefit="1" align="center" width="250" fileref="images/6_4.png"/>
+    </imageobject>
+  </mediaobject>
+
+	<para>En el mapa, los países en los que escojamos la opción Bypass aparecerán resaltados en verde. Los de Analize en naranja y los de Drop en rojo.</para><para/><para/>
+  </section>
+</chapter>

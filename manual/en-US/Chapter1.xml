@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+  <title>What is redBorder IPS?</title>
+    <para>The redBorder IPS solution consists of a scenario made up of a series of devices called sensors and a central device called Manager.</para>
+    <para>The sensors are Linux systems with their distribution completely focused on capturing and/or preventing intrusions into the network segments where they are located. Whenever a threat with a specific signature is recognised, the sensor will launch an alert and optionally block the communication, generating an event in the central system (manager).</para>
+    <para>The manager is a Linux system with its distribution completely focused on receiving events sent to it from the sensors and on managing these events by inventorying the sensors and configuring security policies that will be applied to them (signature management, policies and pre-processors).</para>
+  <section>
+    <title>What is an IDS?</title>
+    <para>An IDS (or an Intrusion Detection System) is a system for detecting intrusions into the network or networks being protected within an organisation. It is usually a specific software program that is executed in the user&apos;s space and which probes the traffic reflected (a mirror port or SPAN) in a system interface or travelling between two interfaces connected by a bridge (a software switch). This traffic is analysed, looking for anomalies, specific signatures or suspicious behaviour.</para>
+    <para>The idea behind the IDS is to detect intruders and launch alerts without interfering with the organisation&apos;s traffic.</para>
+  </section>
+  <section>
+    <title>What is an IPS?</title>
+    <para>An IPS (or Intrusion Prevention System) is a system for preventing intrusions into the organisation&apos;s network(s). It works the same way as an IDS (in fact it is usually the same software with an adapted function), except that in this case it does interfere in the organisation&apos;s traffic, in such a way that when a communication is detected that is identified as an attack, the system can opt not only to launch alerts, but can even discard the packages sent by the communication, creating the same effect as a firewall.</para>
+  </section>
+  <section>
+    <title>Basic scenario of the redBorder IPS solution</title>
+    <para>A typical basic scenario proposed by the solution consists of a set of sensors installed in various sensitive points in the organisation&apos;s network. These points consist of networked links called segments through which the sensitive traffic will travel and which the sensor will analyse more or less transparently, depending on which operational mode has been configured (IPS or IDS).</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="350" fileref="images/ch01_img001.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>When planning the installation of the sensor devices, a few fundamental aspects should be taken into account: the specific bypass segments (network specific interfaces paired with a support bypass) should be installed right in the middle of the traffic to be analysed, the management interfaces (in the form of bonding) for remote access from both normal computers and the Manager, and the IPMI access interfaces for the SOL (Serial Over LAN) connection, iKVM and ipmi commands (start, restart and shut down). These interfaces will be further explained.</para>
+    <para>Since no specific hardware is required for the Manager, the only condition is that there be one or more network interfaces so as to allow for the creation of one bond for managing and connecting to the sensors, and another (optional) one for communications sent to other networks.</para>
+    <para>Both systems support standard 802.1q for virtual LANs (optional during configuration).</para>
+ </section>
+</chapter>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+  <title>Installation</title>
+  <section>
+    <title>Manager</title>
+    <para>The device that acts as the Manager is responsible for configuring, managing and supervising all of the IPS devices under its control. All of the Manager services can be clustered together if necessary in order to improve the availability of the services.</para>
+    <para>The Manager should always be the first component to be installed because some of the sensor installation processes depend on having access to it. It should therefore be operational and in a network that is accessible to the sensors.</para>
+    <note>
+      <title>Note</title>
+      <para>Since this device has no hardware particularities, it is recommended to be always installed within a virtualisation infrastructure, in order to leverage its managing and availability advantages.</para>
+    </note>
+    <important>
+      <title>Important</title>
+      <para>At least 20 GB of hard drive space is required, and the amount of RAM will depend on the number of sensors assigned, with a minimum of 4 GB of RAM.</para>
+    </important>
+  </section>
+  <section>
+    <title>Sensor</title>
+    <para>As many sensors may be installed as necessary, but this will obviously be limited by the processing and storage capacity of the hardware supporting the Manager. All of the sensors are controlled and supervised by a single Manager. As already stated, it is very important to install the Manager first before installing any sensors.</para>
+    <para>The sensors will have the following network cards:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>Management Interfaces--</literal> Ethernet ports dedicated to managing the sensor across the network. In appliances, these ports are the ports on the motherboard itself, located on its back part.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Remote IPMI access interface--</literal> Ethernet ports dedicated to remote control using the IPMI protocol which makes it possible to control the sensor in the event of problems. This port is likewise in the motherboard in the back of the appliance.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Bypass Segments--</literal> These are the network links to be protected by the IPS. The term &apos;bypass&apos; refers to the capacity of the pair of network interfaces that make up the segment to switch and physically connect the two ports so that they act as an extension of the cable and so that the network packages do not go through the system (physical bypass). Thus if the system fails to respond because of a hardware or software error, the communications will be ensured not to be broken. The number of bypass segments and their speed will depend on which model has been selected, with a maximum of 6 bypass segments at 1 Gbps (12 interfaces) and 1 bypass segment at 10 Gbps (2 interfaces). Copper and fibre-optic bypasses are available in order to meet every network requirements. In this case, the bypass segments are located in the device&apos;s front end so that they will be easier to access.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Find below an example the front and back ends of an appliance with four 1 Gbps Ethernet bypass segments, and one 1 Gbps fibre optic segment</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="350" fileref="images/hardware001.png"/>
+      </imageobject>
+    </mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="350" fileref="images/hardware002.png"/>
+      </imageobject>
+    </mediaobject>
+    <note>
+      <title>Note</title>
+      <para>The IMPI remote access port is only available in sensors as an appliance</para>
+    </note>
+  </section>
+  <section>
+    <title>Installation process</title>
+    <para>Both the Manager and the sensor are installed from the same ISO image provided by redBorder. Once the image has been mounted on to a DVD, simply start the terminal with the DVD inserted and select &apos;start up from DVD&apos;.</para>
+    <para>In the start up process, a window like the one shown below will appear where the role to be installed can be indicated</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install001.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>The following choices are available:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>Sensor--</literal> Install the IPS sensor (default option).</para>
+      </listitem>
+      <listitem>
+        <para><literal>Manager--</literal> Install the Manager that will control all of the sensors.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Rescue installed system--</literal> Recovery option to be used when the device will not start. If that is the case, the current system will be loaded onto a temporary partition so that low level changes can be made using the command prompt.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Boot from Local Drive--</literal> Selecting this option will finalise the installation and the device will proceed to normal start up.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Memory Test--</literal> The device&apos;s memory will be tested to check for possible errors.</para>
+      </listitem>
+    </itemizedlist>
+    <note>
+      <title>Note</title>
+      <para>The installation processes for the sensor and the Manager are the same. One software or the other will be installed depending on which option is chosen, but the following installation wizard questions will be the same in either case.</para>
+    </note>
+    <para>Once the installation process for the desired role has been started, the system will prompt the user to enter an installation language. In this case English has been chosen, but any of the choices may be selected.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install002.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>Next, it will ask to define the keyboard model being used. Again, for compatibility, an American keyboard has been selected.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install003.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>The system will now prompt for the network key to be entered. This password may be modified later once the installation process has been completed.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install004.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>If a password has been entered that is too weak, the following warning will appear:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install005.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>At this point a stronger password may be entered or the weaker one can be kept and changed later.</para>
+    <para>Once this information has been entered, the system will proceed to create the partitions and install the software onto the hard drive.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install006.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>Once the packages have been installed, a screen should appear asking for the system to be restarted to complete the first part of the installation.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install007.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>After the first restart of the system, the second installation step should initiate automatically. Some packages will be installed based on which role was selected; therefore the Manager and the sensors will have different start up processes. For example, here are a few screenshots for a Manager:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install008.png"/>
+      </imageobject>
+    </mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install009.png"/>
+      </imageobject>
+    </mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install010.png"/>
+      </imageobject>
+    </mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install011.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>Once the system has started up, a user prompt will appear to start logging in:</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/install012.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>The following users are available:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>root--</literal> Super administrator for the system.</para>
+      </listitem>
+      <listitem>
+        <para><literal>admin--</literal> Administrator that only has access to the redBorder configuration menu (no shell).</para>
+      </listitem>
+      <listitem>
+        <para><literal>redBorder--</literal> This user has a different role for the Manager than it does for the sensors:</para>
+        <itemizedlist mark="bullet">
+          <listitem>
+            <para><literal>Manager--</literal> User used for registering the sensors.</para>
+          </listitem>
+          <listitem>
+            <para><literal>Sensor--</literal> User used when the Manager needs to communicate with the sensors.</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </itemizedlist>
+    <note>
+      <title>Note</title>
+      <para>By default all of the users have the same password (the one entered during installation). This can be changed using the rb_sysconf command. The redBorder user does not have a password for the sensors, they can only be accessed using the RSA key (created during the installation of the Manager).</para>
+    </note>
+    <para>Use the root or admin users to start the session.</para>
+    <note>
+      <title>Note</title>
+      <para>If the root user is used to start the session and access the redBorder configuration menu, the</para>
+      <screen>rb_sysconf command should be run</screen>
+    </note>
+    <para>The next steps will vary depending on manager or sensor roles used. Due to their importance, each case will be analysed in a separate chapter.</para>
+  </section>
+  <section>
+    <title>Finalising installation of the Manager</title>
+    <para>To finalise the installation of the Manager, it will still be necessary to:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>Configure the Network--</literal> Assign a management IP.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Set the remaining system parameters--</literal> Set the system&apos;s name, mode, etc.</para>
+      </listitem>
+    </itemizedlist>
+    <section>
+      <title>Network setup</title>
+      <para>Once the redBorder configuration menu has started up (rb_sysconf), selecting option 1 will bring up the setup for the terminal&apos;s network</para>
+      <para>The following setup options are available:</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para><literal>802.1Q Vlan ID.-</literal> If nothing is entered, VLAN 1 will be used by default, leaving the interface in ACCESS mode. If it needs to be tagged, the corresponding VLAN should be indicated.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Management IP address--</literal> The terminal&apos;s management IP.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Service IP address--</literal> The terminal&apos;s service IP. This option is completely optional and is not required for configuring the Manager.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Default Gateway--</literal> Default gateway.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Primary DNS--</literal> Primary DNS server (first search option).</para>
+        </listitem>
+        <listitem>
+          <para><literal>Secondary DNS--</literal> Secondary DNS server (optional).</para>
+        </listitem>
+        <listitem>
+          <para><literal>Domain--</literal> Search domain. By default it will be local.lan.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Routes--</literal> If required, specific routes can be defined that integrate any scenario into the Manager.</para>
+        </listitem>
+      </itemizedlist>
+      <para>Several network scenarios are possible:</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para><literal>Management IP with no service IP--</literal> In this case, the eth0 and eth1 interfaces will form an active/passive bond assigned to the same management network.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Management IP and Service IP--</literal> In this case the eth0 interface will be assigned to the management network, and the eth1 interface to the service network. If there are four network cards present, the assignment will be as follows: bond0 (eth0 and eth1) to the management network and bond1 (eth2 and eth3) to the service network.</para>
+        </listitem>
+      </itemizedlist>
+      <note>
+        <title>Note</title>
+        <para>In order to apply the changes, enter &apos;apply&apos; (option a)</para>
+      </note>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/install013.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Remaining system parameters</title>
+      <para>Once the network has been configured, the installation of the Manager can be completed by selecting option 2 in the initial rb_sysconf menu.</para>
+      <para>This is done in the following way</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para><literal>Change hostname--</literal> Option 1.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Set the terminal&apos;s clock--</literal> Option 2.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Apply the changes--</literal> Option a.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Configure the High Availability (HA)--</literal> Option 4. This option starts up the Manager&apos;s high availability configuration wizard. There are two operating modes:</para>
+          <itemizedlist mark="bullet">
+            <listitem>
+              <para><literal>Single--</literal> A single node acting as the Manager.</para>
+            </listitem>
+            <listitem>
+              <para><literal>Dual--</literal> Two HA nodes (active/passive) acting as the Manager.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>      
+    </section>
+  </section>
+  <section>
+    <title>Finalising installation of the sensor</title>
+    <para>To finalise the installation of a sensor, it will still be necessary to:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>Configure the Network--</literal> Assign a management IP to the sensor.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Register with the Manager--</literal></para>
+      </listitem>
+    </itemizedlist>
+    <section>
+      <title>Configuring the network</title>
+      <para>Configuring the network for a sensor is very similar to the process for the Manager. Once again, there is a management network and a service network (optional). The only difference is that when the network is being configured, the sensor&apos;s bypass segments are also installed.</para>
+      <para>The bypass segments use the following nomenclature:</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para><literal>bpbrX--</literal> Bypass X segments consisting of two network interfaces. This network card is bypassed by the hardware so that the bypass can be activated by the hardware whenever necessary. When the bypass is activated, both network cards will be connected as if they were a single cable and no inspections will be run for the line.</para>
+        </listitem>
+        <listitem>
+          <para><literal>brY--</literal> Y bypass segments made up of two network cards. In this case the bypass is not made by hardware because it is not supported by the network card. If the bypass is to be mounted it will be done by software, i.e., a bridge between the two interfaces.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section>
+      <title>Registering with the Manager</title>
+      <para>In order to configure the sensor, it needs to be assigned to a Manager. The remaining configuration parameters and the active rules for the sensor will be configured directly from the Manager&apos;s administrative web page.</para>
+      <para>The following information will be required in order to register a sensor with a Manager:</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para><literal>Manager&apos;s IP--</literal> The IP configured in the Manager over which the sensor will communicate with it.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Manager&apos;s redBorder user password--</literal> Sensors are registered in the Manager through the Manager&apos;s redBorder user. It will ask for the user&apos;s credentials so it can validate the initial authentication with the Manager.</para>
+        </listitem>
+      </itemizedlist>
+      <para>The registration procedure is as follows:</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para>Open the redBorder configuration menu (rb_sysconf).</para>
+        </listitem>
+        <listitem>
+          <para>Select Option 2 (System configuration).</para>
+        </listitem>
+        <listitem>
+          <para>Change the name of the sensor (Option 1). This name should be unique in the sensor infrastructure and it will be the name used for it on the Manager&apos;s web page.</para>
+        </listitem>
+        <listitem>
+          <para>Enter the Manager&apos;s IP (Option 3).</para>
+        </listitem>
+        <listitem>
+          <para>Apply the changes (Option a). Once the changes have been applied, the clock will be synchronised with the Manager.</para>
+        </listitem>
+        <listitem>
+          <para>Register with the Manager (Option 4). At this point the system will request the user&apos;s redBorder password to initiate the registration. If the password is incorrect, an exchange of passwords and certificates will occur to ensure the communications between the sensor and the Manager.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </section>
+</chapter>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+  <title>Manager Administration</title>
+  <para/>
+  <section>
+    <title>Login</title>
+    <para>To access the Manager, enter your browser&apos;s address and its IP management number:</para>
+    <para>
+      <screen>https://Manager_IP_address</screen>
+    </para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager000.png"/>
+      </imageobject>
+    </mediaobject>
+    <warning>
+      <title>Warning</title>
+      <para>It is crucial to emphasise that the management web site will NOT work if accessed from an unencrypted server.</para>
+    </warning>
+  </section>
+  <section>
+    <title>Structure</title>
+    <para>The Manager&apos;s management web page is divided into three markedly different sections:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>Menu area--</literal> Direct access to the web site&apos;s main functions.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Accessories area--</literal> Displays a summary of the current section.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Main area--</literal> Main content of the current section.</para>
+      </listitem>
+    </itemizedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager015.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>The menu area has the following options:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para>
+          <literal>Dashboard--</literal> Summary of the events received by the sensors classified based on certain criteria. This is the default section and it appears when a session is initiated.
+        </para>
+      </listitem>
+      <listitem>
+        <para><literal>My Queue--</literal> Displays events classified as favourites for the user that started the session. This screen will depend on which username is used to enter the platform.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Events--</literal> Shows all of the events received by the Manager, sorted by event date.</para>
+      </listitem>
+      <listitem>
+        <para><literal>SNMP--</literal> Each sensor is monitored by SNMP to analyse its status and load. This section provides access to a summary of this monitoring for the most problematic sensors.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Sensors--</literal> Section that displays the list of all the sensors controlled by the Manager.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Administration--</literal> All of the administrative tasks are included in this menu. Only administrative users will be able to see these actions, so as to protect the system from unauthorised use.</para>
+      </listitem>
+      <listitem>
+        <para><literal>More Options--</literal> Any actions associated with the selected section that cannot be included in another category are listed in this menu. As will be shown later, this menu only contains sections that need to be displayed.</para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section>
+    <title>Administration</title>
+    <para>The Administration button only appears for users with administrative privileges. Left clicking on this button will open a dropdown menu.</para>
+    <note>
+      <title>Note</title>
+      <para>This behaviour is the same for other buttons in the application</para>
+    </note>
+    <para>The following options are provided:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>General Settings--</literal> Allows for several general parameters to be configured.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Cluster Info--</literal> Information regarding the cluster and the services active in it.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Classifications--</literal> For managing event classifications.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Lookup Sources--</literal> It allows to add data sources for searches regarding an IP.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Severities--</literal> It allows to manage event priority levels.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Signatures--</literal> A list of the signatures of the events generated, in descending order.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Users--</literal> It allows to manage the system&apos;s users.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Roles--</literal> It allows to manage the system&apos;s roles.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Log--</literal> A log of the actions taken by the users and the system.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Rules&apos; versions--</literal> It allows to view and manage the various versions of the rules available for the sensors.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Worker &amp; Job Queue--</literal> Certain tasks performed by the Manager are conducted in the background, making the web site more agile and easier to manage. This section can be used to control which tasks are executed in the background.</para>
+      </listitem>
+    </itemizedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager020.png"/>
+      </imageobject>
+    </mediaobject>
+    <section>
+      <title>General Settings</title>
+      <para>This view can be used for controlling the most generic redBorder settings.</para>
+      <para>The most important parameters are:</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para><literal>Company name--</literal> Name of the company where redBorder IPS has been installed.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Company email--</literal> The emails generated by the Manager will be sent from this address.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Signature Lookup Url--</literal> This address will be used for querying the signatures that generate events. Entering into an event detail and clicking on the &apos;Query Signature Database&apos; link will bring up a page supplying information on the signature. The following value will be used by default:</para>
+          <screen>http://rootedyour.com/snortsid?sid=$$gid$$:$$sid$$</screen>
+        </listitem>
+        <listitem>
+          <para><literal>Private Key--</literal> This private key will be used by the Manager to communicate with the sensors using a user with restricted privileges, making the traffic between them more secure. This communication between the Manager and the sensors is necessary for executing some of their administration processes. If the password is suspected of having been compromised, it can always be recreated and sent to the various sensors.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Reports--</literal> It can be indicated here the frequency used by the Manager to send reports to the registered users.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Flowbits Dependencies--</literal> By clicking on this parameter, the rule dependencies unresolved by the user will be automatically resolved by the Manager. For example, if a user activates Rule A and the dependencies depend on rule B when this option is activated, this rule will be automatically activated when the rules are compiled, facilitating the rule management task.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Enable Packet Capture Support--</literal> redBorder is fully integrated with two traffic capturing tools, OpenFPC and Solera Networks. By enabling either of them, it becomes possible to activate traffic capturing from the detailed information of the events, producing a capture file with the indicated parameters.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Enable Proxy Settings--</literal> Under certain circumstances, the Manager is downloaded from web files. For example, when updating rules, updating the geolocalisation database, etc. If the Manager does not have direct access to the internet, the proxy that should be used should be indicated in this option. If the connection is not active, it will connect directly without going through a proxy.</para>
+        </listitem>
+      </itemizedlist>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager330.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Cluster Info</title>
+      <para>There are two modes in which the redBorder Manager can operate:</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para><literal>Single--</literal> A single node for managing the Manager&apos;s services. In this case, if there is a service problem, the services will not be balanced with a back-up node; instead the services will be automatically restarted as an initial recovery measure. If this measure does not work, then the cluster will require manual intervention.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Dual--</literal> Two nodes in cluster mode for the same Manager services. Unlike the previous case, if a problem occurs and an error is detected in one of the cluster&apos;s services, it will be balanced by the back-up node. Both nodes share configuration data, data from the database, etc., so that the cluster can operate.</para>
+        </listitem>
+      </itemizedlist>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager460.png"/>
+        </imageobject>
+      </mediaobject>
+      <note>
+        <title>Note</title>
+        <para>The operational mode is selected when the Manager is installed using the <command>rb_sysconf</command> command. This command also provides the option to lock the services controlled by the Manager during maintenance.</para>
+      </note>
+    </section>
+    <section>
+      <title>Classifications</title>
+      <para>One of the most important features provided by redBorder for managing events is the classification option. In addition to the types predefined by the system, administrators will have the chance to add new classifications. This makes it possible to run an exhaustive control of the events generated by the system.</para>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager340.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager350.png"/>
+        </imageobject>
+      </mediaobject>
+      <section>
+        <title>Auto Classifications</title>
+        <para>Another provided possibility is the AutoClassification of events, letting the system automatically catalogue events based on certain criteria, such as sensor/domain, origin and destination IP, signature, etc.</para>
+        <mediaobject>
+          <imageobject>
+            <imagedata scalefit="1" align="center" width="250" fileref="images/manager360.png"/>
+          </imageobject>
+        </mediaobject>
+      </section>
+    </section>
+    <section>
+      <title>Lookup Sources</title>
+      <para>This tool makes it possible to obtain information on the IPs involved in an event. The default services included in the system are:</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para><literal>uTrace--</literal> provides information on the geolocalisation of the address involved.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Trusted Source--</literal> extensive information regarding the concerning IP supplied by McAffee. In addition to geographical information, the system reports on the address&apos;s reputation and the domains associated with it.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Whois.sc --</literal> technical information on the concerning IP address.</para>
+        </listitem>
+      </itemizedlist>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager370.png"/>
+        </imageobject>
+      </mediaobject>
+      <para>On top of this, any other service may be added. To do this, a descriptive text must be supplied together with the URL of the service, making use of a special tag in the URL which will be replaced by the IP that needs to be queried.</para>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager380.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Severities</title>
+      <para>The different levels of severity associated with the rules can be edited. Basically, the name and colour associated with each level can be changed.</para>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager390.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Signatures</title>
+      <para>This section can be used to get a list of all of the signatures present in the system sorted in descending order by number of events generated. Each signature has a link (View) to access all of the events related to it.</para>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager410.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Users</title>
+      <para>The system&apos;s users can be managed from this panel. It has the following fields:</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para><literal>Name--</literal> User&apos;s full name.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Email--</literal> This field is used for the user login.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Password--</literal> The user&apos;s password. All of the passwords are encrypted for storage.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Administrator--</literal> Checkbox that indicates whether or not the user is an administrator. Users who are administrators will be able to view the web site&apos;s administrator menu and will have reading/editing privileges for all of the sensors. If they are not administrators, their user rights will depend on which roles are assigned to them.</para>
+        </listitem>
+      </itemizedlist>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager420.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Roles</title>
+      <para>This panel can be used for managing the roles in the system to give certain privileges to users who are not administrators.</para>
+      <para>The privileges that can be assigned are:</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para><literal>read--</literal> The user can view data but not make modifications.</para>
+        </listitem>
+        <listitem>
+          <para><literal>manage--</literal> May modify data</para>
+        </listitem>
+        <listitem>
+          <para><literal>none--</literal> Grants no privileges; used for denying at a lower level upper level privileges</para>
+        </listitem>
+      </itemizedlist>
+      <para>For each role, one of the three types given above must be assigned-- the users to whom they apply and the sensors/domains to which they apply.</para>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager430.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Log</title>
+      <para>This panel makes it possible to conduct an exhaustive control of everything that users do in the system. Any actions taken in the Manager will be reflected in this view, which also shows the user involved, the object in question being created, edited or deleted, and a descriptive message of the action and its time stamp (for auditing purposes).</para>
+      <para>As with the other features available in redBorder, this once again includes a quick and advanced search function. It can be used to filter the entries in the log for any of the criteria mentioned above.</para>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager435.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Rules&apos; Version</title>
+      <para>RedBorder IPS is capable of working with various rules versions. By default, it comes with VRT integrated, the official rules of Snort, and of Emerging Threats and Emerging Threats Pro. Nevertheless, as many new rules may be added as required.</para>
+      <para>This view also has access to all of the rules&apos; versions present in the system, with data indicating the number of and the sources for the version in question.</para>
+      <para>Using the Worker (which will be discussed later), testing for new rules versions can be activated. When they become available, the system will automatically download them, and the rules version being used by the system will be able to be updated in this same section. These updates can be performed automatically or scheduled in the system to be performed at 00.00 UTE.</para>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager400.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+    <section>
+      <title>Worker &amp; Job Queue</title>
+      <para>Many of the actions taken by the Manager require a significant amount of processing time. This is where the Worker tool comes in, with its ability to manage tasks in the background and thus save users from excessive downtimes.</para>
+      <para>The various tasks the Worker can perform include:</para>
+      <itemizedlist mark="bullet">
+        <listitem>
+          <para><literal>Sensor Cache--</literal> responsible for tasks that calculate and classify events.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Daily Cache--</literal> once a day, it will send, together with others, reports to users.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Snmp--</literal> gathers the information from all the sensors in the system.</para>
+        </listitem>
+        <listitem>
+          <para><literal>GeoIP Database Update--</literal> used for geolocalising the IPs associated with the events.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Rules Database Update--</literal> responsible for checking if new rules versions exist. If so, they are downloaded automatically.</para>
+        </listitem>
+        <listitem>
+          <para><literal>Compilation--</literal> compiling the rules from the sensors/domains is usually a task that requires a long processing time. This process is responsible for performing these tasks in the background.</para>
+        </listitem>
+      </itemizedlist>
+      <para>The Worker reports which jobs are active, with there being at least three (sensor, daily and snmp) that are required for the system to function correctly.</para>
+      <mediaobject>
+        <imageobject>
+          <imagedata scalefit="1" align="center" width="250" fileref="images/manager440.png"/>
+        </imageobject>
+      </mediaobject>
+    </section>
+  </section>
+</chapter>

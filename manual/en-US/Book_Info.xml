@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE bookinfo PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<bookinfo id="book-manual-manual">
+  <title>Reference Manual</title>
+  <productname>redBorder IPS</productname>
+  <productnumber>2.2</productnumber>
+  <edition>1</edition>
+  <pubsnumber>0</pubsnumber>
+  <abstract>
+    <para>ISBN: N/A</para>
+    <para>This material is solely distributed under the terms and conditions established in Open Publication License v1.0 (the latest version can be viewed at http://www.opencontent.org/openpub/).</para>
+    <para>Distribution of modified versions of this document without the express consent of the copyright holder is prohibited.</para>
+    <para>Distribution of the product or copies thereof in book form for commercial purposes is prohibited unless prior written consent is given by the holder of the copyright. </para>
+    <para>All of the trademarks and copyrights referred to are the property of their respective title holders.</para>
+    <para>
+      <important>
+        <title>ENEO Tecnología S.L.</title>
+        <address>
+          <street>C/ Manufactura n.2, 3º Módulo N</street>
+          <city>Mairena del Aljarafe</city>,
+          <state>Sevilla</state>
+          <postcode>41927</postcode>
+          <country>Spain</country>
+        </address>
+      </important>
+    </para>
+  </abstract>
+  <corpauthor>
+    <inlinemediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="150" fileref="images/logo.png"/>
+      </imageobject>
+    </inlinemediaobject>
+  </corpauthor>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Author_Group.xml"/>
+</bookinfo>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+  <title>Event Rules</title>
+  <para>If rules need to be established for controlling or limiting the generation of alarms, there are two independent ways to do so:</para>
+
+  <orderedlist>
+    <listitem>
+      <para><literal>Event Rules.-</literal> In each probe or domain configuration menu, event rules can be generally established, although this is somewhat limited compared to the following option.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Direct Rules.-</literal> In each rule&apos;s options, rules can be set for controlling or limiting its activation, in this case with all of the available options.</para>
+    </listitem>
+  </orderedlist>
+
+<section>
+  <title>Event rules</title>
+  <para>To access the general window for configuring the <literal>Event Rules</literal> selecting the sensor view and the configuration option will be required for a domain or sensor from the drop down menu.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_1.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <para>This will bring up a menu showing the current limitation and suppression rules (configured either directly here or from the rules). The graphic shows the way they are distributed.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_2.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <para>Clicking on &quot;Add&quot; will display a drop-down menu with the correct type. If the <literal>limit</literal> option was selected, the following fields will appear:</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_3.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <orderedlist>
+    <listitem>
+      <para><literal>Signature.-</literal> Signature to which the limitation rule will be applied. All of the system rules will appear. In a future version of the software only the system&apos;s active rules will appear.</para>
+    </listitem>
+    <listitem>
+      <para><literal>By Source / By Destination.-</literal> If the limit is to be applied based on the traffic&apos;s origin or destination.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Count.-</literal> Since only limit rules can be created from this window, this value indicates the number of alerts that will be sent in the specified timeframe. If further events occur in this timeframe the system will not report them.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Seconds.-</literal> The length of this timeframe, in seconds.</para>
+    </listitem>
+  </orderedlist>
+
+  <para>It should be noted that in this window the <literal>limit</literal> rules are always of limit type, and neither <literal>threshold</literal> nor <literal>both</literal>rules may be created. These options are available from the specific view for each rule. (This function will certainly be included in an upcoming release.)</para>
+  <para>If a <literal>suppress</literal> rule was selected to be added, the following drop down menu will appear.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_4.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <orderedlist>
+    <listitem>
+      <para><literal>Signature.-</literal> Signature to which the limitation rule will be applied. All of the system rules will appear. In a future version only the system&apos;s active rules will appear.</para>
+    </listitem>
+    <listitem>
+      <para><literal>By Source / By Destination.-</literal> If the suppression is to be applied based on the origin or destination of the traffic.</para>
+    </listitem>
+    <listitem>
+      <para><literal>IP / Network.-</literal> In this field the IP or network to which the suppression rule will apply should be entered. If By Source was selected earlier, this field will apply to the packages&apos; origin. If By Destination was entered, it will apply to the packages&apos; destination.</para>
+    </listitem>
+  </orderedlist>
+
+  <para>The suppression rules make it possible for no events to be generated for a given series of origins or destinations. This may be useful, for example, for disabling events that are known to come from an internal vulnerability scanner inside the company.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_5.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <para>Once either of these two types of rules has been created, it may be deleted or edited. Editing it will bring up the option to add a note.</para>
+  <para>Once the configuration is correct, it will need to be applied by clicking Apply at the bottom of the window.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_6.png"/>
+      </imageobject>
+    </mediaobject>
+
+</section>
+
+<section>
+  <title>Direct Rules</title>
+  <para>As was noted above, event management rules can be created from a central location, or selectively when configuring each rule. In this case there are more limitation options.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_7.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <para>An event should be selected from the &quot;Events&quot; window that will be limited or suppressed. The options to &quot;Limit Event Rules&quot; or “Suppress Event Rules” corresponding to the previous views will appear in the upper part of the event detail.</para>
+  <para>Selecting “Limit Event Rules” will cause the following menu to drop down:</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_8.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <orderedlist>
+    <listitem>
+      <para><literal>Signature.-</literal> Unlike in the general window, here the value cannot be changed.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Limit / Threshold / Both.-</literal> The limitation mode to be applied will be indicated. The details will be given later. In the general window this option was not available and the options are always limit type.</para>
+    </listitem>
+    <listitem>
+      <para><literal>By Source / By Destination.-</literal> If the suppression is to be applied based on the origin or destination of the traffic.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Count.-</literal> The events count. Since various types are now allowed, this parameter may have several meanings.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Seconds.-</literal> The length of this timeframe, in seconds.</para>
+    </listitem>
+  </orderedlist>
+
+  <para>As can be seen, two different types of limits can be applied, together with a third that is a combination of the first two.</para>
+  
+<orderedlist>
+    <listitem>
+      <para><literal>Limit.-</literal> Alert in the m (count) first events in the time window. The rest are discarded.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Threshold.-</literal> Alert every m (count) times that an event occurs in the time window.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Both.-</literal> It alerts once per time window, once m (count) events have been detected in the time window. The rest are discarded.</para>
+    </listitem>
+  </orderedlist>
+</section>
+
+</chapter>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+  <title>Event Rules</title>
+  <para>Si necesitamos establecer reglas que controlen o limiten la generación de alertas, tenemos dos caminos independientes para conseguirlo:</para>
+
+  <orderedlist>
+    <listitem>
+      <para><literal>Event Rules.-</literal> Dentro del menú de configuración de cada sonda o dominio podemos establecer reglas de evento de manera general aunque algo limitada con respecto a la siguiente opción.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Direct Rules.-</literal> Dentro de las opciones de cada regla, podemos establecer las reglas que controlen o limiten su activación, en este caso sí, con todas las opciones disponibles.</para>
+    </listitem>
+  </orderedlist>
+
+<section>
+  <title>Event rules</title>
+  <para>Para acceder a la ventana general de configuración de <literal>Event Rules</literal>, debemos seleccionar la vista de los sensores, y sobre un dominio o un sensor seleccionar la opción en el menú desplegable de configuración.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_1.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <para>Entramos en una ventana que nos muestra las reglas de limitación y de supresión existentes (tanto las configuradas directamente desde aquí como desde las reglas). El gráfico muestra el reparto de las mismas.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_2.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <para>Pinchando sobre “Add” se nos muestra un desplegable del tipo correcto. Si hemos escogido la opción <literal>limit</literal> nos aparecerán los siguientes campos:</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_3.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <orderedlist>
+    <listitem>
+      <para><literal>Signature.-</literal> Firma sobre la que queremos aplicar la regla de limitación. Aparecen todas las reglas del sistema. En una futura versión del software aparecerán solamente las reglas activas del sistema.</para>
+    </listitem>
+    <listitem>
+      <para><literal>By Source / By Destination.-</literal> Si el límite se aplica según el origen o el destino del tráfico.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Count.-</literal> Dado que desde esta ventana sólo se pueden crear reglas limit, este valor indica el número de alertas que se enviarán en el tiempo especificado. Si se producen más eventos en ese tiempo el sistema no los reportará.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Seconds.-</literal> El tiempo medido en segundos en los que se aplica la cuenta anterior.</para>
+    </listitem>
+  </orderedlist>
+
+  <para>Hay que tener en cuenta que desde esta ventana las reglas <literal>limit</literal> siempre son de tipo limit, no permitiendo crear reglas <literal>threshold</literal> ni <literal>both</literal>. Estas opciones sí que están disponibles desde la vista específica de cada regla (seguramente en una próxima release se incluya esta funcionalidad).</para>
+  <para>Si hemos escogido añadir una regla <literal>suppress</literal> nos aparecerá el siguiente desplegable.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_4.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <orderedlist>
+    <listitem>
+      <para><literal>Signature.-</literal> Firma sobre la que queremos aplicar la regla de limitación. Aparecen todas las reglas del sistema. En una futura versión aparecerán solamente las reglas activas del sistema.</para>
+    </listitem>
+    <listitem>
+      <para><literal>By Source / By Destination.-</literal> Si la supresión se aplica según el origen o el destino del tráfico.</para>
+    </listitem>
+    <listitem>
+      <para><literal>IP / Network.-</literal> En este campo se debe introducir la IP o red sobre la que se quiere aplicar la regla de supresión. Si en el seleccionable anterior hemos puesto By Source, este campo aplicará al origen de los paquetes. Si hemos puesto By Destination, aplicará al destino de los paquetes.</para>
+    </listitem>
+  </orderedlist>
+
+  <para>Las reglas de supresión nos permiten no generar ningún evento para un conjunto seleccionado de orígenes o destinos. Esto puede ser útil, por ejemplo, para deshabilitar los eventos que sabemos vienen de un escaner de vulnerabilidades interno de la empresa.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_5.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <para>Una vez hemos creado una regla de cualquiera de los dos tipos, podemos eliminarla o editarla. Si la editamos, nos aparecerá la opción de añadirle una nota.</para>
+  <para>Una vez la configuración sea correcta, debemos aplicarla pulsando en Apply en la parte baja de la ventana.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_6.png"/>
+      </imageobject>
+    </mediaobject>
+
+</section>
+
+<section>
+  <title>Direct Rules</title>
+  <para>Como ya hemos comentado, las reglas de gestión de eventos se pueden crear desde un sitio centralizado, o de manera selectiva en la configuración de cada regla. En este caso tenemos más opciones de limitación.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_7.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <para>Desde la ventana “Eventos”, buscamos alguno que queramos limitar o suprimir y lo seleccionamos. En la parte superior del detalle del evento nos aparecen las opciones “Limit Event Rules” y “Supress Event Rules” que se corresponden con las vistas anteriormente.</para>
+  <para>En el caso de que escojamos “Limit Event Rules” nos aparecerá el siguiente desplegable:</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/8_8.png"/>
+      </imageobject>
+    </mediaobject>
+
+  <orderedlist>
+    <listitem>
+      <para><literal>Signature.-</literal> A diferencia de la ventana general, ahora no podemos cambiar este valor.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Limit / Threshold / Both.-</literal> Nos indicará el modo de limitación que queremos aplicar. Se detallan más adelante. En la ventana general esta opción no estaba disponible y siempre son de tipo limit.</para>
+    </listitem>
+    <listitem>
+      <para><literal>By Source / By Destination.-</literal> Si la supresión se aplica según el origen o el destino del tráfico.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Count.-</literal> La cuenta de eventos. Como ahora se admiten de varios tipos, este parámetro puede significar cosas diferentes.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Seconds.-</literal> El tiempo medido en segundos en los que se aplica la cuenta anterior.</para>
+    </listitem>
+  </orderedlist>
+
+  <para>Como se ve, podemos aplicar dos tipos diferentes de limitación, siendo el tercero la combinación de los dos.</para>
+  
+<orderedlist>
+    <listitem>
+      <para><literal>Limit.-</literal> Alerta en los m (count) primeros eventos en la ventana de tiempo. El resto se desechan.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Threshold.-</literal> Alerta cada m (count) veces que se pruduce un evento en la ventana de tiempo.</para>
+    </listitem>
+    <listitem>
+      <para><literal>Both.-</literal> Alerta una única vez por ventana de tiempo una vez se han detectado m (count) eventos en la ventana de tiempo. El resto se desechan.</para>
+    </listitem>
+  </orderedlist>
+</section>
+
+</chapter>

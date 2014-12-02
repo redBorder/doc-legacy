@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+  <title>Events</title>
+  <para>The event management contains three main tabs:</para>
+  <itemizedlist mark="bullet">
+    <listitem>
+      <para>The timeframe for the data displayed (which can be modified).</para>
+    </listitem>
+    <listitem>
+      <para>Charts of events classified by criticality.</para>
+    </listitem>
+    <listitem>
+      <para>A graphs area.</para>
+    </listitem>
+  </itemizedlist>
+  <para>From the section where the events are classified by their criticality, a list can be accessed with the events in the classification and the selected timeframe criteria.</para>
+  <para>In the graphs area, various options are available to choose from, grouping the events by various criteria. It is also possible to &apos;hide&apos; any of the lines by clicking on its title. Lastly, some of the graphs are interactive. Clicking on their elements will bring up the list of events that meets the selected criterion.</para>
+  <para>The accessory area displays:</para>
+  <itemizedlist mark="bullet">
+    <listitem>
+      <para>The 5 sensors with the most events</para>
+    </listitem>
+    <listitem>
+      <para>The 5 most active users</para>
+    </listitem>
+    <listitem>
+      <para>The last 5 events by type</para>
+    </listitem>
+    <listitem>
+      <para>The classified events</para>
+    </listitem>
+  </itemizedlist>
+  <section>
+    <title>My Queue and Events</title>
+    <para>The structure of both is very similar. My Queue shows the events that were previously marked by the user as favourites. Under Events, all of the events present in the system that have not yet been classified are displayed.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager030.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>It shows:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para>A selector</para>
+      </listitem>
+      <listitem>
+        <para>A star (for marking favourites)</para>
+      </listitem>
+      <listitem>
+        <para>Severity level</para>
+      </listitem>
+      <listitem>
+        <para>The sensor that issued the event</para>
+      </listitem>
+      <listitem>
+        <para>Origin IP</para>
+      </listitem>
+      <listitem>
+        <para>Destination IP</para>
+      </listitem>
+      <listitem>
+        <para>Description of the Signature</para>
+      </listitem>
+      <listitem>
+        <para>Time the event was received</para>
+      </listitem>
+    </itemizedlist>
+    <note>
+      <title>Note:</title>
+      <para>If geolocalisation is activated, an IP geolocalisation flag will appear next to the origin IP.</para>
+    </note>
+    <para>Clicking on any event will bring up more details about it. Here it is also possible to:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para>Make a query about the origin and destination IPs</para>
+      </listitem>
+      <listitem>
+        <para>Search for information on the signature that generated the event</para>
+      </listitem>
+      <listitem>
+        <para>View the Snort rule that generated it (basic rule)</para>
+      </listitem>
+      <listitem>
+        <para>Add a note</para>
+      </listitem>
+    </itemizedlist>
+    <para>Other significant tasks that can be performed from the details of the event are:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para><literal>Event filtering--</literal> Snort has a function for filtering events. It can be used for reducing the number of alerts arising from marginally applicable rules, limiting the number of times a specific event is registered over a given amount of time. There are 3 types of event filters:</para>
+        <itemizedlist mark="bullet">
+          <listitem>
+            <para>Limit-- Alerts the first of m events in a given time interval. It then ignores them for the rest of the interval.</para>
+          </listitem>
+          <listitem>
+            <para>Threshold-- Alerts every m times that the event occurs during a given time interval.</para>
+          </listitem>
+          <listitem>
+            <para>Both-- Alerts a single time per interval after the event occurs m times, then ignoring the event during the given time interval.</para>
+          </listitem>
+        </itemizedlist>
+        <para>In addition, specific events can be overwritten without altering the rule, optionally indicating the origin or destination IP.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Mass Classification--</literal> The events can be collectively classified by entering a set of parameters:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Signature</para>
+          </listitem>
+          <listitem>
+            <para>Origin IP</para>
+          </listitem>
+          <listitem>
+            <para>Destination IP</para>
+          </listitem>
+          <listitem>
+            <para>Classification</para>
+          </listitem>
+          <listitem>
+            <para>Sensors/Domains</para>
+          </listitem>
+        </itemizedlist>
+        <para>Additionally, this classification can be selected to apply to events that have already been classified, and an entry can be created in the &apos;Auto-Classifications&apos; so that future events will be classified automatically.</para>
+      </listitem>
+    </itemizedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager040.png"/>
+      </imageobject>
+    </mediaobject>
+  </section>
+
+  <section>
+    <title>Search</title>
+    <para>There are two options in order to search for a certain type of event:</para>
+    <itemizedlist mark="bullet">
+      <listitem>
+        <para>Entering the text to be found directly into the search field (quick search)</para>
+      </listitem>
+      <listitem>
+        <para>Clicking on the magnifying glass to access a specific search form where various parameters can be entered</para>
+      </listitem>
+    </itemizedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager050.png"/>
+      </imageobject>
+    </mediaobject>
+  </section>
+</chapter>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2012">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+  <title>Eventos</title>
+  <section>
+    <title>Pestaña "Events"</title>
+    <para>En la pestaña de "events" apareceran todos aquellos eventos presentes en el sistema y que aún no han sido clasificados.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager030.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>Nos aparece:</para>
+    <itemizedlist mark='bullet'>
+      <listitem>
+        <para>Un selector.</para>
+      </listitem>
+      <listitem>
+        <para>Una estrella (para marcarlo como favorito).</para>
+      </listitem>
+      <listitem>
+        <para>Nivel de severidad.</para>
+      </listitem>
+      <listitem>
+        <para>El sensor que ha emitido el evento.</para>
+      </listitem>
+      <listitem>
+        <para>IP de origen.</para>
+      </listitem>
+      <listitem>
+        <para>IP de destino.</para>
+      </listitem>
+      <listitem>
+        <para>Descripción de la Firma.</para>
+      </listitem>
+      <listitem>
+        <para>Hora de recepción del evento.</para>
+      </listitem>
+    </itemizedlist>
+    <note>
+      <title>Nota:</title>
+      <para>En caso de tener activada la geolocalización, al lado de la IP origen e IP destino aparacerá una bandera de la geolocalización de dicha IP.</para>
+    </note>
+    <para>Si pinchamos sobre cualquier evento se mostrarán más detalles de dicho evento. Nos permitirá también:</para>
+    <itemizedlist mark='bullet'>
+      <listitem>
+        <para>Hacer una consulta sobre las IP de origen y destino.</para>
+      </listitem>
+      <listitem>
+        <para>Buscar información sobre la firma que ha generado este evento.</para>
+      </listitem>
+      <listitem>
+        <para>Ver la propia regla de snort que lo ha generado (regla en bruto).</para>
+      </listitem>
+      <listitem>
+        <para>Añadir una nota.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Otras tareas de interés que pueden realizarse desde el detalle del evento son:</para>
+    <itemizedlist mark='bullet'>
+      <listitem>
+        <para><literal>Filtrado de Eventos.-</literal> Snort posee la característica de poder filtras eventos. Puede ser usado para reducir el número de alertas debido a reglas ruidosas limitando el número de veces que un evento en particular es registrado durante un intervalo de tiempo específico. Existen 3 tipos de filtrado de eventos:</para>
+        <itemizedlist mark="bullet">
+          <listitem>
+            <para>Limit.- Alerta el primero de m eventos durante un intervalo de tiempo. Después los ignora para el resto del intervalo.</para>
+          </listitem>
+          <listitem>
+            <para>Threshold.- Alerta cada m veces que se produce el evento durante un intervalo de tiempo.</para>
+          </listitem>
+          <listitem>
+            <para>Both.- Alerta una única vez por intervalo después de que se produzca m veces el evento, ignorando después los eventos durante dicho intervalo.</para>
+          </listitem>
+        </itemizedlist>
+        <para>Adicionalmente se puede suprimir eventos específicos sin alterar la regla, indicando, si se desea, la IP origen o destino.</para>
+      </listitem>
+      <listitem>
+        <para><literal>Clasificación Masiva.-</literal> La clasificación de los eventos se puede realizar de forma colectiva indicando un conjunto de parámetros:</para>
+        <itemizedlist>
+          <listitem>
+            <para>Firma.</para>
+          </listitem>
+          <listitem>
+            <para>IP origen.</para>
+          </listitem>
+          <listitem>
+            <para>IP destino.</para>
+          </listitem>
+          <listitem>
+            <para>Clasificación.</para>
+          </listitem>
+          <listitem>
+            <para>Sensores/Dominios.</para>
+          </listitem>
+        </itemizedlist>
+        <para>De forma complementaria se puede indicar que se aplique dicha clasificación a los eventos ya clasificados, así como crear una entrada en las "Auto Clasificaciones" para que los futuros eventos sean automáticamente clasificados.</para>
+      </listitem>
+    </itemizedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager040.png"/>
+      </imageobject>
+    </mediaobject>
+  </section>
+
+  <section>
+    <title>Búsqueda</title>
+    <para>Para buscar eventos de un determinado tipo tenemos dos opciones:</para>
+    <itemizedlist mark='bullet'>
+      <listitem>
+        <para>Introducir directamente en el campo de búsqueda el texto que queremos encontrar (búsqueda rápida).</para>
+      </listitem>
+      <listitem>
+        <para>Pinchar en Filters -> "Advanzed Filter" lo que nos dará acceso a un formulario específico de búsqueda donde podremos introducir diferentes parámetros.</para>
+      </listitem>
+    </itemizedlist>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager045.png"/>
+      </imageobject>
+    </mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata scalefit="1" align="center" width="250" fileref="images/manager050.png"/>
+      </imageobject>
+    </mediaobject>
+  </section>
+</chapter>
