@@ -1,0 +1,1504 @@
+
+  <title>Bienvenidos a redBorder IPS v.3- Community Generando comunidad
+  día a día </title>
+  ------------------------------
+
+  Muchas gracias por descargar rb_IPS_v.3-Community y bienvenido a
+  la comunidad redBorder.
+
+  Nos complace poder presentarle esta nueva versión de uno de
+  nuestros productos estrella: el sistema de prevención de
+  intrusos (IPS), que junto con el Flow, constituyen los paquetes
+  que se encuentran disponibles en nuestra página
+  http://support.redborder.net/hc/en-us para su descarga
+  gratuita.
+
+  Todos nuestros productos son Open Source. Uno de los pilares
+  básicos de redBorder es potenciar y generar comunidad. Gracias
+  a ella tenemos la oportunidad de innovar
+  constantemente y crecer a través del intercambio de ideas,
+  aportaciones y usos que otros desarrolladores hacen con nuestro
+  código.
+
+  Por ello, lo primero de todo, queremos darte las gracias por
+  contribuir a que nuestro sueño de comunidad Open Source esté
+  más cerca de la realidad y que juntos, podamos mejorar este y
+  otros proyectos para que estén al alcance de cualquier persona
+  u organización.
+
+   <title>Conociendo la Guía Oficial de Instalación de redBorder IPS v.3-
+  Community </title>
+  -------------------------------------------------------------------------
+
+  Esta guía contiene información muy útil que le facilitará
+  realizar una correcta implantación de la solución redBorder
+  IPS.
+
+  En este primer capítulo se exponen algunos consejos de
+  utilización de esta guía. Léalos detenidamente ya que pueden
+  serle de gran utilidad a la hora de manejar los conceptos
+  expuestos en este manual.
+
+  La Guía Oficial de Intslación de redBorder IPS v.3- Community le
+  proporcionará los conocimientos necesarios para realizar la
+  implantación de la solución redBorder IPS, cuyo proceso consta
+  de tres pasos:
+
+  Configuración del Manager
+
+  Configuración de los sensores IPS
+
+  Registro de los sensores en el Manager
+
+  Convenciones de documentación
+  -----------------------------
+
+   <title>Convenciones tipográficas </title>
+
+  A lo largo de este documento va a encontrar diferentes
+  convenciones tipográficas utilizadas en los momentos en los que
+  se pretenda llamar la atención o resaltar una palabra o
+  concepto:
+
+  a) Negrita monoespaciado
+
+  Resalta entradas del sistema:
+
+  Comandos de shell
+
+  Nombres de archivos y/o rutas
+
+  Código fuente, nombres de las clases, métodos, funciones,
+  nombres de variables y valores de retorno mencionados en un
+  párrafo
+
+  En caso de que haya que diferenciar una tecla clave de una
+  combinación de teclas se introduce un guión que conecta cada
+  parte de una combinación de tecla.
+
+  Ejemplos:
+
+  1. <<Para ver el contenido del archivo
+  facturacion_segundo_trimestre (nombre de archivo) en su
+  directorio de trabajo, escriba el comando cat
+  facturacion_segundo_trimestre (comando de shell), a
+  continuación pulse Enter (tecla clave). Para cambiar de
+  directorio pulse Control+Alt+F1 (combinación de teclas), si
+  desea volver a su sesión de Ventanas-X (tecla clave-combinación
+  teclas).>>
+
+  2. << Las clases de archivo relacionadas incluyen filename para
+  sistema de archivos, file para archivos y dir para
+  directorios.>>
+
+  b) Negrita proporcional
+
+  Destaca palabras o frases encontradas en un sistema:
+
+  Nombres de aplicación
+
+  Texto de cuadro de diálogo
+
+  Botones etiquetados
+
+  Etiquetas de cajas de verificación y botones de radio
+
+  Títulos de menú y/o submenú
+
+  Ejemplo:
+
+  << Seleccionar Archivo →Guardar como o Crtl+Shift+S desde la
+  barra del menú superior, para modificar el formato de archivo.
+  En el campo Nombre de Archivo introduzca el nombre que desee
+  darle al documento, a continuación en el desplegable Formato,
+  seleccione el formato. A continuación pulse Guardar.>>
+
+  c) Itálica-negrita monoespaciado o Itálica-negrita proporcional
+
+  Indica en ambos casos texto reemplazable o variable. Es decir,
+  se trata de partes del texto que usted no va a escribir
+  literalmente o que bien, cambian según la circunstancia.
+
+  Ejemplo:
+
+  <<Para acceder al sistema teclee ssh y a continuación introduzca
+  nombredeusuario@dominio.nombre. Si la máquina remota es
+  example.com, y su nombre es Martin teclee ssh
+  martin@example.com. Para ver la versión del sistema instalado
+  utilice el comando rpm- q instalacion. El resultado deberá ser
+  similar a: instalacion-version.>>
+
+  d) Romano monoespaciado
+
+  Mensajes de salida de la terminal
+
+  Fragmentos de código fuente (resaltados en diferentes colores)
+
+  Ejemplos:
+
+  1. Mensajes de salida de la terminal:
+
+  books     Desktop   documentation
+
+  books_tests   Desktop1   downloads
+
+  2. Fragmentos de código fuente:
+
+  package org.jboss.book.jca.ex1;
+
+  import javax.naming.InitialContext;
+
+  public class ExClient
+
+  {
+
+  public static void main(String args[ ])
+
+  throws Exception
+
+  {
+
+   <title>Llamadas y advertencias </title>
+  ------------------------
+
+  Para llamar la atención del lector sobre información importante
+  que no debe pasarse por alto utilizaremos los siguientes
+  recursos gráficos:
+
+  Nota
+
+  Importante
+
+  Advertencia
+
+  [-- Image: Image4 --]
+
+  [-- Image: Image1 --][-- Image: Image5 --]Advertencia
+
+  Las advertencias no deben ignorarse. Ignoprarlas puede ocasionar
+  pérdida de datos o problemas de funcionamiento.
+
+  Importante
+
+  Los cuadros de texto que indican importante anuncian detalles
+  que se pueden pasar por alto y cuyo olvido puede ser negativo y
+  acarrear mayor trabajo.
+
+  Nota
+
+  Una nota es una sugerencia, atajo o enfoque alternativo para una
+  area determinada. Incluye trucos que pueden resultarle de gran
+  utilidad.
+
+  Cómo utilizar este manual
+
+  Este manual ha sido diseñado para la implantación de la solución
+  redBorder IPS versión Community a partir de la descarga del
+  archivo que contiene la ISO de instalación.
+
+  Este documento es ideal tanto para los usuarios que deseen
+  reemplazar la antigua versión, como aquellos que instalen por
+  primera vez la versión 3 redBorder IPS -Community.
+
+  Si es un usuario con experiencia y ya ha realizado la
+  instalación tanto del Manager como del IPS redBorder en otras
+  ocasiones, puede pasar directamente a los Capítulos x, y,
+  Configuración del Manager redBorder y Configuración de los
+  sensores IPS.
+
+   <title>Queremos conocer su opinión </title>
+
+  Si encuentra cualquier tipo de error en este manual, estaremos
+  encantados de recibir sus sugerencias.
+
+  En caso de que se trate de un error tipográfico o de conceptos
+  puede remitírnoslo mediante un correo electrónico en el que se
+  incluyan los siguientes datos:
+
+  Identificador del manual: rb_InstallIPS_v.3_community [ES]
+  (2014-11)
+
+  Capítulo- sección y número de página en el que se encuentra el
+  error
+
+  Fragmento de texto que contiene dicho error
+
+  Esta información nos permite localizar fácilmente el error y
+  subsanarlo con el fin de mejorar la documentación que acompaña
+  a nuestros productos.
+
+  Asimismo, agradecemos cualquier sugerencia referente al modo de
+  exposición u organización de la información que nos ayude a
+  optimizar nuestros manuales.
+
+  Pueden enviar sus comentarios a la dirección de correo
+  electrónico: info@eneotecnologia.com.
+
+  [-- Image: Image2 --]Plaza de las Naciones s/n, Edificio de
+  Oficinas Planta 12
+
+  Mairena del Aljarafe, Sevilla
+
+  +34 955 60 11 60
+
+  info@redborder.net
+
+  Instalación del paquete redBorder IPS v.3- Community Requisitos
+  para la instalación
+
+  La descarga del paquete redBorder IPS v.3 Versión Community
+  requiere del cumplimiento de una serie de requisitos para
+  garantizar su correcta configuración y óptimo funcionamiento.
+
+  Existen dos maneras de realizar la implantación de la solución
+  redBorder IPS:
+
+  Disco local de su equipo (Hardware).
+
+  Estructura de virtualización o Cloud.
+
+  [-- Image: Image8 --][-- Image: Image9 --]
+
+  Soluciones Cloud compatibles:
+
+  -VMWare
+
+  -Open Stack
+
+  -Amazon Web Services (AWS)
+
+  Nota
+
+  Existe la posibilidad de realizar la implantación en una
+  estructura de virtualización para aprovechar las ventajas de
+  gestión y disponibilidad que ésta aporta.
+
+  Advertencia
+
+  Requisitos implantación IPS en disco local:
+
+  1) Memoria y almacenamiento: 60GB de disco duro y un mínimo de
+  6GB de RAM. Esta cifra dependerá del número de sensores
+  asignados).
+
+  2) Para poner en funcionamiento el Manager, disponer de al
+  menos, una interfaz de red.
+
+   <title>2.2 Estructura y operativa de los menús de la interfaz de
+  usuario del programa de instalación </title>
+
+   <title>Menú, submenú y línea de comandos </title>
+
+  El menú del programa de instalación responde a un esquema que se
+  repite en casi todas las pantallas:
+
+  Menú: en el margen izquierdo de la pantalla encontrará un
+  listado con las opciones disponibles.
+
+  Para seleccionar cualquiera de ellas solo debe introducir en la
+  línea Selection, el número o letra que corresponda a la opción
+  que desea elegir.
+
+  Submenú: en caso de que sobre la opción seleccionada se puedan
+  realizar diferentes acciones, aparecerá un submenú en el margen
+  derecho de la pantalla.
+
+  Línea de comandos/ selector de opciones: en el margen superior,
+  y separado del menú y submenú gráficamente, encontramos el área
+  en el que se deberán indicar las selecciones en la línea
+  Selection e introducir los comandos o datos que se soliciten
+  para ejecutar las acciones pertinentes. En esta zona
+  visualizaremos la fecha y la hora definidas en el Manager por
+  defecto (formato UTC).
+
+  Menú
+
+  Submenú selección
+
+  Selector opciones
+
+  [-- Image: graphics1 --]
+
+   <title>Opciones predeterminadas </title>
+
+  En algunos casos, el sistema mostrará una serie de opciones
+  predeterminadas.
+
+  Si se trata de la respuesta a una pregunta, la opción definida
+  por defecto se visualizará en mayúsculas.
+
+  [-- Image: graphics2 --]
+
+   <title>Selección de opciones</title>
+
+  Selección de opción por defecto: pulse Enter.
+
+  Otras opciones: introduzca la letra o comando que corresponda.
+
+  Salir
+
+  Cuando quiera salir de una pantalla para regresar al menú
+  inicial seleccione la opción quit, introduciendo la letra q
+
+  Aplicar cambios
+
+  Para guardar las modificaciones realizadas y aplicar los
+  cambios, seleccione la opción apply introduciendo la letra a
+
+  [-- Image: Image41 --]
+
+  Nota
+
+  Opciones predeterminadas: mayúscula. (Y/n)(y/N)
+
+  Selección de opciones predeterminadas: Enter
+
+  Salir: q
+
+  Aplicar cambios: a
+
+  [-- Image: Image31 --]
+
+  Advertencia
+
+  Need to “apply” to activate changes
+
+  Si visualiza este mensaje deberá seleccionar la opción a. En
+  caso contrario, el sistema no guardará ni aplicará las
+  modificaciones realizadas.
+
+   <title>Bienvenido al asistente para la implantación de la solución
+  redBorder IPS </title>
+
+  Una vez que haya descargado el archivo
+  rb_InstallIPS_v.3_community, encontrará la imagen ISO que hace
+  las veces de asistente para la implantación de la solución
+  redBorder IPS.
+
+  La solución para la prevención de intrusiones redBorder IPS
+  consta de dos elementos:
+
+  Manager: sistema central que recibe los eventos recogidos por
+  cada uno de los sensores instalados.
+
+  Sensores IPS: red de dispositivos que envían eventos al Manager
+  según las reglas establecidas para cada uno de los sensores.
+
+  La implantación de la solución redBorder IPS consta de tres
+  pasos:
+
+  Configuración del Manager
+
+  Configuración de los sensores IPS
+
+  Registro de los sensores en el Manager
+
+  [-- Image: Image10 --]Advertencia
+
+  Es MUY IMPORTANTE que primero se realice la configuración del
+  Manager antes de configurar los sensores.
+
+  El Manager debe estar operativo y en una red accesible a los
+  sensores. Algunos de los procesos de configuración de los
+  sensores dependen del acceso al Manager.
+
+   <title>redBorder Community Installer </title>
+  -----------------------------
+
+  Bienvenido al asistente para la implantación de la solución
+  redBorder IPS. Gracias a él cualquier persona puede configurar
+  el sistema de Prevención de Intrusos redBorder sin necesidad de
+  tener conocimientos específicos de programación en Linux.
+
+  Madiante el comando rb_sysconf,usted accederá a un menú desde el
+  cual realizar todas las configuraciones necesarias para poner en
+  marcha la solución redBorder IPS en su versión Community.
+
+  [-- Image: Image11 --]
+
+  Opciones disponibles del menú del instalador
+  --------------------------------------------
+
+  Este es el menú principal del instalador de la solución
+  redBorder IPS. En él se contemplan las opciones que le
+  permitirán realizar todas las configuraciones, tanto del
+  Manager como de los sensores para la puesta en funcionamiento
+  de la solución redBorder IPS.
+
+  Asimismo, encontrará otras opciones muy útiles relacionadas con
+  el funcionamiento de su equipo.
+
+  Opciones del menú principal del instalador redBorder IPS:
+
+  Install Manager Community IPS: acceso al menú de configuración
+  del Manager.
+
+  Install Sensor Community IPS: acceso al menú de configuración y
+  registro de los sensores IPS.
+
+  Rescue installed System: modalidad de inicio de rescate para los
+  casos en que existan problemas de inicio de su máquina. Por
+  ejemplo, si se produce algún problema en un sensor y su máquina
+  no arranca, se crea una partición temporal sistema paralelo
+  (modo de rescate) que permita actuar sobre el sistema de origen
+  y realizar cambios a bajo nivel mediante la línea de comandos.
+
+  Boot from Local Drive: arranque desde disco local (por defecto).
+
+  Memory Test: testeo de memoria disponible para la instalación
+  del sistema.
+
+  <title>Proceso de Configuración del Manager </title>
+
+ <title>Funciones del Manager</title>
+  ---------------------
+
+  Denominamos Manager al sistema central que recibe los eventos
+  recogidos por los sensores. Permite además, realizar las
+  siguientes funciones:
+
+  Configuración centralizada o individual de las reglas que rigen
+  los sensores.
+
+  Creación de gráficas a partir de los datos recogidos por los
+  sensores.
+
+  El proceso de configuración del Manager comprende las siguientes
+  acciones:
+
+  1) Descarga e instalación de los paquetes del redBorder Community
+  Installer y ajustes básicos.
+
+  2) Configuración del Manager (puesta en red):
+
+  a) Configuración de la red de gestión: creación de un bond
+
+  b) Configuración de la red de servicio: configuración DNS y dominio
+
+
+  <title>Descarga e instalación de los paquetes del redBorder Community
+  Installer y ajustes básicos</title>
+
+  Ajustes básicos
+
+
+  La instalación del redBorder Community Installer
+  comprende una serie de ajustes básicos sobre los que pasaremos
+  de manera rápida:
+
+  Selección del idioma
+
+  Selección del teclado
+
+  Insertar Password
+
+  Pasaremos rápidamente por estos pasos para ir directamente a la
+  configuración del Manager.
+
+  Para comenzar con el proceso de instalación y descarga de los
+  paquetes y realizar los ajustes básicos del instalador que
+  permitan la configuración del Manager es necesario seleccionar
+  la opción 1 Install Manager Community IPS.
+
+  [-- Image: Image12 --]
+
+  A continuación, deberá realizar los siguientes ajustes básicos:
+
+  Selección del idioma
+
+  Selección del teclado
+
+  Insertar Password
+
+  a) Selección de idioma
+
+  Seleccione el idioma con el que desea operar a partir de este
+  momento.
+
+  [-- Image: Image6 --]
+
+  b) Selección tipo de teclado: elija el tipo de teclado que
+  quiere utilizar durante el proceso. Aparecerá seleccionado por
+  defecto el teclado americano [US] debido a su amplia
+  compatibilidad.
+
+  [-- Image: Image7 --]
+
+  c) Insertar Password
+
+  Elegir e insertar una password. Esta, será la clave con la que
+  opere a partir de ahora. Puede ser modificada en cualquier otro
+  momento.
+
+  Confirmar password. Volver a introducir la clave para verificar
+  que la conoce y que no ha cometido ningún error tipográfico.
+
+  En caso de que la clave sea débil o con poca fortaleza, el
+  programa le avisará mediante una ventana emergente.
+
+  Si lo desea, puede insertar una contraseña más fuerte o bien,
+  guardar la contraseña actual y cambiarla en otro momento
+  seleccionando la opción 3 Password, accesible desde el menú del
+  panel de configuración del Manager y del IPS indistintamente.
+
+  [-- Image: Image14 --]
+
+  Una vez que haya introducido su Password y haya pulsado la tecla
+  OK, el sistema procederá a crear las particiones y a realizar la
+  instalación de los paquetes del asistente en su disco duro.
+
+  Advertencia
+
+  El Manager se configura por defecto en la franja horaria UTC
+  para evitar desfases en la sincronización entre los sensores y
+  el Manager que pueden provocar errores en el sistema.
+
+ <title>Instalación de los paquetes y reinicio del sistema </title>
+
+  Una vez que haya insertado el password, se procederá a la
+  instalación de los paquetes de instalación del asistente
+  redBorder Installer. Espere hasta que la barra de progreso le
+  indique que la instalación se ha completado al 100%.
+
+  Este proceso puede durar unos minutos. No pulse ninguna tecla ni
+  realice ninguna acción mientras visualice las siguientes
+  pantallas:
+
+  [-- Image: Image15 --]
+
+  [-- Image: Image13 --]
+
+  [-- Image: Image28 --]
+
+  [-- Image: Image71 --][-- Image: Image29 --]
+
+  [-- Image: Image70 --]
+
+  [-- Image: Image16 --]
+
+  [-- Image: Image17 --]
+
+Una vez instalados los paquetes, el programa arranca los últimos scripts para finalizar esta etapa. 
+A continuación, comienza el reinicio automático. Durante unos segundos visualizará las siguientes pantallas.  No pulse ninguna tecla ni realice ninguna acción hasta que este proceso haya finalizado. 
+
+   <title>Configuración del Manager</title>
+  -------------------------
+
+Llegados a este punto podemos decir que la instalación del asistente para la implantación de la solución redBorder IPS ha finalizado con éxito. 
+
+<para>Tras el reinicio automático del sistema, accederemos a la siguiente pantalla [file:///home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/instalacion-manager/6.tiff]
+Loguearse con el usuario que tiene mayores permisos: root.</para>
+
+NOTA
+
+Para mayor seguridad, le recomendamos la asignación de tres niveles de usuarios/permisos entre las personas que se vayan a encargar del control del sistema redBorder IPS.
+ <title>Usuarios</title>
+ROOT: posee todos los permisos. Es el superadministrador del sistema.
+ADMIN: usuario que solo tiene acceso al menú de configuración del sistema, pero que no posee permisos para modificar ficheros. 
+REDBORDER: Este usuario tiene un significado distinto para el manager que para los sensores:
+• Manager.- Usuario utilizado para registrar los sensores.
+• Sensor.- Usuario utilizado cuando el manager quiere comunicarse con los sensores.
+
+Introducir Password. Esta coincide con la Password que usted haya introducido durante el proceso de instalación del redBorder Community Installer. 
+
+Nota: Recuerde que puede cambiar la contraseña en cualquier momento
+  seleccionando la opción 3 Password, accesible desde el menú del
+  panel de configuración del Manager y del IPS indistintamente.
+
+
+Una vez que el usuario se haya logueado comienza la fase de <b>configuración del Manager</b> para ponerlo en red. 
+[file:///home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/instalacion-manager/7.tiff]
+ 
+Insertar el comando <b>rb_sysconf</b> para lanzar el menú de configuración del Manager.  
+
+
+ <title>Menú de configuración del Manager</title>
+
+Una vez ha insertado el comando <b>rb_sysconf</b> accederá al Menú de Configuración redBorder desde el que configurar el Manager para ponerlo en red. En el menú y submenú encontrará las siguientes opciones: 
+
+1)System Configuration: desde esta opción usted podrá definir y modificar una serie de ajustes básicos del sistema como el nombre, hora, tipo de teclado, etc.
+2) Network Configuration: esta es la opción desde la cual se realizan todas las configuraciones de red para la correcta implantación de la solución redBorder IPS. Recuerde que, <b>para poner en funcionamiento el Manager, se necesita por lo menos una conexión de red.</b> 
+3)Passwords: acceda a esta opción si desea visualizar o modificar sus contraseñas.  
+4) Backup System: permite realizar una copia de seguridad de las configuraciones definidas para el Manager.
+q) quit: Salir. 
+
+[file:///home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/instalacion-manager/c-5.tiff]
+
+
+
+ <title>Pasos para la configuración del Manager</title>
+  ---------------------------------------
+Para que la solución redBorder IPS funcione correctamente, es necesario, en primer lugar poner el Manager en red. Para ello, el usuario tenddrá que realizar la <b>Configuración de la red</b>, seleccionado la opción <b>Network Configuration</b> mediante la inserción del número <b>2</b> una vez que haya accedido al asistente de configuración redBorder. Pulsar Enter. A continuación visualizará las siguientes opciones:
+
+1) Management Network Configuration: seleccione esta opción para configurar la red de gestión mediante la creación de un bond. 
+2) DNS and domain settings: esta opción nos permite realizar las siguientes acciones:
+
+Indicar el nombre de la máquina
+Establecer el Dominio DNS
+Asignar máscara (Netmask)
+Asignar pasarela (Gateway)
+
+i) info: facilita información sobre el proceso de configuración el Manager.
+a) apply: aplicar cambios.
+q) quit: Salir.  
+
+
+[file:///home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/instalacion-manager/c-6.tiff]
+
+1. Creación de bonds y asignación de interfaz de gestión
+
+Seleccione la opción <b>Management Network Configuration</b> insertando el número <b>1</b> y pulsando <b>Enter</b>. A continuación viasualizará el menú que le permitirá crear un bond y asignar una interfaz de gestión para el funcionamiento del Manager. 
+
+
+[file:///home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/instalacion-manager/c-7.tiff]
+
+En esta pantalla se muestran el número de bonds que se han creado, los puertos asignados a cada bond y la máscara e IP de cada uno de los bonds. 
+También puede encontrar el siguiente menú:
+
+n)new bonding: seleccionar para crear un nuevo bond.
+d) delete bonding: borrar un bond.
+q) quit: Salir. 
+
+a) Creación de un nuevo bond y asignación de puertos
+
+En este paso, el usuario realizará las siguientes acciones:
+
+  -Creación del bonding y asignación de interfaz de gestión: 
+   -Asignación de puertos
+   -Asignación Dirección IP
+   -Asignación Máscara
+   -Asignación Pasarela
+   -Asignación Ruta
+
+Para la selección de puertos, se visualizará un listado con información muy valiosa y detallada, que ayudará al administrador a decidir qué puertos son los que quiere asignarle al bond. 
+
+Para ilustrar este proceso crearemos un bond (bond 0) y le asignaremos 1 puerto.
+ 
+Para comenzar con el proceso de creación del bond, seleccione la opción n que aparece en el submenú lateral derecho de la pantalla.
+Una vez que haya revisado los puertos que se encuentran disponibles, seleccione aquel que desea asignar al bond, tal y como aparece en el margen inferior de esta pantalla:
+Introduzca el número de puerto en la línea Insert bonding first port [0]: _
+El número que aparece entre corchetes [] es el que define el sistema por defecto. Para seleccionar este número, pulse Enter. 
+
+[file:///home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/instalacion-manager/c-8.tiff]
+
+b) Añadir un nuevo puerto al bond
+
+El sistema le hará la siguiente pregunta: Insert second port (y/N):_
+La opción que viene predeterminada por defecto aparece en mayúscula. Recuerde que si NO desea añadir un nuevo puerto tan solo tiene que pulsar la tecla Enter. 
+En caso de que desee insertar un nuevo puerto, teclee y.  
+
+c) Configuración de la red del bonding
+
+Una vez que ha realizado la asignación del segundo puerto al nuevo bond (bond0), el sistema le pedirá que introduzca los siguientes datos:
+
+Dirección IP 
+Máscara de gestión
+Pasarela 
+Ruta
+
+Si su equipo utiliza protocolo DHCP le será asignada una dirección IP por defecto. Pulsar Enter para seleccionar la IP, máscara y pasarela asignadas por el sistema. 
+En caso contrario, introduzca manualmente estos valores.  
+
+El sistema también le otorga una ruta por defecto para el bonding creado. Para insertar una ruta manualmente, seleccione la opción y en la pregunta <b>Insert a route for this bonding (y/N)?:_<b> e indique la ruta a continuación. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/25.png]
+
+Una vez que haya terminado con este proceso, visualizará un mensaje avisándole de que el Bonding se ha creado con éxito. 
+
+Nota
+
+Recuerde: 
+Selección de opciones predeterminadas: Enter
+Para introducir una IP, máscara o pasarela diferentes a las asignadas por defecto, introdúzcalas a continuación.
+
+
+Advertencia
+En caso de que su servidor utilice le protocolo DHCP, la asignación de IP es automática. En caso contrario, deberá introducirla de manera manual.  
+
+
+d) Finalizar el proceso de creación del bond
+
+Pulsar Enter para finalizar el proceso de creación del bond y asignar la ruta definida por defecto. 
+A continuación, el sistema le mostrará un mensaje de creación correcta del bond.
+Antes de aplicar cambios y finalizar el proceso de creación del bond, visualizará una pantalla con un listado que incluye los siguientes elementos: 
+
+Bonds 
+Puertos asignados al bond
+IP/ máscara del bond
+Ruta o pasarela del bond
+ 
+
+En la siguiente pantalla el sistema le pedirá que seleccione la opción a para aplicar los cambios realizados y dar por finalizada la creación del bond. 
+
+d) Aplicar cambios
+
+Para que las modificaciones realizadas queden guardadas, debe realizar la acción de aplicar cambios, seleccionando la opción  a
+Puede borrar en cualquier momento el/ los bonds creados seleccionado la opción delete bonding, insertando la letra d
+Para salir del menú principal de configuración de red, seleccionar la opción quit con la letra q
+
+
+[file:///home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/instalacion-manager/c-9.tiff]
+
+  Configuración DNS y dominio 
+  ---------------------------
+
+  En el menú de configuración de red encontramos la opción de DNS
+  and domain settings. Para comenzar el proceso, seleccionar la
+  opción 2
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/28.png]
+
+  Para realizar la configuración correctamente, el usuario deberá
+  introducir:
+
+  Nombre de Dominio
+
+  Dirección DNS primaria
+
+  Dirección DNS secundaria (opcional)
+
+  Una vez introducida esta información, el sistema avisará de que
+  se ha aplicado esta configuración de manera correcta.
+
+
+  <title>¿Cuál es el siguiente paso?: configuración y registro de los sensores en el Manager<title>
+
+  ¡Enhorabuena! Ha instalado correctamente el Manager. A
+  continuación, para finalizar la instalación del redBorder IPS
+  v.3-Community solo quedan tres pasos:
+
+  1) Descarga e instalación de los paquetes del redBorder Community
+  Installer y ajustes básicos.
+
+  2) Configuración de los sensores IPS.
+
+  3) Registro de los sensores en el Manager.
+
+  
+  <title>Proceso de configuración de los sensores IPS</title>
+  ============================================================
+
+  El proceso de instalación y registro de los sensores comprende
+  las siguientes fases:
+
+  
+  1) Descarga e instalación de los paquetes del redBorder Community
+  Installer y ajustes básicos.
+
+  2) Configuración de los sensores IPS.
+
+a)  Configuración de la red de gestión.
+  -Creación del bond o puerto y asignación de interfaz de gestión
+  -Configuración de los segmentos o interfaces de red en los que
+  van a colocarse los sensores.
+b)Configuración DNS y dominio.
+
+  3) Registro de los sensores en el Manager.
+
+
+ <title>Descarga e instalación de los paquetes del redBorder Community
+  Installer y ajustes básicos</title>
+
+  Ajustes básicos
+
+Antes de comenzar con el proceso de configuración de los sensores IPS, se deben desgargar e instalar un conjunto de paquetes así como realizar una serie de ajustes básicos de manera similar a cómo se hizo para la configuración del Manager. 
+
+Para ello, seleccionar entre las opciones del menú del instalador la
+  opción 2) Install Sensor Community IPS
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/01.png]
+
+
+A continuación visualizará una pantalla de arranque del programa
+de instalación. Espere unos segundos para visualizar las
+pantallas de ajustes básicos: idioma, teclado, franja horaria.
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/02.png]
+
+Los ajustes que deberá realizar son los siguientes: 
+ 
+  Selección del idioma
+
+  Selección del teclado
+ 
+  Selección franja horaria
+
+  Insertar Password
+
+  Pasaremos rápidamente por estos pasos para ir directamente a la
+  configuración de los sensores.
+
+
+  a) Selección de idioma
+
+  Seleccione el idioma con el que desea operar a partir de este
+  momento.
+
+ [/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/03.png]
+
+  b) Selección tipo de teclado: elija el tipo de teclado que
+  quiere utilizar durante el proceso. Aparecerá seleccionado por
+  defecto el teclado americano [US] debido a su amplia
+  compatibilidad.
+
+  [/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/04.png]
+
+c) Selección franja horaria:
+
+  El sistema está configurado por defecto en la franja horaria UTC para evitar desfases entre este y los sensores.  Ambos utilizan sistemas de
+  cifrado de clave pública, muy sensibles a cualquier variación
+  temporal.
+
+ En este caso, usted puede seleccionar la franja que corresponda a su hora local o a aquella que le sea de mayor utilidad para el seguimiento de los eventos. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/05.png]
+
+  d) Insertar Password
+
+  Elegir e insertar una password. Esta, será la clave con la que
+  opere a partir de ahora. Puede ser modificada en cualquier otro
+  momento.
+
+  Confirmar password. Volver a introducir la clave para verificar
+  que la conoce y que no ha cometido ningún error tipográfico.
+
+  En caso de que la clave sea débil o con poca fortaleza, el 	
+  programa le avisará mediante una ventana emergente.
+
+  Si lo desea, puede insertar una contraseña más fuerte o bien,
+  guardar la contraseña actual y cambiarla en otro momento
+  seleccionando la opción 3 Password, accesible desde el menú del
+  panel de configuración del Manager y del IPS indistintamente.
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/06.png]
+
+  Una vez que haya introducido su Password y haya pulsado la tecla
+  OK, el sistema procederá a crear las particiones y a realizar la
+  instalación de los paquetes del asistente en su disco duro.
+
+
+ <title>Instalación de los paquetes y reinicio del sistema </title>
+
+  Una vez que haya insertado el password, se procederá a la
+  instalación del asistente
+  redBorder Installer. Espere hasta que la barra de progreso le
+  indique que la instalación se ha completado al 100%.
+
+  Este proceso puede durar unos minutos. No pulse ninguna tecla ni
+  realice ninguna acción mientras visualice las siguientes
+  pantallas:
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/07.png]
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/08.png]
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/09.png]
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/10.png]
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/11.png]
+
+
+
+
+Una vez instalados los paquetes, el programa arranca los últimos scripts para finalizar esta etapa. 
+A continuación, comienza el reinicio automático. Durante unos segundos visualizará las siguientes pantallas.  No pulse ninguna tecla ni realice ninguna acción hasta que este proceso haya finalizado. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/12.png]
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/13.png]
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/12.png]
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/13.png]
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/14.png]
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/15.png]
+
+--------------------------
+ <title>Configuración de los sensores IPS</title>
+  -------------------------
+
+Al finalizar la instalación del asistente para la configuración de los sensores IPS <b>comienza el proceso de puesta en red de los sensores</b>. Tras terminar esa fase, se procede al Registro de los sensores en el Manager lo uqe implica la finalización del proceso de implantación de la solución redBorder IPS. 
+
+<para>Tras el reinicio automático del sistema, accederemos a la siguiente pantalla:
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/16.png]
+
+Loguearse con el usuario que tiene mayores permisos: root.</para>
+
+NOTA
+RECUERDE
+
+Para mayor seguridad, le recomendamos la asignación de tres niveles de usuarios/permisos entre las personas que se vayan a encargar del control del sistema redBorder IPS.
+ <title>Usuarios</title>
+ROOT: posee todos los permisos. Es el superadministrador del sistema.
+ADMIN: usuario que solo tiene acceso al menú de configuración del sistema, pero que no posee permisos para modificar ficheros. 
+REDBORDER: Este usuario tiene un significado distinto para el manager que para los sensores:
+• Manager.- Usuario utilizado para registrar los sensores.
+• Sensor.- Usuario utilizado cuando el manager quiere comunicarse con los sensores.
+
+Introducir Password. Esta coincide con la Password que usted haya introducido durante el proceso de instalación del redBorder Community Installer. 
+
+Nota: Recuerde que puede cambiar la contraseña en cualquier momento
+  seleccionando la opción 3 Password, accesible desde el menú del
+  panel de configuración del Manager y del IPS indistintamente.
+
+
+Una vez que el usuario se haya logueado comienza la fase de <b>configuración de los sensores IPS</b> o su puesta en red. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/17.png]
+ 
+Insertar el comando <b>rb_sysconf</b> para lanzar el menú de configuración de los sensores IPS. 
+  
+
+ <title>Menú de configuración de los sensores IPS</title>
+
+Una vez ha insertado el comando <b>rb_sysconf</b> accederá al Menú de Configuración redBorder desde el que configurar los sensores para ponerlos en red.
+El menú del panel de inicio del programa de configuración de los sensores IPS consta de 5 opciones:
+
+ 
+1)System Configuration: desde esta opción usted podrá definir y modificar una serie de ajustes básicos del sistema como el nombre, hora, tipo de teclado, etc.
+2) Network Configuration: esta es la opción desde la cual se realizan todas las configuraciones de red para la correcta implantación de la solución redBorder IPS. Recuerde que, <b>para poner en funcionamiento el Manager, se necesita por lo menos una conexión de red.</b> 
+3)Passwords: acceda a esta opción si desea visualizar o modificar sus contraseñas.  
+4) Backup System: permite realizar una copia de seguridad de las configuraciones definidas para el Manager.
+5) Actualización de las reglas del Manager: seleccione esta opción para forzar la descarga de las reglas del Manager. (Opcional).
+q)quit: Salir. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/18.png]
+
+<title>Pasos para la configuración de los sensores IPS</title>
+  ---------------------------------------
+Para que la solución redBorder IPS funcione correctamente, es necesario, en primer lugar poner los sensores en red. Para ello, el usuario tendrá que realizar la <b>Configuración de la red</b>, seleccionado la opción <b>Network Configuration</b> mediante la inserción del número <b>2</b> una vez que haya accedido al asistente de configuración redBorder. Pulsar Enter. 
+No es posible realizar el registro en el Manager sin que antes, se haya realizado este paso.
+
+Este proceso comprende las siguientes acciones:
+
+a)  Configuración de la red de gestión.
+  -Creación del bonding y asignación de interfaz de gestión: 
+   -Asignación de puertos
+   -Asignación Dirección IP
+   -Asignación Máscara
+   -Asignación Pasarela
+   -Asignación Ruta
+
+  -Configuración de los segmentos o interfaces de red en los que
+  van a colocarse los sensores.
+b)Configuración DNS y dominio.
+-Indicar el nombre del dominio
+-Establecer el Dominio DNS
+-Asignar DNS primaria 
+-Asignar DNS secundaria (opcional)
+
+
+  Nota
+
+  El orden que se siga en los pasos que comprenden la
+  configuración de la red de gestión, es indiferente. El orden
+  indicado en este manual de instalación es el que se considera
+  más óptimo.
+
+
+  Importante
+
+  En caso de que el sistema se instale en un equipo real y no
+  sobre una virtualización, y este, disponga de más de una tarjeta de red, el usuario deberá elegir cuál será el bond de gestión. 
+
+  <b>Asignación automática de segmentos con bypass<b>
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/18.png]
+
+Nota
+
+  Si es la primera vez que realizamos la configuración de los
+  sensores, el sistema identificará aquellos segmentos de tipo
+  bypass y los asignará de manera automática.
+
+1. Creación de bonding y asignación de interfaz de gestión
+
+Seleccione la opción <b>Network Configuration</b> insertando el número <b>2</b> y pulsando <b>Enter</b>. A continuación visualizará el menú específico de configuración de los sensores IPS que le permitirá crear los bonds o segmentos necesarios para poner en red los sensores IPS entre otras acciones. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/28.png]
+
+Para comenzar el proceso de creación de bonding, seleccionar la opción <b>Management Network Configuration</b> insertando el número 1. 
+
+En esta pantalla se muestran el número de bonds que se han creado, los puertos asignados a cada bond y la máscara e IP de cada uno de los bonds. 
+En ella encontrará el siguiente submenú:
+
+n)new bonding: seleccionar para crear un nuevo bond.
+d) delete bonding: borrar un bond.
+q) quit: Salir. 
+
+Para comenzar la creación del bonding seleccione la opción <b>new bonding</b> insertando la letra n. 
+
+En este paso, el usuario realizará las siguientes acciones:
+
+Creación de un bond. (Máximo 4 bonds).
+Selección y asignación de puertos al bond.
+Cofiguración de la interfaz de gestión para el/ los bonds creados.
+
+Para la selección de puertos, se visualizará un listado con información muy valiosa y detallada, que ayudará al administrador a decidir qué puertos son los que quiere asignarle al bond. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/20.png]
+
+Nota
+
+  Recuerde:
+
+  Selección de opciones predeterminadas: Enter
+
+
+<title>a) Creación de un nuevo bond y asignación de puertos</title>
+
+  Para ilustrar este proceso crearemos un bond (bond 0) y le
+  asignaremos 2 puertos.
+
+Seleccione la opción n que aparece en el submenú lateral derecho de la pantalla.
+
+  Una vez que haya revisado los puertos que se encuentran
+  disponibles, seleccione aquel que desea asignar al bond, tal y
+  como aparece en el margen inferior de la pantalla anterior. 
+
+  Introduzca el número de puerto en la línea Insert bonding first
+  port [0]: _
+
+  El número que aparece entre corchetes [] es el que define el
+  sistema por defecto. Para seleccionar este número, pulse Enter.
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/21.png]
+
+El puerto seleccionado desaparecerá de la opción de puertos disponibles. 
+
+  Importante
+
+  El sistema solo permite la creación de un máximo de 4 bonds:
+  (0-3).
+
+
+
+  b) Añadir un nuevo puerto al bond
+
+  El sistema le hará la siguiente pregunta: Insert second port
+  (y/N):_
+
+  La opción que viene predeterminada por defecto aparece en
+  mayúscula. Recuerde que si NO desea añadir un nuevo puerto tan
+  solo tiene que pulsar la tecla Enter.
+
+  En caso de que desee insertar un nuevo puerto, teclee y.
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/21.png]
+
+
+  Introduzca el número de puerto en la línea Insert bonding second
+  port [1]: _
+
+  El número que aparece entre corchetes [] es el que define el
+  sistema por defecto. Para seleccionar este número, pulse Enter.
+
+c) Configuración de la red del bonding
+
+Una vez que ha realizado la asignación del segundo puerto al nuevo bond (bond0), el sistema le pedirá que introduzca los siguientes datos:
+
+Dirección IP 
+Máscara de gestión
+Pasarela 
+Ruta
+
+Si su equipo utiliza protocolo DHCP le será asignada una dirección IP por defecto. Pulsar Enter para seleccionar la IP, máscara y pasarela asignadas por el sistema. 
+En caso contrario, introduzca manualmente estos valores.  
+
+El sistema también le otorga una ruta por defecto para el bonding creado. Para insertar una ruta manualmente, seleccione la opción y en la pregunta <b>Insert a route for this bonding (y/N)?:_<b> e indique la ruta a continuación. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/25.png]
+
+Una vez que haya terminado con este proceso, visualizará un mensaje avisándole de que el Bonding se ha creado con éxito. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/26.png]
+
+
+
+ d) Finalizar el proceso de creación del bonding
+
+  Antes de aplicar cambios y finalizar el proceso de creación del
+  bonding el sistema le mostrará una tabla en la que figuran el nuevo bond creado (bond0) junto con los puertos que le han sido asignados, la IP y Máscara y la ruta asignadas manualmente o por defecto. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/23.png]
+
+
+ e) Aplicar cambios
+
+  Para que las modificaciones realizadas queden guardadas, debe
+  realizar la acción de aplicar cambios, seleccionando la opción
+  a
+
+  Puede borrar en cualquier momento el/ los bonds creados
+  seleccionado la opción delete bonding, insertando la letra d
+
+  Para volver al menú principal de configuración de red,
+  seleccionar la opción quit con la letra q
+
+  Configuración DNS y dominio 
+  ---------------------------
+
+  En el menú de configuración de red encontramos la opción de DNS
+  and domain settings. Para comenzar el proceso, seleccionar la
+  opción 2
+
+  Para realizar la configuración correctamente, el usuario deberá
+  introducir:
+
+  Nombre de Dominio
+
+  Dirección DNS primaria
+
+  Dirección DNS secundaria (opcional)
+
+  Una vez introducida esta información, el sistema avisará de que
+  se ha aplicado esta configuración de manera correcta.
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/28.png]
+
+Para finalizar el proceso, no es necesario aplicar cambios, seleccionar la opción quit insertando la letra q para volver al menú principal de configuración de red. 
+
+  
+Configuración de los segmentos de red
+  -------------------------------------
+
+  Seleccionar en el Menú de Configuración de Red la opción Segment
+  settings ingresando el número 3. 
+
+En esta pantalla se muestran el número de segmentos que se han creado, los puertos asignados a cada segmento y si estos disponen o no de soporte por bypass.  
+En ella encontrará el siguiente submenú:
+
+f) force bypass autoassign: forzar la asignación automática de puertos con bypass
+n) new segment: seleccionar para crear un nuevo segmento.
+d) delete bonding: borrar un segmento.
+q) quit: Salir. 
+
+Para comenzar la creación del segmento seleccione la opción <b>new segment/b> insertando la letra n. 
+
+
+  Para la creación de los segmentos, el usuario deberá realizar
+  las siguientes acciones:
+
+  Asignación de interfaces de tipo bypass a los segmentos
+  (opcional).
+
+  Creación de un segmento (Máximo 16 segmentos).
+
+  Selección y asignación de puertos al segmento.
+
+  Para la selección de puertos, se visualizará un listado con
+  información muy valiosa y detallada, que ayudará al
+  administrador a decidir qué puertos son los que quiere
+  asignarle al bond.
+
+  a) Asignación de interfaces con bypass a los segmentos
+
+  Como vimos en el proceso de configuración de la red de gestión,
+  si el sistema detectase interfaces de tipo bypass, estas se
+  asignan automáticamente a los segmentos.
+
+  Existen dos modalidades más para asignar puertos o interfaces
+  con bypass a los segmentos:
+
+  1) Forzar autoasignación de bypass: seleccionar la opción Force
+  bypass auto assign en el menú de configuración de los
+  segmentos, introduciendo la letra f
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/32.png]
+
+  2) Asignación manual: seleccionando los puertos con bypass del
+  listado de puertos disponibles que se visualizará en el proceso
+  de creación de los segmentos.
+
+  b) Creación de un nuevo segmento y asignación de puertos
+
+  Para ilustrar este proceso crearemos un segmento (segment 0) y
+  le asignaremos 2 puertos.
+
+  Para comenzar con el proceso de creación del segmento, seleccione la
+  opción n que aparece en el submenú lateral derecho de la
+  pantalla.
+
+  Una vez que haya revisado los puertos que se encuentran
+  disponibles, seleccione aquel que desea asignar al segmento tal
+  y como aparece en el margen inferior de la pantalla anterior.
+
+  Introduzca el número quele va a dar al segmento en la línea Insert segment number
+  (0-15) [0]: _
+
+  El número que aparece entre corchetes [] es el que define el
+  sistema por defecto. Para seleccionar este número, pulse Enter.
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/29.png]
+
+Asigne un puerto indicando el número en la línea Insert segment first port [2]:_
+
+ El puerto asignado anteriormente al segmento desaparecerá del listado de puertos
+  disponibles.
+
+  Importante
+
+  El sistema solo permite la creación de un máximo de 16 segmentos
+  (0-15).
+
+
+
+  c) Añadir un segundo puerto al segmento
+
+  Una vez que haya asignado el primer puerto al segmento, el
+  sistema le planteará la posibilidad de asignar un segundo
+  puerto al segmento: Assign second port to the segment (Y/n):_
+
+  La opción que viene predeterminada por defecto aparece en
+  mayúscula.
+
+  Recuerde que si desea asignar un nuevo puerto tan solo tiene que
+  pulsar la tecla Enter.
+
+  En caso de que no desee asignar un nuevo puerto, teclee n.
+  Una vez que haya revisado los puertos que se encuentran
+  disponibles, seleccione aquel que desea asignar al segmento tal
+  y como aparece en el margen inferior de la pantalla anterior.
+
+  Introduzca el número de puerto en la línea Insert segment second port [3]: _
+
+ [/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/30.png]
+
+  Una vez que se han asignado los dos puertos a un segmento, el
+  sistema le avisará de que el segmento ha sido creado
+  correctamente.
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/31.png]
+
+  d) Finalizar el proceso de creación de los segmentos
+
+  Antes de aplicar cambios y finalizar el proceso de creación del
+  segmento, visualizará una pantalla con un listado que incluye
+  los siguientes elementos:
+
+  Segmentos
+
+  Puertos asignados al segmento
+
+  Si dispone o no de interfaces bypass
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/32.png]
+
+  Varios segmentos creados
+
+  En caso de que haya creado más de un segmento y que estos,
+  tengan signados puertos con bypass, visualizará esa información
+  de este modo:
+
+  [/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/34.png]
+
+  Aplicar cambios
+
+  Para que las modificaciones realizadas queden guardadas, debe
+  realizar la acción de aplicar cambios, seleccionando la opción
+  a
+
+  Puede borrar en cualquier momento el/ los segementos creados
+  seleccionado la opción delete segment, insertando la letra d
+
+  Para volver al menú principal de configuración de red,
+  seleccionar la opción quit con la letra q
+
+  Equipos gestionados con IPMI
+  ----------------------------
+
+  En caso de que el usuario disponga de un equipo gestionado a
+  través del sistema IPMI, tiene la posibilidad de insertar la IP correspondiente al IPMI de su equipo para que los sensores se conecten con él.  
+
+Seleccionar en el Menú de Configuración de Red la opción IPMI
+  Network configuration wizard ingresando el número 4.
+
+ [/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/37.png]
+
+Aplicar cambios
+
+  Para que las modificaciones realizadas queden guardadas, debe
+  realizar la acción de aplicar cambios, seleccionando la opción
+  a
+  Puede consultar la configuración de la IPMI en cualquier momento seleccionando la opción info insertando la letra i.
+
+  Para volver al menú principal de configuración de red,
+  seleccionar la opción quit con la letra q
+
+Finalización de la configuración de los sensores IPS
+
+Al aplicar cambios, el sistema terminará de realizar las configuraciones necesarias para comenzar el registro de los sensores.
+
+ [/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/35.png]
+ [/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/36.png]
+
+  Registro de los sensores en el Manager
+=================================================
+
+  Para finalizar el proceso de instalación de los sensores IPS, el
+  último paso que debe llevarse a cabo es el Registro de los
+  sensores en el Manager.
+
+  Una vez que se haya terminado con la fase de configuración de los sensores, el sistema lanzará el asistente de Registro de los sensores en el Manager. 
+En él visualizará un mensaje en el que se indica que los sensores aún no han sido registrados en el Manager. 
+
+ [/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/38.png]
+
+En el menú de resgitro de los sensores en el Manager encontramos las siguientes opciones:
+
+1) Hostame [rbsensor]: Asignar un nombre al sensor 
+
+2) Set local time: configurar hora local 
+
+3)IP adress for rB Master Manager [127.0.0.1]: Introducir la IP del Manager
+
+4)Register rB:   Registro de los sensores en el manager
+  Sensor/Manager. Hasta que no se haya completado el proceso de
+  registro el usuario visualizará el siguiente mensaje rotulado
+  en rojo: (not registered yet)
+
+<title>Proceso de registro de los sensores en el Manager</title>
+  
+a) Asignar nombre al sensor (Hostname)
+  -----------------------------------
+
+  Seleccionar la opción Hostname [rbsensor] del menú de resgitro de los sensores en el Manager insertando el número 1. 
+
+  A continuación, en la línea Insert Hostname [rbsensor]:_
+  escribir el nombre que se desea dar al sensor que se va a
+  registrar en el Manager. Recuerde que, a partir de este
+  momento, este es el nombre que visualizará en la web cuando
+  acceda al listado de sensores IPS.
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/38.png]
+
+  Recuerde introducir un nombre coherente para el sensor. Evite
+  utilizar el nombre de “Sensor”, ya que ese es el nombre
+  genérico que utiliza el Manager y que a la larga, podría
+  causar confusión. Unknown Author2014-11-20T11:40:56
+
+  IMPORTANTE
+
+  El sistema le pedirá que verifique que el nombre elegido es el
+  correcto, en ese caso pulse Enter.
+
+  Si desea modificarlo, inserte la letra n.
+
+  El sistema procederá a cambiar el nombre del sensor. Para
+  continuar, y regeresar al menú de configuración del sistema
+  redBorder, pulse cualquier tecla tal y como se indica Press a
+  key to continue..._
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/39.png]
+
+
+
+  b) Configurar hora local
+  ---------------------
+
+  Seleccionar la opción Set local time del menú de resgitro de los sensores en el Manager insertando el número 2.
+
+  Insertar fecha y hora de la franja horaria correspondiente al país en el que se encuentre, esta debería coincidir con la seleccionada en la fase de ajustes básicos durante el proceso de configuración de los sensores IPS. 
+
+  El sistema le indica dos formatos posibles para la inserción de
+  la fecha y la hora (Y=año):
+
+  [HH:mm] o [YYYY/MM/DD]
+
+  [YYYY/MM/DD HH:mm]
+
+Pulsar Enter para continuar con el proceso de registro. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/40.png]
+
+  
+c) Introducir la IP del Master Manager 
+  --------------------------------------
+
+  Seleccionar la opción IP adress for rB Master Manager
+  [127.0.0.1] Seleccionar la opción Set local timedel menú de resgitro de los sensores en el Manager insertando el número 3.
+
+  En primer lugar, insertar la dirección IP o nombre de dominio
+  del equipo utilizado por el usuario.
+
+  El sistema realizará una serie de comprobaciones para verificar
+  si es alcanzable. Este proceso puede llevar unos segundos.
+
+  El sistema sincronizará la hora de los equipos y a continuación,
+  reiniciará un par de servicios con el objetivo de finalizar la
+  sincronía horaria.
+
+  ¡Enhorabuena! Su equipo está preparado para realizar el
+  registro de los sensores en el Manager.
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/41.png]
+
+
+  Para continuar, y regeresar al menú de configuración del sistema
+  redBorder, pulse cualquier tecla tal y como se indica Press a
+  key to continue..._
+
+ d) Registro de los sensores en el Manager
+  ---------------------------------------
+
+  Este es el último paso que da por finalizado el proceso de implantación de la solución redBorder IPS.
+
+  A partir de este momento, usted podrá trabajar directamente
+  desde la aplicación de gestión IPS, en cuyo dashboard visualizará de manera gráfica
+  todos los eventos de tráfico captados por los
+  sensores IPS. En esta aplicación podrá crear informes, visualizar los eventos o configurar las reglas del Manager entre otras acciones.  
+
+
+Pasos para el registro de los sensores en el Manager
+
+  Los pasos que se van a seguir para completar el proceso de
+  registro de los sensores en el Manager son los siguientes:
+
+1) Indicar si se desea tener una salida de depuración: el sistema
+  formulará la siguiente pregunta Would you like to have a debug
+  output? Seleccionar la opción predeterminada (No) insertando la
+  letra n.
+
+2) Insertar password: indicar la clave que se ha introducido en la fase de ajustes básicos para la configuración del Manager. 
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/42.png]
+
+3) Sincronización temporal (automático)entre el Manager y los sensores: este proceso puede llevar
+  unos segundos en completarse.
+
+Tras la realización de estos pasos, el sistema le avisará con un
+  mensaje de que el sensor ha sido registrado con éxito.
+
+  Sensor registered succesfully with chef server
+ [/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/44.png]
+
+
+
+ ADVERTENCIA
+
+Una vez registrado el sensor no cambiar el nombre del mismo o
+  HOSTNAME ya que el sistema utilizará este nombre para realizar
+  el registro. Para realizar cambios en el hostname será
+  necesario deshacer todo el proceso de registro y comenzarlo de
+  nuevo.
+
+  IMPORTANTE
+
+  Para continuar, y regresar al menú de configuración del sistema
+  redBorder, pulse cualquier tecla tal y como se indica Press a
+  key to continue..._
+
+  En él menú de registro de los sensores en el Manager redBorder puede
+  comprobar que el sensor ha sido registrado con éxito: (Registered)
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/45.png]
+
+  Para salir del asistente de registro de los sensores en el
+  Manager, seleccione la opción quit introduciendo la letra q.
+
+  Versión Community del sistema IPS
+  =================================
+
+Enhorabuena, la implantación de la solución redBorder IPS ha llegaod a su término. A partir de este momento puede operar de manera sencilla desde la interfaz de la aplicación.  
+
+  En la siguiente pantalla podrá ver el nombre que le ha asignado
+  al sensor en el paso Asignar nombre al sensor (Hostname).
+
+[/home/raquel/redBOrder/Documentacion-tecnica-eneo-redborder/version-community-horama/IPS/imagenes-install-ips/46.png]
+ 
+
+
+
