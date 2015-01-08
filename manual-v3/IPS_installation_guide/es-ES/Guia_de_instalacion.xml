@@ -3,12 +3,16 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
 <!ENTITY PRODUCT "Documentation">
 <!ENTITY BOOKID "manual">
-<!ENTITY YEAR "2012">
+<!ENTITY YEAR "2014">
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <book>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Book_Info.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Preface.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter1.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter2.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter3.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter4.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Chapter5.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Revision_History.xml"/>
 </book>

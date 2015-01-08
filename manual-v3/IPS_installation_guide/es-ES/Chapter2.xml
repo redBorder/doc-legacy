@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2014">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+	<title>Proceso de Configuración del Manager</title>
+	<para>Denominamos Manager al sistema central que recibe los eventos
+  recogidos por los sensores. Permite además, realizar las
+  siguientes funciones:</para>
+	<para>El proceso de configuración del Manager comprende las siguientes acciones:</para>
+    <orderedlist numeration="arabic">
+		<listitem>
+			<para>Descarga e instalación de los paquetes del redBorder Community Installer y ajustes básicos.</para>
+	    </listitem>
+	    <listitem>
+			<para>Configuración del Manager (puesta en red):</para>
+			<para><emphasis role="bold">Configuración de la red de gestión:</emphasis> creación de un bond.</para>	
+			<para><emphasis role="bold">Configuración de la red de servicio: </emphasis> configuración DNS y dominio.</para>
+		</listitem>
+	</orderedlist>
+	<section>
+		<title>Descarga e instalación de los paquetes del redBorder Community Installer y ajustes básicos</title>
+		<section>
+			<title>Ajustes básicos</title>
+			<para>La instalación del redBorder Community Installer comprende una serie de ajustes básicos sobre los que pasaremos de manera rápida:</para>
+            <itemizedlist mark="bullet">
+				<listitem>
+					<para>Selección del idioma</para>
+				</listitem>
+				<listitem>
+					<para>Selección del teclado</para>
+				</listitem>
+				<listitem>
+					<para>Insertar Password</para>
+				</listitem>
+			</itemizedlist>
+			<para>Para comenzar con el proceso de instalación y descarga de los paquetes y realizar los ajustes básicos del instalador que permitan la configuración del Manager es necesario seleccionar la opción <keycap>1</keycap> <literal>Install Manager Community IPS.</literal></para>
+            <mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-1.png"/>
+				  </imageobject>
+			</mediaobject>
+			<para><emphasis role="bold">Selección de idioma</emphasis></para>
+			<para>Seleccione el idioma con el que desea operar a partir de este momento.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/3.png"/>
+				</imageobject>
+			</mediaobject>
+			<para><emphasis role="bold">Selección tipo de teclado</emphasis></para>
+			<para>Elija el tipo de teclado que quiere utilizar durante el proceso. Aparecerá seleccionado por defecto el teclado americano [US] debido a su amplia compatibilidad.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/4.png"/>
+				</imageobject>
+            </mediaobject>
+            <para><emphasis role="bold">Insertar password</emphasis></para>
+            <para><emphasis>Elegir e insertar una password.</emphasis> Esta, será la clave con la que opere a partir de ahora. Puede ser modificada en cualquier otro momento. </para>
+            <para><emphasis>Confirmar password.</emphasis> Volver a introducir la clave para verificar que la conoce y que no ha cometido ningún error tipográfico. En caso de que la clave sea débil o con poca fortaleza, el programa le avisará mediante una ventana emergente.</para>
+            <para> Si lo desea, puede insertar una contraseña más fuerte o bien, guardar la contraseña actual y cambiarla en otro momento seleccionando la opción <keycap>3</keycap> <literal>Password</literal>, accesible desde el menú del panel de configuración del Manager y del IPS indistintamente.</para>    
+            <para>Una vez que haya introducido su Password y haya pulsado la tecla <keycap>OK</keycap>, el sistema procederá a crear las particiones y a realizar la instalación de los paquetes del asistente en su disco duro.</para>
+            <mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/5.png"/>
+				</imageobject>
+			</mediaobject>
+			<note>
+				<title>Nota</title>
+				<para>El Manager se configura por defecto en la franja horaria UTC para evitar desfases en la sincronización entre los sensores y el Manager que pueden provocar errores en el sistema.</para>
+            </note>
+        </section>                
+        <section>
+			<title>Instalación de los paquetes y reinicio del sistema</title>
+			<para>Una vez que haya insertado el password, se procederá a la instalación de los paquetes de instalación del asistente redBorder Installer. </para>
+			<para>Espere hasta que la barra de progreso le indique que la instalación se ha completado al 100%. Este proceso puede durar unos minutos. </para>
+			<para>No pulse ninguna tecla ni realice ninguna acción mientras visualice las siguientes pantallas:</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/5-a.png"/>
+				</imageobject>
+			</mediaobject>
+			<para>Una vez instalados los paquetes, el programa arranca los últimos scripts para finalizar esta etapa. A continuación, comienza el reinicio automático. Durante unos segundos visualizará las siguientes pantallas. </para>
+			<para>No pulse ninguna tecla ni realice ninguna acción hasta que este proceso haya finalizado.</para>
+        </section>
+    </section>
+</chapter>
