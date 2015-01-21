@@ -10,7 +10,7 @@
 	<title>¿Qué es redBorder IPS?</title>
 	<para>La solución <emphasis role="bold">redBorder IPS</emphasis>(de sus siglas en inglés <emphasis>Intrusion Prevention System</emphasis>) consiste en un escenario compuesto por una serie de equipos denominados sensores y un equipo central llamado Manager.</para>
 	<para>Los <emphasis role="bold">sensores</emphasis> son sistemas Linux con una distribución totalmente enfocada a la captación y/o prevención de intrusiones en los segmentos de red donde son ubicados. Cualquier amenaza cuya firma específica sea reconocida, el sensor lanzará una alerta y, opcionalmente, bloquerá esa comunicación, generando un evento en el sistema central (manager).</para>
-	<para>El <emphasis role="bold">Manager</emphasis> es un sistema Linux con una distribución totalmente enfocada a la recepción de eventos lanzados desde los sensores, así como lagestión de dichos eventos, inventariado de sensores y configuración de políticas de seguridad a aplicar sobre los sensores (gestión de firmas, políticas y preprocesadores).</para>
+	<para>El <emphasis role="bold">Manager</emphasis> es un sistema Linux con una distribución totalmente enfocada a la recepción de eventos lanzados desde los sensores, así como la gestión de dichos eventos, inventariado de sensores y configuración de políticas de seguridad a aplicar sobre los sensores (gestión de firmas, políticas y preprocesadores).</para>
 	<section>
 		<title>¿Qué es un IDS?</title>
 		<para>Un <emphasis role="bold">IDS</emphasis> (de sus siglas en inglés Intrusion Detection System) es un Sistema de Detección de Intrusiones en la red o redes a proteger en una organización. </para> 
@@ -26,7 +26,7 @@
 			<title>Escenario básico de la solución redBorder IPS</title>
 			<para>Un escenario básico típico propuesto por la solución consiste en un conjunto de sensores dispuestos en diferentes puntos sensibles de la red de la organización. </para>
 			<para>Dichos puntos están formados por enlaces de red, llamados segmentos, por los que circulará el tráfico sensible y que el sensor analizará de manera más o menos transparante, en función del modo de funcionamiento configurado (IPS ó IDS).</para>
-			<para>Para la planificación de la instalación de equipos sensores, se deberán tener en cuenta algunos aspectos fundamentales: <emphasis role="bold">los segmentos bypass</emphasis> (interfaces específicas de red pareadas con soporte bypass) se interpondrán enmedio del tráfico a analizar; <emphasis role="bold">las interfaces de gestión </emphasis> (en forma de bonding) para acceso remoto tanto desde equipos normales como desde el Manager; y <emphasis role="bold">las interfaces de acceso IPMI para conexión SOL (Serial Over Lan), iKVM y comandos ipmi (inicio, reinicio y apagado) </emphasis>. Estas interfaces están explicadas más adelante.</para>
+			<para>Para la planificación de la instalación de equipos sensores, se deberán tener en cuenta algunos aspectos fundamentales: <emphasis role="bold">los segmentos</emphasis> (interfaces específicas de red pareadas, normalmente con soporte bypass) se interpondrán enmedio del tráfico a analizar; <emphasis role="bold">las interfaces de gestión </emphasis> (en forma de bonding) para acceso remoto tanto desde equipos normales como desde el Manager; y <emphasis role="bold">las interfaces de acceso IPMI para la gestión remota del hardware</emphasis> (conexión SOL ó Serial Over Lan, iKVM y comandos ipmi como inicio, reinicio y apagado). Estas interfaces están explicadas más adelante.</para>
 			<para>Para el Manager, al no ser necesario un hardware específico, la única condición es <emphasis role="bold">la existencia de una o más interfaces de red. </emphasis> </para>
 			<para>De esta manera se permite la creación de un bonding para la gestión y conexión con los sensores y otro bonding (opcional) para sus comunicaciones hacia otras redes. Ambos sistemas soportan el estándar 802.1q para virtual LAN (opcional a la hora de configurar).</para>
 			<warning>
@@ -48,17 +48,16 @@
 		<section>
 			<title>Opciones disponibles del menú del instalador</title>
 			<para>Este es el menú principal del instalador de la solución redBorder IPS. </para>
-			<para>En él se contemplan las opciones que le permitirán realizar todas las configuraciones, tanto del Manager como de los sensores para la puesta en funcionamiento de la solución redBorder IPS.</para>
-			<para>Asimismo, encontrará otras opciones muy útiles relacionadas con el funcionamiento de su equipo.</para>
+			<para>En él se contemplan las opciones que le permitirán realizar todas las configuraciones, tanto del Manager como de los sensores para la puesta en funcionamiento de la solución. Asimismo, encontrará otras opciones muy útiles relacionadas con el funcionamiento de su equipo.</para>
             <itemizedlist mark="bullet">
 				<listitem>
-					<para><literal>Install Manager Community IPS:</literal> acceso al menú de configuración del Manager.</para>
+					<para><literal>Install Manager Community IPS:</literal> Realiza la instalación del software de Manager en el equipo.</para>
 				</listitem>
 				<listitem>
-					<para><literal>Install Sensor Community IPS:</literal> acceso al menú de configuración y registro de los sensores IPS.</para>
+					<para><literal>Install Sensor Community IPS:</literal> Realiza la instalación del software de sensor IPS en el equipo.</para>
 			    </listitem>
 				<listitem>
-				    <para><literal>Rescue installed System:</literal> modalidad de inicio de rescate para los casos en que existan problemas de inicio de su máquina. Por ejemplo, si se produce algún problema en un sensor y su máquina no arranca, se crea una partición temporal sistema paralelo (modo de rescate) que permita actuar sobre el sistema de origen y realizar cambios a bajo nivel mediante la línea de comandos.</para>
+				    <para><literal>Rescue installed System:</literal> modalidad de inicio de rescate para los casos en que existan problemas de inicio de su máquina (modo avanzado).</para>
 				</listitem>
 				<listitem>
 					<para><literal>Boot from Local Drive:</literal> arranque desde disco local (por defecto).</para>
