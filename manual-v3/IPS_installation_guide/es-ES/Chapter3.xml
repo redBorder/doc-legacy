@@ -8,7 +8,7 @@
 ]>
 <chapter>
 	<title>Configuración del Manager</title>
-	<para>Una vez que se han descargado todos los paquetes del asistente de instalación, accederemos al menú en el que procederemos a la configuración del Manager.Tras el reinicio automático del sistema, accederemos a la siguiente pantalla:</para>	
+	<para>Una vez que se han descargado todos los paquetes del asistente de instalación, accederemos al menú en el que procederemos a la configuración del Manager. Tras el reinicio automático del sistema, accederemos a la siguiente pantalla:</para>	
 	<mediaobject>
 		<imageobject>
 			<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/6.png"/>
@@ -71,7 +71,7 @@
 		<para>El comando <literal>rb_sysconf</literal> lanza un Menú en el que encontrará las opciones para finalizar la Configuración del Manager mediante su puesta en red.</para>
 		<orderedlist numeration="arabic">
 		 	<listitem>
-				<para><literal>System Configuration:</literal> desde esta opción usted podrá definir y modificar una serie de ajustes básicos del sistema como el nombre, hora, tipo de teclado, etc.</para>
+				<para><literal>System Configuration:</literal> desde esta opción usted podrá definir y modificar una serie de ajustes básicos del sistema como el nombre, hora, etc.</para>
 			</listitem>
 			<listitem>
 				<para><literal>Network Configuration:</literal> esta es la opción desde la cual se realizan todas las configuraciones de red para la correcta implantación de la solución redBorder IPS. Recuerde que, para poner en funcionamiento el Manager, se necesita por lo menos una conexión de red.</para>
@@ -95,13 +95,12 @@
 	<section>
 		<title>Configuración del Manager</title>
 		<para>Para que la solución redBorder IPS funcione correctamente, es necesario, en primer lugar poner el Manager en red.</para>
-		<para>Para ello, el usuario tendrá que realizar la <emphasis role="bold">Configuración de la red</emphasis>, seleccionado la opción <literal>Network Configuration</literal> mediante la inserción del número <keycap>2</keycap> una vez que haya accedido al asistente de configuración redBorder.</para>
-		<para>Pulsar <keycap>Enter</keycap>.</para>
+		<para>Para ello, el usuario tendrá que realizar la <emphasis role="bold">Configuración de la red</emphasis>, seleccionando la opción <literal>Network Configuration</literal> (opción <keycap>2</keycap> del menú de configuración en rb_sysconf).</para>
 		<para>A continuación visualizará una serie de opciones que corresponden a los pasos que se deben seguir para realizar la configuración completa del Manager.</para>
 		<para><emphasis role="bold">Pasos para la configuración del Manager</emphasis></para>
 		<orderedlist numeration="arabic">
 			<listitem>
-				<para><literal>Management Network Configuration:</literal> seleccione esta opción para configurar la red de gestión mediante la creación de un bond.</para>
+				<para><literal>Management Network Configuration:</literal> seleccione esta opción para configurar la red de gestión mediante la creación de un bonding.</para>
 			</listitem>
 			<listitem>			 
 				<para><literal>DNS and domain settings:</literal> esta opción nos permite realizar las siguientes acciones:</para>
@@ -126,17 +125,17 @@
 			</imageobject>
 		</mediaobject>	
 		<section>
-			<title>Management Network Configuration: creación de un nuevo bond y asignación de puertos al Manager</title>
+			<title>Management Network Configuration: creación de un nuevo bonding y asignación de puertos al Manager</title>
 			<para>Seleccione la opción <literal>Management Network Configuration</literal> insertando el número <keycap>1</keycap> y pulsando <keycap>Enter</keycap>. </para>
-			<para>A continuación visualizará el menú que le permitirá crear un bond y asignar una interfaz de gestión para el funcionamiento del Manager.</para>			 
+			<para>A continuación visualizará el menú que le permitirá crear un bonding y asignar una interfaz de gestión para el funcionamiento del Manager.</para>			 
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-7.png"/>
 				</imageobject>
 			</mediaobject>
-			<para>En esta pantalla se muestran el número de bonds que se han creado, los puertos asignados a cada bond y la máscara e IP de cada uno de los bonds. También puede encontrar el siguiente menú:</para>	
-			<para><literal>n) new bonding:</literal>seleccionar para crear un nuevo bond.</para>
-			<para><literal>d) delete bonding:</literal>borrar un bond.</para>
+			<para>En esta pantalla se muestran el número de bonds que se han creado, los puertos asignados a cada bonding y la máscara e IP de cada uno de los bondings. También puede encontrar el siguiente menú:</para>	
+			<para><literal>n) new bonding:</literal>seleccionar para crear un nuevo bonding.</para>
+			<para><literal>d) delete bonding:</literal>borrar un bonding.</para>
 			<para><literal>q) quit:</literal>Salir.</para>
 			<para>En este paso, el usuario realizará las siguientes acciones:</para>
 			<itemizedlist mark="bullet">
@@ -157,9 +156,9 @@
 				</listitem>
 			</itemizedlist>
 			<para>Para la selección de puertos, se visualizará un listado con información muy valiosa y detallada, que ayudará al administrador a decidir qué puertos son los que quiere asignarle al bond. </para>
-			<para>Para ilustrar este proceso crearemos un bond (bond 0) y le asignaremos 1 puerto.</para>
-			<para>Para comenzar con el proceso de creación del bond, seleccione la opción <keycap>n</keycap> que aparece en el submenú lateral derecho de la pantalla.</para>
-			<para>Una vez que haya revisado los puertos que se encuentran disponibles, seleccione aquel que desea asignar al bond, tal y como aparece en el margen inferior de esta pantalla:</para>
+			<para>Para ilustrar este proceso crearemos un bonding (bond 0) y le asignaremos 1 puerto.</para>
+			<para>Para comenzar con el proceso de creación del bonding, seleccione la opción <keycap>n</keycap> que aparece en el submenú lateral derecho de la pantalla.</para>
+			<para>Una vez que haya revisado los puertos que se encuentran disponibles, seleccione aquel que desea asignar al bonding, tal y como aparece en el margen inferior de esta pantalla:</para>
 			<para>Introduzca el número de puerto en la línea <literal>Insert bonding first port [0]:_</literal> El número que aparece entre corchetes <literal>[]</literal> es el que define el sistema por defecto. Para seleccionar este número, pulse <keycap>Enter</keycap>.</para>        
 			<mediaobject>
 				<imageobject>
@@ -168,7 +167,7 @@
             </mediaobject>
         </section>
         <section>
-			<title>Añadir un nuevo puerto al bond</title>
+			<title>Añadir un nuevo puerto al bonding</title>
 			<para>El sistema le hará la siguiente pregunta: <literal>Insert second port (y/N):_.</literal></para>
 			<para>La opción que viene predeterminada por defecto aparece en mayúscula. Recuerde que si NO desea añadir un nuevo puerto tan solo tiene que pulsar la tecla <keycap>Enter</keycap>.</para>
 			<para>En caso de que desee insertar un nuevo puerto, teclee <keycap>y</keycap>.</para>
@@ -179,10 +178,10 @@
             </mediaobject>
             <para>Introduzca el número de puerto en la línea <literal>Insert bonding second port [1]: _</literal></para>
             <para>El número que aparece entre corchetes <literal>[]</literal> es el que define el sistema por defecto. Para seleccionar este número, pulse <keycap>Enter</keycap>.</para>   
-			<para>Una vez que ha realizado la asignación del segundo puerto al nuevo bond (bond0), el sistema le pedirá que introduzca de nuevo los datos relativos a la configuración de la red tal y como se ha visto en el apartado anterior: dirección IP, máscara, pasarela y ruta para el nuevo bond creado.</para>
-			<para>Si su equipo utiliza protocolo DHCP le será asignada una dirección IP por defecto. Pulsar <keycap>Enter</keycap> para seleccionar la IP, máscara y pasarela asignadas por el sistema. En caso contrario, introduzca manualmente estos valores.</para>
+			<para>Una vez que ha realizado la asignación del segundo puerto al nuevo bonding (bond0), el sistema le pedirá que introduzca de nuevo los datos relativos a la configuración de la red tal y como se ha visto en el apartado anterior: dirección IP, máscara, pasarela y ruta para el nuevo bonding creado.</para>
+			<para>Si su equipo utiliza protocolo DHCP, le será asignada una dirección IP por defecto. Pulsar <keycap>Enter</keycap> para seleccionar la IP, máscara y pasarela asignadas por el sistema. En caso contrario, introduzca manualmente estos valores.</para>
 			<para>El sistema también le otorga una ruta por defecto para el bonding creado. Para insertar una ruta manualmente, seleccione la opción <keycap>y</keycap> en la línea <literal>Insert a route for this bonding (y/N)?:_</literal>.</para>
-			<para>Una vez que haya terminado con este proceso, visualizará un mensaje avisándole de que el bonding se ha creado con éxito: <literal>Bonding 0 created successfully.</literal></para>
+			<para>Una vez que haya terminado con este proceso, visualizará un mensaje avisándole de que el bonding se ha creado con éxito.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/11.png"/>
@@ -199,9 +198,9 @@
 			</warning>
 		</section>
 		<section>
-			<title>Finalizar el proceso de creación del bond</title>
-			<para>Pulsar <keycap>Enter</keycap> para finalizar el proceso de creación del bond y asignar la ruta definida por defecto.</para>
-			<para>Antes de aplicar cambios y finalizar el proceso de creación del bond, visualizará una pantalla con un listado que incluye los siguientes elementos:</para>
+			<title>Finalizar el proceso de creación del bonding</title>
+			<para>Pulsar <keycap>Enter</keycap> para finalizar el proceso de creación del bonding y asignar la ruta definida por defecto.</para>
+			<para>Antes de aplicar cambios y finalizar el proceso de creación del bonding, visualizará una pantalla con un listado que incluye los siguientes elementos:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
 					<para>Bonds</para>
@@ -218,7 +217,7 @@
 			</itemizedlist>
 			<para>Para que las modificaciones realizadas queden guardadas, debe realizar la acción de aplicar cambios: <literal>Need to 'apply' to activate changes</literal> seleccionando la opción <keycap>a.</keycap></para>
 			<para>Puede borrar en cualquier momento el/ los bonds creados seleccionado la opción <literal>delete bonding</literal> insertando la letra <keycap>d.</keycap></para>
-			<para>Para salir del menú principal de configuración de red, seleccionar la opción <literal>quit</literal>con la letra <keycap>q.</keycap></para>
+			<para>Para salir del menú principal de configuración de red, seleccionar la opción <literal>quit</literal> con la letra <keycap>q.</keycap></para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/23.png"/>
@@ -250,10 +249,10 @@
 	</section>
 	<section>
 		<title>¿Cuál es el siguiente paso?: configuración y registro de los sensores en el Manager</title>
-		<para>¡Enhorabuena! Ha instalado correctamente el Manager. A continuación, para finalizar la instalación dela solución redBorder IPS Community v.3.x solo quedan tres pasos:</para>
+		<para>¡Enhorabuena! Ha instalado correctamente el Manager. A continuación, para finalizar la instalación de la solución redBorder IPS solo quedan tres pasos:</para>
 		<orderedlist numeration="arabic">
 			<listitem>
-				<para>Descarga e instalación de los paquetes del redBorder Community Installer y ajustes básicos.</para>
+				<para>Descarga e instalación de la solución redBorder y ajustes básicos.</para>
 			</listitem>
 			<listitem>
 				<para>Configuración de los sensores IPS:</para>
