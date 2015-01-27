@@ -48,7 +48,7 @@
             </orderedlist>
         </note>
         <para><emphasis role="bold">Password</emphasis></para>
-		<para>Introducir Password. Esta coincide con la Password que usted haya introducido durante el proceso de instalación del redBorder Community Installer.</para>		
+		<para>Introducir Contraseña. Esta coincide con la contraseña que usted haya introducido durante el proceso de instalación de redBorder.</para>		
 			<note>
 				<title>Nota</title>
 				<para> Recuerde que puede cambiar la contraseña en cualquier momento seleccionando la opción <keycap>3</keycap> <literal>Password</literal> accesible desde el menú del panel de configuración del Manager y del IPS indistintamente.</para>
@@ -77,7 +77,7 @@
 				<para><literal>Network Configuration:</literal> esta es la opción desde la cual se realizan todas las configuraciones de red para la correcta implantación de la solución redBorder IPS. Recuerde que, para poner en funcionamiento el Manager, se necesita por lo menos una conexión de red.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Passwords:</literal> acceda a esta opción si desea visualizar o modificar sus contraseñas.</para>
+				<para><literal>Passwords:</literal> acceda a esta opción si desea modificar sus contraseñas.</para>
 			</listitem>
 			<listitem>
 				<para><literal>Backup System:</literal> permite realizar una copia de seguridad de las configuraciones definidas para el Manager.</para>
