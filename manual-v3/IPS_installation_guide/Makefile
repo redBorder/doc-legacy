@@ -12,3 +12,7 @@ pdf-es:
 html-es:
 	publican build --formats html --langs "es-ES" --config publican-es-ES.cfg
 
+txt-es:
+	publican build --formats txt --langs "es-ES" --config publican-es-ES.cfg
+
+

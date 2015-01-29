@@ -8,7 +8,7 @@
 ]>
 <chapter>
 	<title>Configuración y registro de los sensores IPS</title>
-	<para>Al finalizar la instalación del asistente para la configuración de los sensores IPS comienza el proceso de puesta en red de los sensores. Tras terminar esa fase, se procede al Registro de los sensores en el Manager lo que implica la finalización del proceso de implantación de la solución redBorder IPS.</para>
+	<para>Al finalizar la instalación, comienza el proceso de configuración del sensor. Son fundamentalmente dos partes: configuración de red y registro en Horama (Managers). El registro de los sensores en el Manager implica la finalización del proceso de implantación de la solución redBorder IPS en el appliance.</para>
 	<para>Tras el reinicio automático del sistema, accederemos a la siguiente pantalla:</para>
 	<mediaobject>
 		<imageobject>
@@ -28,7 +28,7 @@
 		</listitem>
 	</itemizedlist>	
 	<para>Este proceso es idéntico al expuesto en la <emphasis role="bold">Finalización del proceso de instalación del asistente para la configuración del Manager.</emphasis></para>
-	<para>Puede consultar esta información en el <emphasis role="bold">capítulo 3, sección 3.1.Finalización de la instalación del asistente para la configuración del Manager.</emphasis></para>
+	<para>Puede consultar esta información en el <emphasis role="bold">capítulo 3, sección 3.1. Finalización de la instalación del asistente para la configuración del Manager.</emphasis></para>
 	 <para>En este apartado se encuentra una explicación detallada sobre los pasos que ha de seguir para finalizar el proceso y lanzar el menú de configuración de los sensores IPS.</para>
 	<mediaobject>
 		<imageobject>
@@ -37,23 +37,23 @@
 	</mediaobject>
 	<section>
 		<title>Menú de configuración de los sensores IPS</title>
-		<para>Una vez ha insertado el comando <literal>rb_sysconf</literal> accederá al <emphasis role="bold"> Menú de Configuración redBorder.</emphasis></para>
+		<para>Una vez ha ejecutado el comando <literal>rb_sysconf</literal> accederá al <emphasis role="bold"> Menú de Configuración redBorder.</emphasis></para>
 		<para>Este menú consta de 5 opciones:</para>
 		<orderedlist numeration="arabic">
 			<listitem>
 				<para><literal>System Configuration:</literal>desde esta opción usted podrá definir y modificar una serie de ajustes básicos del sistema como el nombre, hora, tipo de teclado, etc.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Network Configuration:</literal> esta es la opción desde la cual se realizan todas las configuraciones de red para la correcta implantación de la solución redBorder IPS.</para>
+				<para><literal>Network Configuration:</literal> esta es la opción desde la cual se realizan todas las configuraciones de red para la correcta implantación de la solución.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Passwords:</literal> acceda a esta opción si desea visualizar o modificar sus contraseñas.</para>
+				<para><literal>Passwords:</literal> acceda a esta opción si desea modificar sus contraseñas.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Backup System:</literal> permite realizar una copia de seguridad de las configuraciones definidas para el Manager.</para>
+				<para><literal>Backup System:</literal> permite realizar una copia de seguridad de la configuración.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Update rules from Manager</literal>: seleccione esta opción para forzar la descarga de las reglas del Manager.(Opcional).</para>
+				<para><literal>Update rules from Manager:</literal> seleccione esta opción para forzar la descarga de las reglas del Manager.(Opcional).</para>
 			</listitem>
 			<listitem>
 				<para><literal>quit:</literal> Salir.</para>
@@ -67,7 +67,7 @@
 	</section>
 	<section>
 		<title>Pasos para la configuración de los sensores IPS</title>
-		<para>Para que la solución redBorder IPS funcione correctamente, es necesario, en primer lugar poner los sensores en red. Para ello, el usuario tendrá que realizar la <emphasis role="bold">Configuración de la red</emphasis>, seleccionado la opción <literal>Network Configuration</literal> mediante la inserción del número <keycap>2</keycap> una vez que haya accedido al asistente de configuración redBorder. Pulsar <keycap>Enter</keycap>.</para>
+		<para>Para que la solución redBorder IPS funcione correctamente, es necesario, en primer lugar poner los sensores en red. Para ello, el usuario tendrá que realizar la configuración de la red, seleccionado la opción <literal>Network Configuration</literal> mediante la inserción del número <keycap>2</keycap> una vez que haya accedido al asistente de configuración redBorder.</para>
 		<para>Hasta que no se haya realizado esta configuración, no se podrá proceder al registro de los sensores en el Manager.</para>
 		<para>Estos son los pasos que hay que seguir para realizar la instalación de los sensores IPS:</para>
 		<orderedlist numeration="arabic">
@@ -86,12 +86,12 @@
 		</note>
 		<warning>
 			<title>Advertencia</title>
-			<para>En caso de que el sistema se instale en un equipo real que disponga de más de una tarjeta de red, el usuario deberá elegir cuál será el bond de gestión.</para>
+			<para>En caso de que el sistema se instale en un equipo real que disponga de más de una tarjeta de red, el usuario deberá elegir cuál será el bonding de gestión.</para>
 		</warning>
 	</section>
 	<section>
 		<title>Management Network Configuration: creación del bonding y asignación de la interfaz de gestión</title>
-		<para>Seleccione la opción <literal>Network Configuration</literal> insertando el número <keycap>2</keycap> y pulsando <keycap>Enter.</keycap></para>
+		<para>Seleccione la opción <literal>Network Configuration</literal> insertando la opción <keycap>2</keycap> y pulsando <keycap>Enter.</keycap></para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/18.png"/>
@@ -106,16 +106,16 @@
 		<para>A continuación se realizarán las siguientes acciones para asegurarnos que la red de los sensores queda correctamete configurada:</para>
 		<itemizedlist mark="bullet">
 			<listitem>
-				<para>Creación de un bond: (máximo 4 bonds).</para>
+				<para>Creación de un bonding: (máximo 4 bonds).</para>
 			</listitem>
 			<listitem>
-				<para>Selección y asignación de puertos al bond.</para>
+				<para>Selección y asignación de puertos al bonding.</para>
 			</listitem>
 			<listitem>
-				<para>Configuración de la interfaz de gestión para el/ los bonds creados.</para>
+				<para>Configuración de la interfaz de gestión para los bondings creados.</para>
 			</listitem>
 		</itemizedlist>
-		<para>Para la selección de puertos, se visualizará un listado con información muy valiosa y detallada, que ayudará al administrador a decidir qué puertos son los que quiere asignarle al bond.</para>
+		<para>Para la selección de puertos, se visualizará un listado con información muy valiosa y detallada, que ayudará al administrador a decidir qué puertos son los que quiere asignarle al bonding.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/20.png"/>
@@ -126,11 +126,11 @@
 			<para>Selección de opciones predeterminadas: <keycap>Enter</keycap></para>
 		</note>
 		<section>
-			<title>Creación de un nuevo bond y asignación de puertos</title>
-			<para>Para ilustrar este proceso crearemos un bond (bond 0) y le asignaremos 2 puertos.</para>
+			<title>Creación de un nuevo bonding y asignación de puertos</title>
+			<para>Para ilustrar este proceso crearemos un bonding (bond0) y le asignaremos 2 puertos.</para>
 			<para>Seleccione la opción <keycap>n</keycap> que aparece en el submenú lateral derecho de la pantalla.</para>
-			<para> Una vez que haya revisado los puertos que se encuentran disponibles, seleccione aquel que desea asignar al bond, tal y como aparece en el margen inferior de la pantalla anterior.</para>
-			<para> Introduzca el número de puerto en la línea <literal>Insert bonding first port [0]: _</literal></para>
+			<para>Una vez que haya revisado los puertos que se encuentran disponibles, seleccione aquel que desea asignar al bonding, tal y como aparece en el margen inferior de la pantalla anterior.</para>
+			<para>Introduzca el número de puerto en la línea <literal>Insert bonding first port [0]: _</literal></para>
 			<para>El número que aparece entre corchetes <literal>[]</literal> es el que define el sistema por defecto. Para seleccionar este número, pulse <keycap>Enter</keycap>.</para>
 			<mediaobject>
 				<imageobject>
@@ -140,7 +140,7 @@
 			<para>El puerto seleccionado desaparecerá de la opción de puertos disponibles.</para>
 			<note>
 				<title>Nota</title>
-				<para> El sistema solo permite la creación de un máximo de 4 bonds: (0-3).</para>
+				<para>El sistema solo permite la creación de un máximo de 4 bonds: (0-3).</para>
 			</note>
 		</section>
 		<section>
@@ -153,7 +153,7 @@
 					<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/21.png"/>
 				</imageobject>
 			</mediaobject>
-			<para> Introduzca el número de puerto en la línea <literal>Insert bonding second port [1]: _</literal></para>
+			<para>Introduzca el número de puerto en la línea <literal>Insert bonding second port [1]: _</literal></para>
 			<para>El número que aparece entre corchetes <literal>[]</literal> es el que define el sistema por defecto. Para seleccionar este número, pulse <keycap>Enter</keycap>.</para>			
 		</section>
 		<section>
@@ -164,16 +164,16 @@
 					<para>Dirección IP</para>
 				</listitem>
 				<listitem>
-					<para>Máscara de gestión.</para>
+					<para>Máscara de red</para>
 				</listitem>
 				<listitem>
 					<para>Pasarela</para>
 				</listitem>
 				<listitem>
-					<para>Ruta</para>
+					<para>Rutas</para>
 				</listitem>
 			</itemizedlist>
-			<para>Si su equipo utiliza protocolo DHCP le será asignada una dirección IP por defecto. Pulsar <keycap>Enter</keycap> para seleccionar la IP, máscara y pasarela asignadas por el sistema.  En caso contrario, introduzca manualmente estos valores.</para>
+			<para>Si su equipo utiliza protocolo DHCP, le será asignada una dirección IP por defecto. Pulsar <keycap>Enter</keycap> para seleccionar la IP, máscara y pasarela asignadas por el sistema.  En caso contrario, introduzca manualmente estos valores.</para>
 			<para>El sistema también le otorga una ruta por defecto para el bonding creado.</para>
 			<para>Para insertar una ruta manualmente, seleccione la opción <keycap>y</keycap> en la línea <literal>Insert a route for this bonding (y/N)?:_</literal></para>
 			<mediaobject>
@@ -190,7 +190,7 @@
 		</section>
 		<section>
 			<title>Finalizar el proceso de creación del bonding</title>
-			<para>Antes de aplicar cambios y finalizar el proceso de creación delbonding el sistema le mostrará una tabla en la que figuran el nuevo bond creado (bond0) junto con los puertos que le han sido asignados, la IP y Máscara y la ruta asignadas manualmente o por defecto.</para>
+			<para>Antes de aplicar cambios y finalizar el proceso de creación delbonding el sistema le mostrará una tabla en la que figuran el nuevo bonding creado (bond0) junto con los puertos que le han sido asignados, la IP y Máscara y la ruta asignadas manualmente o por defecto.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/23.png"/>
@@ -260,7 +260,7 @@
 		<para> Para la selección de puertos, se visualizará un listado con información muy valiosa y detallada, que ayudará al administrador a decidir en qué puertos estarán los segmentos creados.</para>
 		<section>
 			<title>Asignación de interfaces con bypass a los segmentos</title>
-			<para>Si el sistema detecta interfaces de tipo bypass, estas se asignan automáticamente a los segmentos durante el proceso de configuración de la red de gestión del bonding.</para>
+			<para>Si el sistema detecta interfaces de tipo bypass, estas se asignan automáticamente a los segmentos cuando se ingresa en el menú de configuración de red.</para>
 			<para>Existen, además, otras dos modalidades de asignación de puertos o interfaces con bypass a segmentos:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
@@ -293,7 +293,7 @@
 					<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/29.png"/>
 				</imageobject>
 		    </mediaobject>
-		    <para> El puerto asignado anteriormente al segmento desaparecerá del listado de puertos disponibles.</para>
+		    <para>El puerto asignado anteriormente al segmento desaparecerá del listado de puertos disponibles.</para>
 		    <note>
 				<title>Nota</title>
 				<para>El sistema solo permite la creación de un máximo de 16 segmentos (0-15).</para>
@@ -301,10 +301,10 @@
 		</section>
 		<section>
 			<title>Añadir un segundo puerto al segmento</title>
-			<para> Una vez que haya asignado el primer puerto al segmento, el sistema le planteará la posibilidad de asignar un segundo puerto al segmento: <literal>Assign second port to the segment (Y/n):_</literal></para>
-			<para> La opción que viene predeterminada por defecto aparece en mayúscula.</para>
-			<para> Recuerde que si desea asignar un nuevo puerto tan solo tiene que pulsar la tecla <keycap>Enter.</keycap></para>
-			<para> En caso de que no desee asignar un nuevo puerto, teclee <keycap>n</keycap>. Una vez que haya revisado los puertos que se encuentran disponibles, seleccione aquel que desea asignar al segmento tal y como aparece en el margen inferior de la pantalla anterior.</para>
+			<para>Una vez que haya asignado el primer puerto al segmento, el sistema le planteará la posibilidad de asignar un segundo puerto al segmento: <literal>Assign second port to the segment (Y/n):_</literal></para>
+			<para>La opción que viene predeterminada por defecto aparece en mayúscula.</para>
+			<para>Recuerde que si desea asignar un nuevo puerto tan solo tiene que pulsar la tecla <keycap>Enter.</keycap></para>
+			<para>En caso de que no desee asignar un nuevo puerto, teclee <keycap>n</keycap>. Una vez que haya revisado los puertos que se encuentran disponibles, seleccione aquel que desea asignar al segmento tal y como aparece en el margen inferior de la pantalla anterior.</para>
 			<para>Introduzca el número de puerto en la línea <literal>Insert segment second port [3]: _</literal></para>
 			<mediaobject>
 				<imageobject>
@@ -339,7 +339,7 @@
 			</mediaobject>		
 			<para><emphasis role="bold">Aplicar cambios</emphasis></para>
 			<para>Para que las modificaciones realizadas queden guardadas, debe realizar la acción de aplicar cambios, seleccionando la opción <keycap>a.</keycap></para>
-			<para>Puede borrar en cualquier momento el/ los segementos creados seleccionado la opción <literal>delete segment</literal>, insertando la letra <keycap>d.</keycap></para>
+			<para>Puede borrar en cualquier momento los segementos creados seleccionado la opción <literal>delete segment</literal>, insertando la letra <keycap>d.</keycap></para>
 			<para>Para volver al menú principal de configuración de red, seleccionar la opción <literal>quit</literal> con la letra <keycap>q.</keycap></para>
 			<mediaobject>
 				<imageobject>
