@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2014">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+	<title>¿What is redBorder IPS?</title>
+	<para>The <emphasis role="bold">redBorder IPS</emphasis> solution (English acronym for <emphasis>Intrusion Prevention System</emphasis>) is a scenario composed of a series of equipment called sensors and a central system called Manager.</para>
+	<para>The <emphasis role="bold">sensors</emphasis> are Linux systems with a fully focused distribution to the detection and / or intrusion prevention network segments which are located. Any threat whose specific signature is recognized, the sensor will launch an alert and, optionally, will block this communication, generating an event in the central system (manager).</para>
+	<para>The <emphasis role="bold">Manager</emphasis>  is a Linux system with a distribution totally focused on the reception of events fired from the sensors, as well as the management of these events, inventory of sensors and policy configuration security to be applied to the sensors (signature management, policies and preprocessors).</para>
+	<section>
+		<title>¿What is an IDS?</title>
+		<para>An <emphasis role="bold">IDS</emphasis> is a security solution in a network or networks to protect an organization.</para> 
+		<para>It’s usually a specific software that runs on the user space and traffic polls reflected (mirror port or SPAN) on an interface or system which circulates between two interfaces together in a bridge (switch by software).</para>
+		<para>Such traffic is analyzed looking for abnormalities, specific signatures or suspicious behavior.</para> 
+		<para>The idea behind the IDS is to detect intrusions and launch alerts without interfering with traffic organization.</para>
+    </section>
+    <section>
+		<title>¿What is an IPS?</title>
+		<para>An <emphasis role="bold">IPS</emphasis> (English acronym for Intrusion Prevention System) is a security solution in the network or networks organization.</para> 
+		<para>Its operation is identical to the IDS (in fact, it’s usually the same behavior with software adapted), except that in this case it interferes with traffic organization so that when communication is detected corresponding to an attack, the system can opt not only for sending alerts but even discard packets of such communication, creating the same effect as a firewall.</para>
+		<section>
+			<title>RedBorder basic scenario of IPS solution</title>
+			<para>A proposed solution in a basic scenario consists of a set of sensors located at different sensitive points in the organization of the network. </para>
+			<para>These set points are formed by network links called segments, which circulate sensitive traffic and the sensor will analyze more or less in a transparent manner, depending on the configuration of the operating mode (IPS or IDS).</para>
+			<para>When planning the sensor installation equipment, you should consider some fundamental aspects: <emphasis role="bold">the segments</emphasis> (specific network interfaces paired, usually with bypass support) are lodged in middle of traffic to be analyzed; <emphasis role="bold">management interfaces </emphasis> (in the form of bonding) to remote access from a common PC as well as from the Manager; and <emphasis role="bold">access IPMI interface for remote management hardware</emphasis> (connection SOL or Serial Over Lan, iKVM and IPMI command as power on, power restart and power off). These interfaces are explained below.</para>
+			<para>For the Manager, specific hardware is not necessary. The only requirement is <emphasis role="bold">the existence of one or more network interfaces. </emphasis> </para>
+			<para>This way allows for the creation of bonding management and connection sensors and other bonding (optional) for communication to other networks. Both systems support 802.1q standard for virtual LAN (optional when set).</para>
+			<warning>
+				<title>Warning</title>
+				<para>It is VERY IMPORTANT that the first configuration is performed by the Manager before configuring the sensors.</para>
+				<para>The Manager must be operational and in a network accessible to the sensors. Some of the sensor configuration process depends on Manager access.</para>
+			</warning>
+	    </section>
+    </section>
+    <section>
+		<title>redBorder Installer Community</title>
+		<para>Welcome to the installation of our redBorder IPS solution. Thanks to this guide, anyone can set up the redBorder Intrusion Prevention System without having knowledge of specific programming from Linux.</para> 
+		<para>Using the <emphasis>rb_sysconf</emphasis> command, you will have access to the menu from which you find all settings necessary to implement the redBorder IPS solution in its Community version.</para>
+        <mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-2.png"/>
+			</imageobject>
+		</mediaobject>
+		<section>
+			<title>Available options in the installer’s menu</title>
+			<para>This is the main menu for our redBorder IPS solution. </para>
+			<para>These options allow you to consider all configurations, both the Manager, as well as the sensors, for commissioning the solution. You will also find other useful options related to the operation of your computer.</para>
+            <itemizedlist mark="bullet">
+				<listitem>
+					<para><literal>Install Manager Community IPS:</literal> Performs Manager software installation on the computer.</para>
+				</listitem>
+				<listitem>
+					<para><literal>Install Sensor Community IPS:</literal> Performs IPS sensor software installation on the computer.</para>
+			    </listitem>
+				<listitem>
+				    <para><literal>Rescue installed System:</literal> start rescue mode in those cases which there are problems booting your machine (advanced mode).</para>
+				</listitem>
+				<listitem>
+					<para><literal>Boot from Local Drive:</literal> Booting from local disk (default).</para>
+				</listitem>
+				<listitem>
+				    <para><literal>Memory Test:</literal> Memory testing available for installation system.</para>
+				</listitem>
+			</itemizedlist>
+		</section>
+	</section>
+</chapter>

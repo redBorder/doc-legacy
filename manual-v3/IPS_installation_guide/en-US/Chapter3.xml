@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2014">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+	<title>Configuration Manager</title>
+	<para>Once you have downloaded all the wizard installation packages, access the menu where you proceed to the Configuration Manager. After automatic reboot, you will have access to the following screen:</para>	
+	<mediaobject>
+		<imageobject>
+			<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/6.png"/>
+		</imageobject>
+    </mediaobject>    
+    <para>Then the following actions will be performed:</para>
+    <para></para>
+    <itemizedlist mark="bullet">
+		<listitem>
+			<para>Login</para>
+		</listitem>
+		<listitem>
+			<para>Password</para>
+		</listitem>
+		<listitem>
+			<para>Command rb_sysconf</para>
+		</listitem>
+	</itemizedlist>	
+	<section>
+		<title>Completing the installation wizard for configuration Manager</title>
+		<para><emphasis role="bold">Login</emphasis></para>
+		<para>Register user that has greater permissions: <emphasis>root.</emphasis></para>		
+		<para>To improve security, we recommend that you assign three levels of users / permissions among people who you are going to allow control of the redBorder IPS system.</para>
+	    <note>
+			<title>User Levels for redBorder IPS</title>
+			<orderedlist numeration="arabic">
+				 <listitem>
+					<para>root: has all permissions. It is the super administrator of the system.</para>
+				</listitem>
+				<listitem>
+					<para>admin: user who only has access to the setup menu system but does not have permission to modify files.</para> 
+				</listitem>
+				<listitem>
+					<para>redBorder: This user has a different meaning for the manager than for sensors:</para>
+					<para><emphasis>Manager:</emphasis> User is using to record sensors.</para>
+					<para><emphasis>Sensor:</emphasis> User is using when the manager wants to communicate with the sensors.</para>
+				</listitem>	
+            </orderedlist>
+        </note>
+        <para><emphasis role="bold">Password</emphasis></para>
+		<para>Enter Password. This coincides with the password you entered during the redBorder installation process.</para>		
+			<note>
+				<title>Note</title>
+				<para> Remember that you can change your password at any time selecting <keycap>3</keycap> <literal>Password</literal> accessible from the configuration menu.</para>
+			</note>	    
+	    	<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-5.png"/>
+				</imageobject>
+			</mediaobject>	
+			<para><emphasis role="bold">Insert comand <literal>rb_sysconf</literal></emphasis></para>
+			<para>Insert command <literal>rb_sysonf</literal> to launch the menu Configuration Manager.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/7.png"/>
+				</imageobject>
+			</mediaobject>		
+	</section>	
+	<section>
+		<title>Configuration Menu Manager</title>
+		<para>The <literal>rb_sysconf</literal> command launches a menu where you will find the options to complete the Configuration Manager using their network.</para>
+		<orderedlist numeration="arabic">
+		 	<listitem>
+				<para><literal>System Configuration:</literal> From this option you can define and modify some basic system settings such as name, time, etc.</para>
+			</listitem>
+			<listitem>
+				<para><literal>Network Configuration:</literal> esta es la opción desde la cual se realizan todas las configuraciones de red para la correcta implantación de la solución redBorder IPS. Recuerde que, para poner en funcionamiento el Manager, se necesita por lo menos una conexión de red.</para>
+				<para><literal>Network Configuration:</literal> this is the option from which all network settings for the proper installation of the redBorder IPS solution are made. Remember, to operate Manager, you need at least one network connection.</para>
+			</listitem>
+			<listitem>
+				<para><literal>Passwords:</literal> access this option if you want to change their passwords.</para>
+			</listitem>
+			<listitem>
+				<para><literal>Backup System:</literal> make a backup of the defined settings for the Manager.</para>
+			</listitem>
+			<listitem>
+				<para><literal>Quit:</literal> quit.</para>
+			</listitem>
+		</orderedlist>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-5.png"/>
+		    </imageobject>
+		</mediaobject>									
+	</section>
+	<section>
+		<title>Configuration Manager</title>
+		<para>In order for the redBorder IPS solution to work properly, it is necessary to first put Manager in the network.</para>
+		<para>To do this, the user must perform <emphasis role="bold">Network Setup</emphasis>, select the Network option <literal>Configuration</literal> (option <keycap>2</keycap> setup menu.</para>
+		<para>You will see a series of options displayed that correspond to the steps to be followed to perform the complete Manager configuration.</para>
+		<para><emphasis role="bold">Steps for configuring Manager</emphasis></para>
+		<orderedlist numeration="arabic">
+			<listitem>
+				<para><literal>Management Network Configuration:</literal> Select to configure network management through the creation of a bonding.</para>
+			</listitem>
+			<listitem>			 
+				<para><literal>DNS and domain settings:</literal> This option allows us to perform the following:</para>
+				<para>a) Indicate the name of the machine</para>	
+				<para>b) Establish Domain DNS</para>
+				<para>c) Assign mask (Netmask)</para>
+				<para>d) Assign gateway (Gateway)</para>
+			</listitem>	
+			<listitem>
+				<para><literal>i) info:</literal> provides information about the Network layer.</para>
+			</listitem>
+			<listitem>
+				<para><literal>a) apply:</literal> apply changes</para>
+			</listitem>
+			<listitem>
+				<para><literal>q) quit:</literal> Quit.</para>
+			</listitem>
+		</orderedlist>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-6.png"/>
+			</imageobject>
+		</mediaobject>	
+		<section>
+			<title>Management Network Configuration: Creating a new bonding and assignment of port to the Manager</title>
+			<para>Select the <literal>iNetwork Management Configuration</literal> option by inserting <keycap>number 1</keycap> and pressing <keycap>Enter</keycap>. </para>
+			<para>Below you will see a menu that will allow you to create a bonding and assign a management interface for Manager operation.</para>			 
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-7.png"/>
+				</imageobject>
+			</mediaobject>
+			<para>This screen will show the number of bonds that have been created, the ports assigned to each bonding and IP mask and each bondings. You can also find the following menu:</para>	
+			<para><literal>n) new bonding:</literal>select to create a new bonding.</para>
+			<para><literal>d) delete bonding:</literal>delete a bonding.</para>
+			<para><literal>q) quit:</literal>Quit.</para>
+			<para>In this step, the Users take the following actions:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>Assigning Ports</para>
+				</listitem>
+				<listitem>
+					<para>Assign IP address: <literal>Insert management IP adress.</literal></para>
+				</listitem>
+				<listitem>
+					<para>Assign Mask: <literal>Insert management Netmask.</literal></para>
+				</listitem>
+				<listitem>
+					<para>Assign gateway: <literal>Insert default gateway.</literal></para>
+				 </listitem>
+				 <listitem>
+					<para>Assign route: <literal>Insert a route for this bonding.</literal></para>
+				</listitem>
+			</itemizedlist>
+			<para>For the selection of ports, a list will be displayed with detailed and valuable information, which will help the administrator to decide which ports will be assigned to the bond. </para>
+			<para>To illustrate this process create a bonding (bond 0) and assign one port.</para>
+			<para>To begin with the creation of the bonding process, select the <keycap>n</keycap> submenu option that appears on the right side of the screen.</para>
+			<para>Once you have revised the ports you have found available, select one that you want to assign to the bonding, as shown at the bottom of this screen:</para>
+			<para>Enter the port number in the line <literal>Insert bonding first port [0]:_</literal> The number in brackets <literal>[]</literal> is the number that defines the system default. To select this number, press <keycap>Enter</keycap>.</para>        
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-8.png"/>
+                </imageobject>
+            </mediaobject>
+        </section>
+        <section>
+			<title>Add a new port bonding</title>
+			<para>The system will ask the following: <literal>Insert second port (y/N):_.</literal></para>
+			<para>The option selected by default is capitalized. Remember that if you DO NOT want to add a new port you just have to press the <keycap>Enter</keycap> key.</para>
+			<para>If you want to insert a new port, type <keycap>y</keycap>.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-8.png"/>
+                </imageobject>
+            </mediaobject>
+            <para>Enter the port number on the second line <literal>Insert bonding second port [1]: _</literal></para>
+            <para>The number in brackets <literal>[]</literal> is the defining default system. To select this number, press <keycap>Enter</keycap>.</para>   
+			<para>Enter. Once the assignment of the second port is made to the new bonding (bond0), the system prompts you to enter again the relevant data to the configuration of the network data from the previous paragraph: IP address, mask, gateway and route for the new bonding created.</para>
+			<para>If your computer uses DHCP, you will be assigned a default IP address. Press <keycap>Enter</keycap> to select the IP, mask and gateway assigned by the system. Otherwise, enter these values manually.</para>
+			<para>The system also gives a route default for the bonding created. To insert a path manually, select <keycap>y</keycap> in the line <literal>Insert a route for this bonding (y/N)?:_</literal>.</para>
+			<para>Once you are done with this process, you will see a message that the bonding has been successfully created.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/11.png"/>
+                </imageobject>
+            </mediaobject>
+            <note>
+				<title>Note</title>
+					<para>-Selection of default options: <keycap>Enter</keycap></para>
+					<para>-Para introducir una IP, máscara o pasarela diferentes a las asignadas por defecto, introdúzcalas manualmente.</para>
+					<para>-To enter an IP, mask or different from those assigned as a default gateway, enter them manually.</para>
+			</note>
+			<warning>
+				<title>Warning</title>
+				<para>If your server will use DHCP, IP assignment is automatic. Otherwise, you must enter it manually.</para>
+			</warning>
+		</section>
+		<section>
+			<title>Finish the process of creating the bonding</title>
+			<para>Press <keycap>Enter</keycap> to complete the process of creating the bonding and assign the path defined by default.</para>
+			<para>Antes de aplicar cambios y finalizar el proceso de creación del bonding, visualizará una pantalla con un listado que incluye los siguientes elementos:</para>
+			<para>Before applying changes and finalizing the creation process of bonding, a screen will be displayed with a list of the following elements:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>Bondings</para>
+				</listitem>
+				<listitem>
+					<para>Ports assigned to the bonding<para>
+				</listitem>
+				<listitem>
+					<para>IP/Mask bonding</para>
+				</listitem>
+				<listitem>
+				    <para>Route or gateway bonding</para>
+				</listitem>
+			</itemizedlist>
+			<para>In order for performed modifications to be saved, you must perform the action to implement changes: <literal>Need to 'apply' to activate changes</literal> selecting a choice<keycap>a.</keycap></para>
+			<para>At any moment you can delete the created bond(s) by selecting the option <literal>delete bonding</literal> by pressing the letter <keycap>d.</keycap></para>
+			<para> To exit the main menu of network configuration, select the <literal>quit</literal> option with the letter <keycap>q.</keycap></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/23.png"/>
+                </imageobject>
+                </mediaobject>			 
+        </section>
+	</section>
+	<section>
+		<title>Configuring DNS and domain</title>
+		<para>In the Network Configuration menu find option DNS and domain settings. To begin the process, select <literal>DNS and domain settings</literal>. To begin the process, select option <keycap>2.</keycap></para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-9.png"/>
+            </imageobject>
+        </mediaobject>	
+        <para>En el proceso de configuración el usuario deberá introducir:</para>
+        <para>In the process of configuring the user must enter:</para>
+        <itemizedlist mark="bullet">
+			<listitem>
+				<para>Domain Name</para>
+			</listitem>
+			<listitem>
+				<para>Primary DNS Address</para>
+			</listitem>
+			<listitem>
+				<para>Secondary DNS Address (optional)</para>
+			</listitem>
+		</itemizedlist>
+		<para>After entering this information, the system will prompt you that it has applied this configuration correctly.</para>
+	</section>
+	<section>
+		<title>What's next ?: configuration and registration sensors in the Manage</title>
+		<para>Congratulations! You have successfully installed the Manager. To finish installing the redBorder IPS solution you only have three more steps:</para>
+		<orderedlist numeration="arabic">
+			<listitem>
+				<para>1. Download and install the redBorder IPS solution and basic settings.</para>
+			</listitem>
+			<listitem>
+				<para>2. Configuring IPS sensors:</para>
+				<para>a) Setting the network management </para>
+				<para>b) Domain DNS Settings </para>
+			</listitem>
+			<listitem>
+				<para>3. Registration of the sensors in the Manager.</para>
+			</listitem>
+		</orderedlist>			
+	</section>
+</chapter>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "manual">
+<!ENTITY YEAR "2014">
+<!ENTITY HOLDER "Eneo Tecnología S.L. |">
+]>
+<chapter>
+	<title>Process Configuration Manager</title>
+	<para>The central system that receives and collects events is called the Manager.</para>
+	<para>The Manager configuration process comprises the following:</para>
+    <orderedlist numeration="arabic">
+		<listitem>
+			<para>Download and install packages from our redBorder Community Installer and basic settings</para>
+	    </listitem>
+	    <listitem>
+			<para>Configuration Manager (networking):</para>
+			<para><emphasis role="bold">Network Configuration Management:</emphasis> Creating a bonding</para>	
+			<para><emphasis role="bold">Network Setup Service: </emphasis> DNS and domains settings</para>
+		</listitem>
+	</orderedlist>
+	<section>
+		<title>Downloading and installing packages of our redBorder Community Installer and basic settings</title>
+		<section>
+			<title>Basic Settings</title>
+			<para>redBorder Community installation comprises a series of installer basic settings:</para>
+            <itemizedlist mark="bullet">
+				<listitem>
+					<para>Language selection</para>
+				</listitem>
+				<listitem>
+					<para>Keyboard selection</para>
+				</listitem>
+				<listitem>
+					<para>Insert Password</para>
+				</listitem>
+			</itemizedlist>
+			<para> To begin the installation process and the basic settings that allow the Manager installer settings, you must select <keycap>1</keycap> <literal>Install Manager Community IPS.</literal></para>
+            <mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-1.png"/>
+				  </imageobject>
+			</mediaobject>
+			<para><emphasis role="bold">Language Select</emphasis></para>
+			<para>Select the language in which you want to operate from now</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/3.png"/>
+				</imageobject>
+			</mediaobject>
+			<para><emphasis role="bold">Selecting keyboard type</emphasis></para>
+			<para>Choose the type of keyboard you want to use during the process. By default appears the US keyboard [US] because of its ranging compatibility.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/4.png"/>
+				</imageobject>
+            </mediaobject>
+            <para><emphasis role="bold">Insert password</emphasis></para>
+            <para><emphasis>Choose and insert a password.</emphasis> This will be the key with which you operate from now on. It can be modified at any time. </para>
+            <para><emphasis>Confirm password.</emphasis> Re-enter the password to for verification. If the password is weak or low strength, the program will warn you via a popup window.</para>
+            <para> If you wish, you can insert a stronger password, or save the current password and change it later by selecting <keycap>3</keycap> <literal>Password</literal>, accessible from the configuration menu.</para>    
+            <para>Once you have entered your password and you press the <keycap>OK</keycap> button, the system will proceed to create partitions and to install wizard packages on your hard drive.</para>
+            <mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/5.png"/>
+				</imageobject>
+			</mediaobject>
+			<note>
+				<title>Note</title>
+				<para>The Manager is configured by default in the time zone UTC to avoid mismatches in timing between the sensors and the Manager, which could cause system errors.</para>
+            </note>
+        </section>                
+        <section>
+			<title>Installing packages and reboot</title>
+			<para>Once you have inserted the password, proceed to “installation” of the redBorder Installler wizard installation package. </para>
+			<para>Wait until the progress bar tells you that the installation was 100% complete. This process can take up to several minutes. </para>
+			<para>Don’t press any key or perform any action while viewing the following screens:</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/5-a.png"/>
+				</imageobject>
+			</mediaobject>
+			<para>Una vez instalados los paquetes, el programa arranca los últimos scripts para finalizar esta etapa. A continuación, comienza el reinicio automático. Durante unos segundos visualizará las siguientes pantallas. </para>
+			<para>Once the package is installed, the program starts recent scripts to finish this stage. Then begins automatic restart. For a few seconds you will see the following screens. </para>
+			<para>Do not press any buttons or perform any action until this process is completed.</para>
+        </section>
+    </section>
+</chapter>
