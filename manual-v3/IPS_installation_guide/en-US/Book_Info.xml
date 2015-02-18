@@ -3,28 +3,28 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
 <!ENTITY PRODUCT "Documentation">
 <!ENTITY BOOKID "manual">
-<!ENTITY YEAR "2014">
+<!ENTITY YEAR "2015">
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <bookinfo id="book-manual-manual">
-  <title>Guia de instalacion</title>
+  <title>Installation Guide</title>
   <productname>redBorder IPS</productname>
   <productnumber>3</productnumber>
   <edition>1</edition>
   <pubsnumber>0</pubsnumber>
   <abstract>
-    <para>ISBN: No disponible</para>
-    <para>Este material se distribuye tan sólo bajo los términos y las condiciones establecidas en la Open Publication License v1.0 (la última versión está disponible en http://www.opencontent.org/openpub/).</para>
-    <para>La distribución de versiones modificadas de este documento está prohibida sin el permiso explícito del propietario de los derechos de autor.</para>
-    <para>La distribución del producto o una copia del mismo en forma de libro con fines comerciales está prohibida a menos que se obtenga permiso previo por escrito del propietario de los derechos de autor. </para>
-    <para>Todas las marcas registradas y los derechos de autor a los que se hace referencia son propiedad de sus respectivos propietarios.</para>
+    <para>ISBN: Unavailable </para>
+    <para>This material may be distributed only under the terms and conditions set forth in the Open Publication License v1.0 (the latest version is available at http://www.opencontent.org/openpub/).</para>
+    <para>The distribution of modified versions of this document is prohibited without the explicit permission of owner of the copyright.</para>
+    <para>The product distribution or copy in book form for commercial purposes is prohibited unless prior permission is obtained in writing from those of copyright.</para>
+    <para>All trademarks and copyrights on those references are property of their respective owners.</para>
     <para>
       <important>
         <title>ENEO Tecnología S.L.</title>
         <address>
-          <street>Plaza de las Naciones s/n, Torre Norte (Edificio Aljarafe Center). Planta 12.</street>
+          <street>Plaza de las Naciones s/n, Torre Norte (Edificio Aljarafe Center). 12th floor.</street>
           <city>Mairena del Aljarafe</city>
-          <state>Sevilla</state>
+          <state>Seville</state>
           <postcode>41927</postcode>
           <phone> +34 955 60 11 60</phone>
           <country>Spain</country>

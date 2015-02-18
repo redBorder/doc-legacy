@@ -3,7 +3,7 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "manual.ent">
 <!ENTITY PRODUCT "Documentation">
 <!ENTITY BOOKID "manual">
-<!ENTITY YEAR "2014">
+<!ENTITY YEAR "2015">
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
@@ -210,7 +210,7 @@
 					<para>Bondings</para>
 				</listitem>
 				<listitem>
-					<para>Ports assigned to the bonding<para>
+					<para>Ports assigned to the bonding</para>
 				</listitem>
 				<listitem>
 					<para>IP/Mask bonding</para>
