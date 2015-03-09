@@ -8,8 +8,8 @@
 ]>
 <chapter>
 	<title>¿What is redBorder IPS?</title>
-	<para>The <emphasis role="bold">redBorder IPS</emphasis> solution (English acronym for <emphasis>Intrusion Prevention System</emphasis>) is a scenario composed of a series of equipment called sensors and a central system called Manager.</para>
-	<para>The <emphasis role="bold">sensors</emphasis> are Linux systems with a fully focused distribution to the detection and / or intrusion prevention network segments which are located. Any threat whose specific signature is recognized, the sensor will launch an alert and, optionally, will block this communication, generating an event in the central system (manager).</para>
+	<para>The <emphasis role="bold">redBorder IPS</emphasis> solution (Acronym for <emphasis>Intrusion Prevention System</emphasis>) is a scenario composed of a series of equipment called sensors and a central system called Manager.</para>
+	<para>The <emphasis role="bold">sensors</emphasis> are Linux systems with a fully focused distribution to the detection and / or intrusion prevention network segments which are located. Any threat whose specific signature is recognized, the sensor will launch an alert and, optionally, will block this communication, generating an event in the central system (Manager).</para>
 	<para>The <emphasis role="bold">Manager</emphasis>  is a Linux system with a distribution totally focused on the reception of events fired from the sensors, as well as the management of these events, inventory of sensors and policy configuration security to be applied to the sensors (signature management, policies and preprocessors).</para>
 	<section>
 		<title>¿What is an IDS?</title>
@@ -20,7 +20,7 @@
     </section>
     <section>
 		<title>¿What is an IPS?</title>
-		<para>An <emphasis role="bold">IPS</emphasis> (English acronym for Intrusion Prevention System) is a security solution in the network or networks organization.</para> 
+		<para>An <emphasis role="bold">IPS</emphasis> (Acronym for Intrusion Prevention System) is a security solution in the network or networks organization.</para> 
 		<para>Its operation is identical to the IDS (in fact, it’s usually the same behavior with software adapted), except that in this case it interferes with traffic organization so that when communication is detected corresponding to an attack, the system can opt not only for sending alerts but even discard packets of such communication, creating the same effect as a firewall.</para>
 		<section>
 			<title>RedBorder basic scenario of IPS solution</title>

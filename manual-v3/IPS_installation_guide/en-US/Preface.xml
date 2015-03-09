@@ -7,7 +7,7 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <preface id="pref-manual-Preface">
-  <title>Prefacio</title>
+  <title>Preface</title>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Common_Content/Conventions.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Feedback.xml">
   </xi:include>
@@ -37,7 +37,7 @@
     <section>
 		<title>How to use this manual</title>
 		<para>This manual is designed for the implementation of the solution redBorder IPS Community version from the download file containing the installation ISO. This document is ideal for both users wishing to replace the old version, as well as those who are installing the redBorder IPS 3 Community for the first time.</para>
-        <para>If you are already one of our users and have completed the installation of both the redBorder IPS and Manager at another time, you may go directly to Chapters 3 and 5 for installation of Manager and IPS Sensors.</para>
+        <para>If you are already one of our users and have completed the installation of both the redBorder IPS and Manager at another time, you may go directly to <emphasis role="bold">Chapters 3 and 5 for installation of Manager and IPS Sensors.</emphasis></para>
         <section>
 			<title>Requirements for the installation of redBorder IPS solution Community version</title>
             <para>The installation of  redBorder IPS solution Community Edition v.3 requires compliance with certain requirements to ensure correct settings and optimal functioning.</para>
@@ -68,7 +68,7 @@
 			<important>
 			    <title>Important</title>
 			    <para>redBorder Installation Requirements for the Manager on a physical computer:</para>
-			    <para>Memory and Storage:<emphasis role= "bold"> 60GB hard drive and a minimum of 6GB of RAM.</emphasis>.(This figure depends on the number of allocated sensors).</para>
+			    <para>Memory and Storage:<emphasis role= "bold"> 60GB hard drive and a minimum of 12GB of RAM.</emphasis> (This figure depends on the number of allocated sensors).</para>
 			    <para><emphasis role= "bold"> At least one interface network for the Manager to operate.</emphasis></para>
 		    </important>
 		</section>
@@ -93,15 +93,16 @@
                 </imageobject>
             </mediaobject>
 				<para><emphasis>Menu</emphasis></para>
-				<para>Menu on the left side of the screen for a listing with the available options. To select any of them they must be entered in the line<literal>Selection</literal>, the number or letter corresponding to the option you want to choose.</para>
+				<para>Menu on the left side of the screen for a listing with the available options. To select any of them they must be entered in the line <literal>Selection</literal>, the number or letter corresponding to the option you want to choose.</para>
 				<para><emphasis>Submenu</emphasis></para>
 				<para> If you would like to perform different actions select submenu. It will appear on the right side of the screen.</para>
 				<para><emphasis> Line command / dial options</emphasis></para>
 				<para>in the top margin, and separated from the menu and sub graph, find the area in which they should indicate selections on the line that contains <literal>Selection</literal> and enter commands or data requested to perform the appropriate actions. In this area the date and time of the system can be visualized (default UTC).</para>
 			<section>
 				<title>Selecting Options</title>
-				<para><emphasis role="bold">Dafault options</emphasis></para>
-				<para>In some cases of default options, the system will display a series of default options. If this is the answer to a particular question, the defined default option will be displayed in uppercase.</para>
+				<para><emphasis role="bold">Default options</emphasis></para>
+				<para>In some cases of default options, the system will display a series of default options.</para>
+				<para>If this is the answer to a particular question, the defined default option will be displayed in uppercase.</para>
 				<mediaobject>
 					<imageobject>
 						<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/41.png"/>
@@ -110,16 +111,16 @@
 				<para><emphasis role="bold">Options available in the redBorder installer menu</emphasis></para>
 				<itemizedlist mark="bullet">
 					<listitem>
-						<para>Selecting default: Press <keycap>Enter</keycap></para>
+						<para>Selecting default: Press <keycap>Enter.</keycap></para>
 					</listitem>
 					<listitem>
 						<para> Other options: enter the letter or command that corresponds.</para>
 					</listitem>
 					<listitem>
-						<para>Quit: when you want to exit a screen to return to the main menu select the <literal>quit</literal>, option by entering the letter <keycap>q</keycap></para>
+						<para>Quit: when you want to exit a screen to return to the main menu select the <literal>quit</literal>, option by entering the letter <keycap>q.</keycap></para>
 					</listitem>
 					<listitem>
-						<para>Apply Changes: to save and apply the changes made, select <literal>apply</literal> by entering <keycap>a</keycap></para>
+						<para>Apply Changes: to save and apply the changes made, select <literal>apply</literal> by entering <keycap>a.</keycap></para>
 					</listitem>
 				</itemizedlist>
 				<mediaobject>
@@ -130,7 +131,7 @@
 				<warning>
 					<title>Caution</title>
 					<para><literal>Need to "apply" to activate changes</literal></para>
-					<para>If you see this message you must select the option<keycap>a</keycap>. Otherwise, the system will not store nor apply the changes.</para>
+					<para>If you see this message you must select the option <keycap>a</keycap>. Otherwise, the system will not store nor apply the changes.</para>
 				</warning>
 			</section>
 		</section>
