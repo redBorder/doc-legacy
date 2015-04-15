@@ -96,7 +96,7 @@
 			<para>En versiones posteriores de redBorder Horama, el usuario podrá desarrollar sus propias Apps e integrarlas en el Manager para la visualización unificada e integrada de los datos recogidos por ellas y los sensores de la redBorder App inserta en su redBorder Manager Horama.</para><!--/revisar si esta línea es correcta-->
 			<para>Los usuarios de la versión Community en el área de menú (tanto la zona de visualización como de configuración) de la interfaz de <anchor xml: id="Administración del Manager"></anchor> visualizarán datos de un solo un tipo de sensores dependiendo de lo que haya asociado al Manager: colectores netflow o sondas IPS.</para>
 			<para><emphasis role="bold">Un único servidor frente a Cluster</emphasis></para>
-			<para>La versión Community no permite la creación de Clusters, por lo que el apartado <anchor xml: id="Creación de cluster"></anchor> de la sección de Instalación del Manager, no aplica en este caso.</para>
+			<para>La versión Community no permite la creación de Clusters, por lo que el usuario deberá pasar directamente al capítulo 3 <anchor xml: id="Horama Manager Install Community Version"></anchor></para>
 		</section>
 	</section>
 	<section>

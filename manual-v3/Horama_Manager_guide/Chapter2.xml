@@ -59,7 +59,7 @@
 			</listitem>
 		</itemizedlist>
 		<para><emphasis role="bold">Selección de idioma</emphasis></para>
-		<para>Seleccione el idioma con el que desea operar a partir de este momento.</para> <!--capturas de pantalla-->
+		<para>Seleccione el idioma con el que desea operar a partir de este momento.</para> 
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/Horama_Manager_guide/ch02_img003.png"/>
@@ -99,8 +99,7 @@
 				<imagedata scalefit="1" align="center" width="350" fileref="images/Horama_Manager_guide/ch02_img006.png"/>
 			</imageobject>
 		</mediaobject>
-		<para>Una vez instalados los paquetes, el programa arranca los últimos scripts para finalizar esta etapa. A continuación, deberá aparecer una pantalla emergente en la que se solicita el reinicio del sistema para finalizar la primera parte de la instalación. Hacer clic en <literal>Reboot</literal>. Durante unos segundos visualizará las siguientes pantallas. </para>
-		<!--insertar capturas-->
+		<para>Una vez instalados los paquetes, el programa arranca los últimos scripts para finalizar esta etapa. A continuación, deberá aparecer una pantalla emergente en la que se solicita el reinicio del sistema para finalizar la primera parte de la instalación. Hacer clic en <literal>Reboot</literal>. Durante unos segundos visualizará las siguientes pantallas. </para>		
 	</section>
     <section>
 		<title>Finalización de la instalación del Manager Horama: redBorder Configuration menu</title>
@@ -213,10 +212,6 @@
 			</warning>
 			<para>Recordamos que para la instalación del redBorder Manager Horama es necesaria, al menos, una interfaz de gestión de red. En caso de que se vaya a crear un cluster, será necesario reservar dos bondings como mínimo.</para>
 			<para>Para la creación de un bonding deberán especificarse los elementos que se indican a continuación. Para aceptar los valores definidos por defecto basta con pulsar la tecla <keycap>Enter.</keycap> En caso contrario, introducir manualmente los nuevos valores.</para>
-			<note>
-				<title></title>
-				<para></para>
-			</note>
 			<itemizedlist mark="bullet">
 				<listitem>
 					<para><literal>Insert managment Netmask</literal></para>
@@ -343,3 +338,4 @@
 			</note>		
 		</section>
     </section>
+</chapter>
