@@ -95,7 +95,7 @@
 	<section>
 		<title>Configuración del Manager</title>
 		<para>Para que la solución redBorder IPS funcione correctamente, es necesario, en primer lugar poner el Manager en red.</para>
-		<para>Para ello, el usuario tendrá que realizar la <emphasis role="bold">Configuración de la red</emphasis>, seleccionando la opción <literal>Network Configuration</literal> (opción <keycap>2</keycap> del menú de configuración en rb_sysconf).</para>
+		<para>Para ello, el usuario tendrá que realizar la <emphasis role="bold">Configuración de la red</emphasis>, seleccionando la opción <literal>Network Configuration</literal> (opción <keycap>2</keycap> del redBorder Configuration Menu.</para>
 		<para>A continuación visualizará una serie de opciones que corresponden a los pasos que se deben seguir para realizar la configuración completa del Manager.</para>
 		<para><emphasis role="bold">Pasos para la configuración del Manager</emphasis></para>
 		<orderedlist numeration="arabic">
@@ -125,7 +125,7 @@
 			</imageobject>
 		</mediaobject>	
 		<section>
-			<title>Management Network Configuration: creación de un nuevo bonding y asignación de puertos al Manager</title>
+			<title>Management Network Configuration: creación de un nuevo bond y asignación de puertos al Manager</title>
 			<para>Seleccione la opción <literal>Management Network Configuration</literal> insertando el número <keycap>1</keycap> y pulsando <keycap>Enter</keycap>. </para>
 			<para>A continuación visualizará el menú que le permitirá crear un bonding y asignar una interfaz de gestión para el funcionamiento del Manager.</para>			 
 			<mediaobject>
@@ -133,7 +133,7 @@
 					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/c-7.png"/>
 				</imageobject>
 			</mediaobject>
-			<para>En esta pantalla se muestran el número de bonds que se han creado, los puertos asignados a cada bonding y la máscara e IP de cada uno de los bondings. También puede encontrar el siguiente menú:</para>	
+			<para>En esta pantalla se muestran el número de bondings que se han creado, los puertos asignados a cada bonding y la máscara e IP de cada uno de los bondings. También puede encontrar el siguiente menú:</para>	
 			<para><literal>n) new bonding:</literal>seleccionar para crear un nuevo bonding.</para>
 			<para><literal>d) delete bonding:</literal>borrar un bonding.</para>
 			<para><literal>q) quit:</literal>Salir.</para>

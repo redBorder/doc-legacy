@@ -75,7 +75,6 @@
 				<para><literal>System Configuration:</literal> From this option you can define and modify some basic system settings such as name, time, etc.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Network Configuration:</literal> esta es la opción desde la cual se realizan todas las configuraciones de red para la correcta implantación de la solución redBorder IPS. Recuerde que, para poner en funcionamiento el Manager, se necesita por lo menos una conexión de red.</para>
 				<para><literal>Network Configuration:</literal> this is the option from which all network settings for the proper installation of the redBorder IPS solution are made. Remember, to operate Manager, you need at least one network connection.</para>
 			</listitem>
 			<listitem>

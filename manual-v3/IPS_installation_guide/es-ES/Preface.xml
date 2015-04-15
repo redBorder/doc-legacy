@@ -67,7 +67,7 @@
 			<important>
 			    <title>Importante</title>
 			    <para>Requisitos de instalación del Manager de redBorder en un equipo físico:</para>
-			    <para>Memoria y almacenamiento: <emphasis role= "bold"> 60GB de disco duro y un mínimo de 6GB de RAM</emphasis>. (Esta cifra dependerá del número de sensores asignados).</para>
+			    <para>Memoria y almacenamiento: <emphasis role= "bold"> 60GB de disco duro y un mínimo de 12GB de RAM</emphasis>. (Esta cifra dependerá del número de sensores asignados).</para>
 			    <para><emphasis role= "bold">Una interfaz de red para poner en funcionamiento el Manager. </emphasis></para>
 		    </important>
 		</section>
