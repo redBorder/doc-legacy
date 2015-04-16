@@ -15,11 +15,11 @@
 		<title>Bienvenidos a redBorder Manager Horama</title>
 		<para>Muchas gracias por descargar o adquirir la versión 3.x del redBorder Manager Horama.</para>
         <para>Nos complace poder presentarle esta nueva versión de redBorder Manager Horama. Se trata de una potente plataforma de seguridad y monitorización de redes que combina las capacidades del <emphasis role="bold">redBorder IPS</emphasis> y la visibilidad que ofrece <emphasis role="bold">redBorder Flow</emphasis>.</para>
-        <!--<para>Puede descargar las últimas versiones de estas Apps en formato Community a través del siguiente enlace <xlink:href="http://redborder.net/redborder-store/" xlink:show="new"></xlink:href></para>-->
+        <para>Puede descargar las últimas versiones de estas Apps en formato Community a través del siguiente enlace <emphasis role="bold">http://redborder.net/redborder-store/</emphasis></para>
         <para>Todos nuestros productos son Open Source. Uno de los pilares básicos de redBorder es potenciar y generar comunidad. Gracias a ella tenemos la oportunidad de innovar constantemente y crecer a través del intercambio de ideas, aportaciones y usos que otros desarrolladores hacen con nuestro código.</para>
         <para>Crecemos gracias a las aportaciones de expertos como usted podemos testear y validar nuestros productos internamente y ofrecer mejoras que se adapten a nuevas necesidades.</para>
         <para>No obstante este manual va dirigido a aquellos usuarios que disponen de la versión <emphasis role="bold">Enterprise</emphasis> que incluye más funcionalidades y ventajas.</para>
-        <!--<para>Si eres usuario Community, no dejes de consultar el apartado <anchor xml: id="Diferencias entre la versión Community y la Enterprise de redBorder Manager Horama"></anchor></para>-->
+        <para>Si eres usuario Community, no dejes de consultar el apartado <emphasis> Diferencias entre la versión Community y la Enterprise de redBorder Manager Horama</emphasis></para>
         <para>Muchas gracias a todos nuestros clientes y usuarios. les deseamos que saquen el máximo rendimiento a esta plataforma para mantener la ciberseguridad y el análisis de sus redes.</para>
     </section>
     <section>
@@ -43,7 +43,7 @@
 		    </itemizedlist>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/Horama_Manager_guide/pref_img001.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/pref_img001.png"/>
 			</imageobject>
             </mediaobject>
 			<para><emphasis>Menú</emphasis></para>
@@ -59,7 +59,7 @@
 			<para>En algunos casos, el sistema mostrará una serie de opciones predeterminadas. Si se trata de la respuesta a una pregunta, la opción definida por defecto se visualizará en mayúsculas.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/Horama_Manager_guide/pref_img001.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/pref_img001.png"/>
 				</imageobject>
 			</mediaobject>
 			<para><emphasis role="bold">Opciones disponibles en el menú del instalador redBorder</emphasis></para>
@@ -79,7 +79,7 @@
 			</itemizedlist>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/Horama_Manager_guide/pref_img002.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/pref_img002.png"/>
 				</imageobject>
 			</mediaobject>
 			<warning>
@@ -93,10 +93,10 @@
 			<para>Existen algunas diferencias entre las versiones Community y Enterprise que se deben tener en cuenta a la hora de utilizar este manual.</para>
 			<para><emphasis role="bold">Monoproducto frente a integración</emphasis></para>
 			<para>En caso de que haya descargado la versión Community de redBorder Manager Horama, tendrá una plataforma base con uno de los dos sabores o aplicaciones disponibles de redBorder: IPS o Flow. Esto significa que no podrá visualizar de manera integrada la gestión de eventos (IPS) con el flujo de su red (Flow) o insertar en el Manager cualquier otra redBorder App.</para>
-			<para>En versiones posteriores de redBorder Horama, el usuario podrá desarrollar sus propias Apps e integrarlas en el Manager para la visualización unificada e integrada de los datos recogidos por ellas y los sensores de la redBorder App inserta en su redBorder Manager Horama.</para><!--/revisar si esta línea es correcta-->
-			<!--<para>Los usuarios de la versión Community en el área de menú (tanto la zona de visualización como de configuración) de la interfaz de <anchor xml: id="Administración del Manager"></anchor> visualizarán datos de un solo un tipo de sensores dependiendo de lo que haya asociado al Manager: colectores netflow o sondas IPS.</para>-->
+			<para>En versiones posteriores de redBorder Horama, el usuario podrá desarrollar sus propias Apps e integrarlas en el Manager para la visualización unificada e integrada de los datos recogidos por ellas y los sensores de la redBorder App inserta en su redBorder Manager Horama.</para>
+			<para>Los usuarios de la versión Community en el área de menú (tanto la zona de visualización como de configuración) de la interfaz de Administración del Manager" visualizarán datos de un solo un tipo de sensores dependiendo de lo que haya asociado al Manager: colectores netflow o sondas IPS.</para>
 			<para><emphasis role="bold">Un único servidor frente a Cluster</emphasis></para>
-			<!--<para>La versión Community no permite la creación de Clusters, por lo que el usuario deberá pasar directamente al capítulo 3 <anchor xml: id="Horama Manager Install Community Version"></anchor></para>-->
+			<para>La versión Community no permite la creación de Clusters, por lo que el usuario deberá pasar directamente al capítulo 3 <emphasis>Horama Manager Install Community Version"</emphasis></para>
 		</section>
 	</section>
 	<section>
