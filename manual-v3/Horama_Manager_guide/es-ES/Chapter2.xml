@@ -62,14 +62,14 @@
 		<para>Seleccione el idioma con el que desea operar a partir de este momento.</para> 
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img003.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img002a.png"/>
 			</imageobject>
 		</mediaobject>
 		<para><emphasis role="bold">Selección tipo de teclado</emphasis></para>
 		<para>Elija el tipo de teclado que quiere utilizar durante el proceso. Debido a su amplia compatibilidad aparecerá seleccionada por defecto la opción de teclado americano [US].</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img004.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img002b.png"/>
 			</imageobject>
         </mediaobject>
         <para><emphasis role="bold">Insertar password</emphasis></para>
@@ -83,7 +83,7 @@
         <para>Una vez que haya introducido su Password y haya pulsado la opción <literal>OK</literal>, el sistema procederá a crear las particiones y a realizar la instalación de los paquetes del asistente en su disco duro.</para>
         <mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img005.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img002c.png"/>
 			</imageobject>
 		</mediaobject>
 		<note>
@@ -96,7 +96,7 @@
 		<para>No pulse ninguna tecla ni realice ninguna acción mientras visualice las siguientes pantallas:</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img006.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img002d.png"/>
 			</imageobject>
 		</mediaobject>
 		<para>Una vez instalados los paquetes, el programa arranca los últimos scripts para finalizar esta etapa. A continuación, deberá aparecer una pantalla emergente en la que se solicita el reinicio del sistema para finalizar la primera parte de la instalación. Hacer clic en <literal>Reboot</literal>. Durante unos segundos visualizará las siguientes pantallas. </para>		
@@ -106,7 +106,7 @@
 		<para>Tras el reinicio automático del sistema, accederemos a la siguiente pantalla:</para>	
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img00.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img002e.png"/>
 			</imageobject>
 		</mediaobject>    
 		<para>A continuación se realizarán las siguientes acciones:</para>
@@ -142,14 +142,14 @@
 		<para>Introducir Contraseña. Esta coincide con la contraseña que usted haya introducido durante la primera fase de ajustes básicos.</para>    
 	    <mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img00.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img00.2c.png"/>
 			</imageobject>
 		</mediaobject>	
 		<para><emphasis role="bold">Instertar comando <literal>rb_sysconf</literal></emphasis></para>
 		<para>Insertar comando <literal>rb_sysconf</literal> para lanzar el redBorder Configuration menu. Estas son las opciones que encontrará en él: </para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img00.png"/>
+				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img002f.png"/>
 			</imageobject>
 		</mediaobject>
 		<orderedlist numeration="arabic">

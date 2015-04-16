@@ -19,12 +19,12 @@
         <para>Todos nuestros productos son Open Source. Uno de los pilares básicos de redBorder es potenciar y generar comunidad. Gracias a ella tenemos la oportunidad de innovar constantemente y crecer a través del intercambio de ideas, aportaciones y usos que otros desarrolladores hacen con nuestro código.</para>
         <para>Crecemos gracias a las aportaciones de expertos como usted podemos testear y validar nuestros productos internamente y ofrecer mejoras que se adapten a nuevas necesidades.</para>
         <para>No obstante este manual va dirigido a aquellos usuarios que disponen de la versión <emphasis role="bold">Enterprise</emphasis> que incluye más funcionalidades y ventajas.</para>
-        <para>Si eres usuario Community, no dejes de consultar el apartado <emphasis> Diferencias entre la versión Community y la Enterprise de redBorder Manager Horama</emphasis></para>
+        <para>Si eres usuario Community, no dejes de consultar el apartado <emphasis> Diferencias entre la versión Community y la Enterprise de redBorder Manager Horama.</emphasis></para>
         <para>Muchas gracias a todos nuestros clientes y usuarios. les deseamos que saquen el máximo rendimiento a esta plataforma para mantener la ciberseguridad y el análisis de sus redes.</para>
     </section>
     <section>
 		<title>Conociendo la Guía Oficial de Instalación de redBorder Manager Horama</title>
-		<para>Esta guía contiene información muy útil que le ayudará a realizar una correcta instalación de la plataforma redBorder Manager Horama. A continuación, se exponen algunos consejos de utilización de esta guía.</para> 
+		<para>Esta guía contiene información muy útil que le ayudará a realizar una correcta instalación de la plataforma redBorder Manager Horama<footnote><para>Esta es una guía rápida de instalación del redBorder Manager HOrama versión Enterprise diseñada para uso interno</para></footnote>. A continuación, se exponen algunos consejos de utilización de esta guía.</para> 
 		<para>Este apartado explica detenidamente cómo moverse por el asistente de instalación del Manager o ISO y es válido tanto si dispone de DVD de instalación como si ha realizado la descarga directa de la ISO. Este documento es ideal tanto para los usuarios que deseen reemplazar la antigua versión, como aquellos que instalen por primera vez la versión 3 redBorder Manager Horama.</para>
         <para>Si es un usuario con experiencia y ya ha realizado la instalación tanto del Manager como del IPS redBorder en otras ocasiones, puede pasar directamente a los capítulos 3 y 5 correspondientes a la instalación del Manager y de los sensores IPS, respectivamente.</para>
         <section>
