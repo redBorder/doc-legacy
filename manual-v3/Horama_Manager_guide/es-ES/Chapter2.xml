@@ -7,8 +7,8 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
-	<title>Horama Manager Install Enterprise Version</title>
-	<para>Bienvenido al asistente para la instalación del redBorder Manager Horama Enterprise Version. Gracias a este asistente, podrá realizar la instalación y configuración del Manager de una forma rápida y sencilla sin necesidad de tener conocimientos específicos de programación en Linux.</para> 
+	<title>Instalación del manager de redBorder Horama Enterprise Version</title>
+	<para>Bienvenido al asistente para la instalación del manager de redBorder Horama Enterprise Version. Gracias a este asistente, podrá realizar la instalación y configuración del Manager de una forma rápida y sencilla sin necesidad de tener conocimientos específicos de programación en Linux.</para> 
 	<para>Para la instalación del Manager, el usuario dispondrá de una imagen ISO obtenida mediante descarga, o bien, a través del DVD facilitado por redBorder. Si obtuvo la imagen mediante descarga, puede guardarla en su disco local o bien, grabarla en un DVD o USB para su instalación en máquina física. En cualquier caso, una vez realizada la primera fase de la instalación, el sistema se reiniciará y arrancará desde la opción definida por defecto <literal>Select from local disk.</literal></para>
 	<para>Al arrancar el asistente de instalación tendrá acceso a un menú en el que encontrará las siguientes opciones:</para>
 	<itemizedlist mark="bullet">
@@ -249,7 +249,7 @@
 		        </imageobject>
 			</mediaobject>
 			<para><emphasis role="bold">Sincronización con bases de datos y almacenamiento</emphasis></para>
-			<para>En este punto deberemos indicarle al sistema cómo se van a gestionar las bases de datos y el almacenamiento de datos del Manager. Como se observará en la captura de pantalla, en todos los casos la opción <keycap>N</keycap> aparece definida por defecto. Se aconseja, por tantom que sea el Manager quien realice esta gestión. En caso contrario, seleccionar la opción <keycap>y</keycap> para los siguientes casos:</para>
+			<para>En este punto deberemos indicarle al sistema cómo se van a gestionar las bases de datos y el almacenamiento de datos del Manager. Como se observará en la captura de pantalla, en todos los casos la opción <keycap>N</keycap> aparece definida por defecto. Se aconseja, por tanto que sea el Manager quien realice esta gestión. En caso contrario, seleccionar la opción <keycap>y</keycap> para los siguientes casos:</para>
 			<para><literal>Would you like to use remote S3 storage? (y/N) </literal>. Indicar en caso de que se use el protocolo de Amazon Web Services (AWS) para transferencia de ficheros.</para>
 			<para><literal>Would you like to use remote memcached? (y/N) </literal>. Seleccionar en caso de que se desee realizar el cacheo de las peticiones a bases de datos. </para>
 			<para><literal>Would you like to use remote postgresql database? (y/N) </literal>. Gestión mediante base de datos postgresql.</para>
