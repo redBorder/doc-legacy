@@ -6,8 +6,8 @@
 <!ENTITY YEAR "2015">
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
-<bookinfo id="book-manual-manual">
-  <title>Guia de instalacion</title>
+<bookinfo id="Instalation_guide">
+  <title>Guía de instalación</title>
   <productname>redBorder Horama</productname>
   <productnumber>3</productnumber>
   <edition>1</edition>
