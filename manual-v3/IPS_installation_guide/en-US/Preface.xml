@@ -96,7 +96,7 @@
 				<para>Menu on the left side of the screen for a listing with the available options. To select any of them they must be entered in the line <literal>Selection</literal>, the number or letter corresponding to the option you want to choose.</para>
 				<para><emphasis>Submenu</emphasis></para>
 				<para> If you would like to perform different actions select submenu. It will appear on the right side of the screen.</para>
-				<para><emphasis> Line command / dial options</emphasis></para>
+				<para><emphasis> Line command/Dial options</emphasis></para>
 				<para>in the top margin, and separated from the menu and sub graph, find the area in which they should indicate selections on the line that contains <literal>Selection</literal> and enter commands or data requested to perform the appropriate actions. In this area the date and time of the system can be visualized (default UTC).</para>
 			<section>
 				<title>Selecting Options</title>

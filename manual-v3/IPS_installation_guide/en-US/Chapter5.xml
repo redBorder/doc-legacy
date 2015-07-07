@@ -37,7 +37,7 @@
 	</mediaobject>
 	<section>
 		<title>Setup Menu IPS sensors</title>
-		<para>Execute the command <literal>rb_sysconf</literal> to access the menu <emphasis role="bold"> Setting redBorder.</emphasis></para>
+		<para>Execute the command <literal>rb_sysconf</literal> to access the menu <emphasis role="bold"> redBorder Configuration Menu.</emphasis></para>
 		<para>This menu contains 5 options:</para>
 		<orderedlist numeration="arabic">
 			<listitem>
@@ -67,7 +67,7 @@
 	</section>
 	<section>
 		<title> Steps for configuring IPS sensors</title>
-		<para>In order for the redBorder IPS solution to work properly, it is necessary to first put the sensors in the network.To do this, the user will have to perform the network configuration, selecting <literal>Network Configuration</literal> by inserting the number <keycap>2</keycap>once you have accessed the redBorder configuration wizard.</para>
+		<para>In order for the redBorder IPS solution to work properly, it is necessary to first put the sensors in the network. To do this, the user will have to perform the network configuration, selecting <literal>Network Configuration</literal> by inserting the number <keycap>2</keycap> once you have accessed the redBorder Configuration Menu.</para>
 		<para>Until you have done this configuration, you can not proceed with registration of the sensors in the Manager.</para>
 		<para>These are the steps to follow to install the IPS sensors:</para>
 		<orderedlist numeration="arabic">
@@ -121,17 +121,13 @@
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/20.png"/>
 			</imageobject>
 		</mediaobject>
-		<note>
-			<title>Note</title>
-			<para>Selecting Presets: <keycap>Enter</keycap></para>
-		</note>
 		<section>
 			<title>Creating a new bonding and assignment of port</title>
 			<para>To illustrate this process you will create a bonding (bond0) and assign 2 ports.</para>
 			<para>Select the <keycap>n</keycap> option on the lateral submenu right of the screen.</para>
 			<para>Once you have reviewed the ports available, select the one you want to assign to bonding, as it appears at the bottom of the previous screen.</para>
-			<para>Enter the port number in the line<literal>Insert bonding first port [0]: _</literal></para>
-			<para>The number in brackets<literal>[]</literal>  is what defines the system default. To select this number, press <keycap>Enter</keycap>.</para>
+			<para>Enter the port number in the line <literal>Insert bonding first port [0]: </literal></para>
+			<para>The number in brackets <literal>[]</literal>  is what defines the system default. To select this number, press <keycap>Enter</keycap>.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/21.png"/>
@@ -148,12 +144,7 @@
 			<para>The system will ask the following:  <literal>Insert second port (y/N):_</literal></para>
 			<para>The option selected by default is capitalized. Remember that if you DO NOT want to add a new port just have to press the <keycap>Enter</keycap> key.</para>
 			<para>If you want to insert a new port, type <keycap>y</keycap>.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/21.png"/>
-				</imageobject>
-			</mediaobject>
-			<para>Enter the port number on the second line<literal>Insert bonding second port [1]: _</literal></para>
+			<para>Enter the port number on the second line<literal> Insert bonding second port [1]:</literal></para>
 			<para>The number in brackets <literal>[]</literal>  is the defining default system. To select this number, press <keycap>Enter</keycap>.</para>			
 		</section>
 		<section>
@@ -197,7 +188,7 @@
 				</imageobject>
 			</mediaobject>		
 			<para><emphasis role="bold">Apply Changes</emphasis></para>
-			<para>In order for modifications to be saved, you must perform the action to implement changes by selecting <keycap>a.</keycap></para>
+			<para>After returning to the main menu network configuration, and in order for modifications to be saved, you must perform the action apply to implement changes by selecting <keycap>a.</keycap></para>
 			<para>At any time you can delete the created bonds by selecting <literal>delete bonding</literal>  entering the letter <keycap>d.</keycap></para>
 			<para> To return to the main menu network configuration, select the <literal>quit</literal>  option with the letter <keycap>q.</keycap></para>
 		</section>
@@ -244,7 +235,7 @@
 				<para><keycap>q)</keycap> <literal>quit:</literal>exit</para>
 			</listitem>
 		</itemizedlist>
-		<para>To begin creating a <literal>new segment</literal> select the option segment inserting the letter<keycap>n</keycap>.</para>
+		<para>To begin creating a <literal>new segment</literal> select the option segment inserting the letter <keycap>n</keycap>.</para>
 		<para>The process of creating segments comprises the following actions:</para>
 		<orderedlist numeration="arabic">
 			<listitem>
@@ -304,8 +295,8 @@
 			<para>Once the first port is assigned to the segment, the system will make it possible to assign a second port to the segment: <literal>Assign second port to the segment (Y/n):_</literal></para>
 			<para>The option that is predetermined by default is capitalized.</para>
 			<para>Remember that if you want to assign a new port you only have to press the <keycap>Enter</keycap> key.</para>
-			<para> If you don’t want to assign a new port, type<keycap>n</keycap>. Once you have reviewed the ports that are available, select the one you would like to assign to a segment as shown at the bottom margin of the previous screen.</para>
-			<para> Enter the port number in the line <literal>Insert segment second port [3]: _</literal></para>
+			<para> If you don’t want to assign a new port, type <keycap>n</keycap>. Once you have reviewed the ports that are available, select the one you would like to assign to a segment as shown at the bottom margin of the previous screen.</para>
+			<para> Enter the port number in the line <literal>Insert segment second port [3]:</literal></para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/30.png"/>
@@ -338,7 +329,7 @@
 				</imageobject>
 			</mediaobject>		
 			<para><emphasis role="bold">Apply Changes</emphasis></para>
-			<para>In order for modifications to remain saved you must perform the action to apply changes by selecting option <keycap>a.</keycap></para>
+			<para>After returning to the main menu network configuration and in order for modifications to remain saved you must perform the action to apply changes by selecting option <keycap>a.</keycap></para>
 			<para>You can delete the created segments at any time by entering the letter <literal>delete segment</literal>, insertando la letra <keycap>d.</keycap></para>
 			<para> To return to Network Settings in the main menu, select the <literal>quit</literal> option by entering <keycap>q.</keycap></para>
 			<mediaobject>
@@ -351,16 +342,15 @@
 	<section>
 		<title>Appliances managed via IPMI</title>
 		<para>In the case that the user provided an appliance managed through an IPMI system, you will have the ability to insert the corresponding IP to IPMI in your system so you can connect to the sensor using IPMI.</para>
-		<para> In the Network Settings menu select option<literal>IPMI Network configuration wizard</literal> entering the number <keycap>4.</keycap></para>
+		<para> In the Network Settings menu select option <literal>IPMI Network configuration wizard</literal> entering the number <keycap>4.</keycap></para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/37.png"/>
 			</imageobject>
 		</mediaobject>	
 		<para><emphasis role="bold">Apply Changes</emphasis></para>
-		<para> To finish the network configuration process, you must perform the action to  apply changes: <literal>apply</literal>, by selecting option<keycap>a.</keycap></para>
-		<para>You can view the IPMI settings at any time by selecting the option <literal>info</literal> by entering the letter <keycap>i.</keycap></para>
-		<para> To apply changes, the system will finish performing the configurations necessary to begin the registration of sensors.</para>	
+		<para> To finish the network configuration process, you must perform the action to  apply changes: <literal>apply</literal>, by selecting option <keycap>a.</keycap></para>
+		<para>You can view the IPMI settings at any time by selecting the option <literal>info</literal> by entering the letter <keycap>i.</keycap></para>	
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/36.png"/>
@@ -369,7 +359,7 @@
 	</section>
 	<section>
 		<title>Sensor registration in Manager</title>
-		<para>To complete the installation of the IPS sensors, the last step that must be performed is the <emphasis role="bold">Registration of sensors in Manager.</emphasis></para>
+		<para>To complete the installation of the IPS sensors, the last step that must be performed is the <emphasis role="bold">Registration of sensors in Manager.</emphasis> Select the option <literal>System Configuration</literal> by entering the number <keycap>1</keycap> in the redBorder Configuration Menu.</para>
 		<para>Until the registration has been completed, a message will be displayed indicating that the sensors are not yet registered in Manager.</para>
 		<mediaobject>
 			<imageobject>
@@ -385,7 +375,7 @@
 				<para><literal>Set local time:</literal> set local time.</para>
 			</listitem>
 			<listitem>
-				<para><literal>IP adress for rB Master Manager [127.0.0.1]:</literal>enter the IP Manager.</para>
+				<para><literal>IP address for rB Master Manager [127.0.0.1]:</literal>enter the IP Manager.</para>
 			</listitem>
 			<listitem>
 				<para><literal>Register rB:</literal> registration of the sensors in the Sensor Manager / Manager. Until the registration process has been completed, the user will see a message displayed in red: <literal>(not registered yet)</literal></para>
@@ -394,7 +384,7 @@
 		<section>
 			<title>Set name to sensor (Hostname)</title>
 			<para> Select the <literal>Hostname [rbsensor]</literal> from the Sensor Registration menu in Manager by entering the number <keycap>1.</keycap></para>
-			<para> Then in the line <literal>Insert Hostname [rbsensor]:_</literal> write the name you want to give the sensor to be registered with the Manager. From this moment, this is the name displayed on the web when you access the list of IPS sensors.</para>
+			<para> Then in the line <literal>Insert Hostname [rbsensor]:</literal> write the name you want to give the sensor to be registered with the Manager. From this moment, this is the name displayed on the web when you  the list of IPS sensors.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/38.png"/>
@@ -408,7 +398,7 @@
 				<title>Caution</title>
 				<para>The system will ask you to verify that the chosen name is correct, then press <keycap>Enter</keycap></para>
 				<para>To modify insert the letter <keycap>n</keycap></para>
-				<para>the system will proceed to rename the sensor. To continue and to return to the redBorder menu setup system, <literal>Press a key to continue..._</literal></para>
+				<para>the system will proceed to rename the sensor. To continue and to return to the redBorder menu setup system, <literal>Press a key to continue...</literal></para>
 			</warning>
 			<mediaobject>
 				<imageobject>
@@ -447,7 +437,7 @@
 					<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/41.png"/>
 			    </imageobject>
 		    </mediaobject>
-		    <para>To continue, and return to the redBorder System Setup menu, <literal>Press a key to continue..._</literal></para>
+		    <para>To continue, and return to the redBorder System Setup menu, <literal>Press a key to continue...</literal></para>
 		</section>
 		<section>
 			<title> Sensor registration in Manager</title>
@@ -455,10 +445,12 @@
 			<para> From this point you can work directly from the IPS management application, in which your dashboard graphically displays all traffic events captured by the IPS sensors.</para>
 			<para>In this application you can create reports, view events or set the rules of the Manager including actions.</para>
 			<para><emphasis>Completion of the sensor registration process in Manager:</emphasis></para>
-			<para> Here are the following steps to complete the sensor registration process in Manager:</para>
 			<orderedlist numeration="arabic">
 				<listitem>
-					<para> Indicate whether you want to have a debug output: the system will prompt you with the question: <literal>Would you like to have a debug output?</literal> Select the default (No) by inserting the letter <keycap>N</keycap>.</para>
+					<para>Select the option <literal>Register rB Sensor/Manager</literal> by entering the number <keycap>4.</keycap></para>
+				</listitem>
+				<listitem>
+					<para> The system will prompt you with the question: <literal>Would you like to have a debug output?</literal> Press <keycap>Enter</keycap> to select the default option (No) if you don't want to have a debug output. </para>
 				</listitem>
 				<listitem>
 					<para><emphasis role="bold">Insert password: </emphasis>specify the password you entered the Manager.</para>
@@ -477,8 +469,7 @@
 						<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/43.png"/>
 			        </imageobject>
 		        </mediaobject>	
-					<para>After performing these steps, the system will prompt you with a message that the sensor has been successfully registered. Sensor registered successfully with chef server</para>
-					<para><literal> Sensor registered succesfully with chef server</literal></para>
+					<para>After performing these steps, the system will prompt you with a message that the sensor has been successfully registered: <literal>Sensor registered successfully with chef server</literal></para>
 					<mediaobject>
 						<imageobject>
 							<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/44.png"/>
@@ -486,9 +477,9 @@
 		            </mediaobject>
 			<warning>
 				<title>Caution</title>
-				<para>Do not rename the sensor or<emphasis>hostname</emphasis> once it has been registered. To make changes to the <emphasis>hostname </emphasis> it is necessary to undo the entire registration process and start over. </para>
+				<para>Do not rename the sensor or <emphasis>hostname</emphasis> once it has been registered. To make changes to the <emphasis>hostname </emphasis> it is necessary to undo the entire registration process and start over. </para>
 			</warning>
-			<para>To continue and return to the redBorder setup menu system, <literal>Press a key to continue..._</literal></para>
+			<para>To continue and return to the redBorder System Configuration Menu, <literal>Press a key to continue...</literal></para>
 			<para>In the Sensor Registration menu in Manager, redBorder can verify that the sensor has been successfully <literal>(Registered).</literal></para>
 			<mediaobject>
 				<imageobject>
@@ -501,7 +492,7 @@
 	<section>
 		<title>Welcome to redBorder IPS</title>
 		<para>Congratulations! You have successfully completed the installation of the redBorder IPS solution. From this point you can easily operate from the interface of the application.</para>
-		<para>The next screen will display the sensors whose names match the given names in step <emphasis role="bold">Set name to sensor</emphasis> or <emphasis>(Hostname)</emphasis>.</para>
+		<para>The next screen will display the sensors whose names match the given names in step <emphasis role="bold">1) Hostname.</emphasis></para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ips-install/46.png"/>

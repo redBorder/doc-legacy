@@ -30,7 +30,7 @@
 		<title>Download and install redBorder IPS and basic settings</title>
 		<section>
 			<title>Basic Settings</title>
-			<para>RedBorder’s installation of its IPS solution comprises a quick series of basic settings:</para>
+			<para>redBorder’s installation of its IPS solution comprises a quick series of basic settings:</para>
             <itemizedlist mark="bullet">
 				<listitem>
 					<para>Language selection</para>
@@ -74,9 +74,9 @@
 				</imageobject>
 			</mediaobject>
             <para><emphasis role="bold">Insert password</emphasis></para>
-            <para><emphasis>Select and enter a password.</emphasis>This will be the key with which you operate from now on. It can be modified at any time.</para>
-            <para><emphasis>Confirm Password</emphasis>by re-entering the password for verify that you know your password and there aren't typos. If the password is weak or low strength, the program will warn you via a popup window.</para>
-            <para>You can change it later by selecting<keycap>3</keycap> <literal>Password</literal>, accessible from the configuration menu.</para>    
+            <para>1) Select and enter a password: This will be the key with which you operate from now on. It can be modified at any time.</para>
+            <para>2) Confirm Password: by re-entering the password for verify that you know your password and there aren't typos. If the password is weak or low strength, the program will warn you via a popup window.</para>
+            <para>You can change it later by selecting<keycap>3)</keycap> <literal>Password</literal>, accessible from the configuration menu.</para>    
             <para>Once you have entered your password and you press the <keycap>OK</keycap> button, the system will proceed to create partitions and to install wizard packages on your hard drive.</para>
             <mediaobject>
 				<imageobject>
@@ -88,7 +88,7 @@
 			<title>Installing packages and reboot</title>
 			<para>Once you have inserted the password, proceed to “installation” of the redBorder solution.</para>
 			<para>Wait until the progress bar tells you that the installation was 100% complete. This process can take up to several minutes.</para>
-			<para>Once the package is installed, the program startsrecent scripts to finish this stage. Then begins automatic restart.</para>
+			<para>Once the package is installed, the program starts some scripts to finish this stage. Then begins automatic restart.</para>
 			<para>Don’t press any key or perform any action while viewing the following:</para>
 			<mediaobject>
 				<imageobject>

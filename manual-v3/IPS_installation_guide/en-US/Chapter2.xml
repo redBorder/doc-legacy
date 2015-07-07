@@ -81,8 +81,7 @@
 					<imagedata scalefit="1" align="center" width="350" fileref="images/manager-install/5-a.png"/>
 				</imageobject>
 			</mediaobject>
-			<para>Una vez instalados los paquetes, el programa arranca los últimos scripts para finalizar esta etapa. A continuación, comienza el reinicio automático. Durante unos segundos visualizará las siguientes pantallas. </para>
-			<para>Once the package is installed, the program starts recent scripts to finish this stage. Then begins automatic restart. For a few seconds you will see the following screens. </para>
+			<para>Once the package is installed, the program starts recent scripts to finish this stage. Then begins automatic restart.</para>
 			<para>Do not press any buttons or perform any action until this process is completed.</para>
         </section>
     </section>

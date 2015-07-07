@@ -1,0 +1,47 @@
+[file_prefs]
+final_new_line=true
+ensure_convert_new_lines=false
+strip_trailing_spaces=false
+replace_tabs=false
+
+[indentation]
+indent_width=4
+indent_type=1
+indent_hard_tab_width=8
+detect_indent=false
+detect_indent_width=false
+indent_mode=2
+
+[project]
+name=IPS_installation_guide
+base_path=/home/raquel/projects/redBorder-doc/manual-v3/IPS_installation_guide/
+description=
+file_patterns=
+
+[long line marker]
+long_line_behaviour=1
+long_line_column=72
+
+[files]
+current_page=6
+FILE_NAME_0=448;Make;0;EUTF-8;1;1;0;%2Fhome%2Fraquel%2Fprojects%2FredBorder-doc%2Feuskaltel_mobile%2FMakefile;0;4
+FILE_NAME_1=0;XML;0;EUTF-8;1;1;0;%2Fhome%2Fraquel%2Fprojects%2FredBorder-doc%2Feuskaltel_mobile%2Fes-ES%2FRevision_History.xml;0;4
+FILE_NAME_2=0;None;0;EUTF-8;1;1;0;%2Fhome%2Fraquel%2Fprojects%2FredBorder-doc%2Feuskaltel_mobile%2Fes-ES%2Fmanual.ent;0;4
+FILE_NAME_3=0;XML;0;EUTF-8;1;1;0;%2Fhome%2Fraquel%2Fprojects%2FredBorder-doc%2Feuskaltel_mobile%2Fes-ES%2FChapter1.xml;0;4
+FILE_NAME_4=526;XML;0;EUTF-8;1;1;0;%2Fhome%2Fraquel%2Fprojects%2FredBorder-doc%2Feuskaltel_mobile%2Fes-ES%2FBook_Info.xml;0;4
+FILE_NAME_5=0;XML;0;EUTF-8;1;1;0;%2Fhome%2Fraquel%2Fprojects%2FredBorder-doc%2Feuskaltel_mobile%2Fes-ES%2FAuthor_Group.xml;0;4
+FILE_NAME_6=595;XML;0;EUTF-8;1;1;0;%2Fhome%2Fraquel%2Fprojects%2FredBorder-doc%2Feuskaltel_mobile%2Fes-ES%2FEventos_de_la%20red%20de_telefonia_movil.xml;0;4
+
+[VTE]
+last_dir=/home/raquel
+
+[build-menu]
+NF_00_LB=_Compilar
+NF_00_CM=make all
+NF_00_WD=
+NF_01_LB=Compilar obje_tivo personalizado...
+NF_01_CM=make 
+NF_01_WD=
+NF_03_LB=abrir pdf
+NF_03_CM=evince /home/raquel/projects/redBorder-doc/manual-v3/IPS_installation_guide/tmp/es-ES/pdf/redBorder_IPS-3-Guia_de_instalacion-es-ES.pdf
+NF_03_WD=

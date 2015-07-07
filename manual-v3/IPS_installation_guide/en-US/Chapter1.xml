@@ -8,12 +8,12 @@
 ]>
 <chapter>
 	<title>¿What is redBorder IPS?</title>
-	<para>The <emphasis role="bold">redBorder IPS</emphasis> solution (Acronym for <emphasis>Intrusion Prevention System</emphasis>) is a scenario composed of a series of equipment called sensors and a central system called Manager.</para>
+	<para>The <emphasis role="bold">redBorder IPS</emphasis> (Acronym for <emphasis>Intrusion Prevention System</emphasis>) is a scenario composed of a series of equipment called sensors and a central system called Manager.</para>
 	<para>The <emphasis role="bold">sensors</emphasis> are Linux systems with a fully focused distribution to the detection and / or intrusion prevention network segments which are located. Any threat whose specific signature is recognized, the sensor will launch an alert and, optionally, will block this communication, generating an event in the central system (Manager).</para>
 	<para>The <emphasis role="bold">Manager</emphasis>  is a Linux system with a distribution totally focused on the reception of events fired from the sensors, as well as the management of these events, inventory of sensors and policy configuration security to be applied to the sensors (signature management, policies and preprocessors).</para>
 	<section>
 		<title>¿What is an IDS?</title>
-		<para>An <emphasis role="bold">IDS</emphasis> is a security solution in a network or networks to protect an organization.</para> 
+		<para>An <emphasis role="bold">IDS</emphasis> (Acronym for <emphasis>Intrusion Detection System</emphasis>) is a security solution in a network or networks to protect an organization.</para> 
 		<para>It’s usually a specific software that runs on the user space and traffic polls reflected (mirror port or SPAN) on an interface or system which circulates between two interfaces together in a bridge (switch by software).</para>
 		<para>Such traffic is analyzed looking for abnormalities, specific signatures or suspicious behavior.</para> 
 		<para>The idea behind the IDS is to detect intrusions and launch alerts without interfering with traffic organization.</para>
@@ -23,7 +23,7 @@
 		<para>An <emphasis role="bold">IPS</emphasis> (Acronym for Intrusion Prevention System) is a security solution in the network or networks organization.</para> 
 		<para>Its operation is identical to the IDS (in fact, it’s usually the same behavior with software adapted), except that in this case it interferes with traffic organization so that when communication is detected corresponding to an attack, the system can opt not only for sending alerts but even discard packets of such communication, creating the same effect as a firewall.</para>
 		<section>
-			<title>RedBorder basic scenario of IPS solution</title>
+			<title>redBorder basic scenario of IPS solution</title>
 			<para>A proposed solution in a basic scenario consists of a set of sensors located at different sensitive points in the organization of the network. </para>
 			<para>These set points are formed by network links called segments, which circulate sensitive traffic and the sensor will analyze more or less in a transparent manner, depending on the configuration of the operating mode (IPS or IDS).</para>
 			<para>When planning the sensor installation equipment, you should consider some fundamental aspects: <emphasis role="bold">the segments</emphasis> (specific network interfaces paired, usually with bypass support) are lodged in middle of traffic to be analyzed; <emphasis role="bold">management interfaces </emphasis> (in the form of bonding) to remote access from a common PC as well as from the Manager; and <emphasis role="bold">access IPMI interface for remote management hardware</emphasis> (connection SOL or Serial Over Lan, iKVM and IPMI command as power on, power restart and power off). These interfaces are explained below.</para>
