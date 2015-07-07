@@ -22,10 +22,11 @@
 			<para><literal>Rescue installed system:</literal> modalidad de inicio de rescate para los casos en que existan problemas de inicio de su máquina (modo avanzado). Además, permite iniciar el procedimiento de resolución del problema o cambiar la contraseña del usuario en caso de pérdida.</para>
 		</listitem>
 		<listitem>
-			<para><literal>Boot form Local Drive:</literal> arranque desde disco local (por defecto).</para>
+			<para><literal>Boot from Local Drive:</literal> arranque desde disco local (por defecto).</para>
 		</listitem>
 	    <listitem>
 			<para><literal>Memory Test:</literal> testeo de memoria disponible para la instalación del sistema. En caso de que algún módulo de memoria se encuentre defectuoso, esta prueba lo detectará y avisará de ello al usuario.</para>
+			<para>Es aconsejable revisar el estado de la memoria de la máquina antes de comenzar la instalación el segundo Manager.</para>
 		</listitem>
 	</itemizedlist>
 	<mediaobject>
@@ -83,7 +84,7 @@
 				</caption>
         </mediaobject>
         <para><emphasis role="bold">c) Insertar password</emphasis></para>
-        <para><emphasis>1) Elegir e insertar una password.</emphasis> Esta, será la clave con la que opere a partir de ahora. Puede ser modificada en cualquier otro momento.</para>
+        <para><emphasis>1) Elegir e insertar una password.</emphasis> Esta será la clave con la que opere a partir de ahora. Puede ser modificada en cualquier otro momento.</para>
         <para><emphasis>2) Confirmar password.</emphasis> Volver a introducir la clave para verificar que la conoce y que no ha cometido ningún error tipográfico. En caso de que la clave sea débil o con poca fortaleza, el programa le avisará mediante una ventana emergente.</para>
         <para> Si lo desea, puede insertar una contraseña más fuerte o bien, guardar la contraseña actual y cambiarla en otro momento seleccionando la opción <keycap>3)</keycap> <literal>Password</literal>, accesible desde el menú del Panel de Administración del Manager.</para>    
         <note>
@@ -150,19 +151,19 @@
 			<title>Nota</title>
 			<para>Para realizar la instalación del manager es enecesario registrarse con el usuario que tiene mayores permisos: <emphasis>root.</emphasis></para>
 		</note>		
-		<para>Para mayor seguridad, le recomendamos que asigne de tres niveles de usuarios/permisos entre las personas que se vayan a encargar de la gestión del manager.</para>
+		<para>Para mayor seguridad, le recomendamos que asigne tres niveles de usuarios/permisos entre las personas que se vayan a encargar de la gestión del manager.</para>
 		<para><emphasis role="bold">Niveles de usuarios para el  Manager redBorder Horama </emphasis></para>
 		<orderedlist numeration="arabic">
 			<listitem>
-				<para>Root: posee todos los permisos. Es el superadministrador del sistema.</para>
+				<para>root: posee todos los permisos. Es el superadministrador del sistema.</para>
 			</listitem>
 			<listitem>
-				<para>Admin: usuario que solo tiene acceso al menú de configuración del sistema, pero que no posee permisos para modificar ficheros.</para> 
+				<para>admin: usuario que solo tiene acceso al menú de configuración del sistema, pero que no posee permisos para modificar ficheros.</para> 
 			</listitem>
 			<listitem>
-				<para>Redborder: este usuario tiene un significado distinto para el manager que para los sensores.</para>
-				<para><emphasis>Manager:</emphasis> usuario utilizado para registrar los sensores.</para>
-				<para><emphasis>Sensor:</emphasis>  usuario utilizado cuando el manager quiere comunicarse con los sensores.</para>
+				<para>redborder: este usuario tiene un significado distinto para el manager que para los sensores.</para>
+				<para><emphasis>manager:</emphasis> usuario utilizado para registrar los sensores.</para>
+				<para><emphasis>sensor:</emphasis>  usuario utilizado cuando el manager quiere comunicarse con los sensores.</para>
 			</listitem>	
         </orderedlist>
         <para><emphasis role="bold">Password</emphasis></para>
@@ -185,16 +186,16 @@
 				<imagedata scalefit="1" align="center" width="350" fileref="images/ch02_img002f.png"/>
 			</imageobject>
 			<textobject>
-					<phrase>Finalización del proceso de instalación: insertar comando rbsysconf</phrase>
+					<phrase>Finalización del proceso de instalación: insertar comando rb_sysconf</phrase>
 				</textobject>
 				<caption>
-					<para>Finalización del proceso de instalación: insertar comando <literal>rbsysconf</literal></para>
+					<para>Finalización del proceso de instalación: insertar comando <literal>rb_sysconf</literal></para>
 				</caption>
 		</mediaobject>
 		<para>Estas son las opciones que encontrará en la pantalla principal de este menú: </para>
 		<orderedlist numeration="arabic">
 		 	<listitem>
-				<para><literal>System Configuration:</literal> configuración del hostname, IP del Manager, hora y estatus del Manager.</para>
+				<para><literal>System Configuration:</literal> configuración del hostname, IP del Manager, hora y estado del Manager.</para>
 			</listitem>
 			<listitem>
 				<para><literal>Network Configuration:</literal> configuración de bonds, segmentos, DNS, rutas e IPMI. Recuerde que, para poner en funcionamiento el Manager, se necesita por lo menos una conexión de red.</para>
@@ -241,7 +242,7 @@
 				</caption>
 			</mediaobject>
 			<para>1) Seleccionar el modo cluster para unir más de un Manager.</para>
-			<para>2) <literal>Insert Hostname [rbmanager].</literal> La opción que viene definida por defecto es la de <literal>rbmanager01.</literal> Este es un nombre que identifica de manera clara y sencilla al Manager y su posición dentro del cluster.</para>
+			<para>2) <literal>Insert Hostname [rbmanager].</literal> La opción que viene definida por defecto es la de <literal>rbmanager.</literal> Este es un nombre que identifica de manera clara y sencilla al Manager y su posición dentro del cluster.</para>
 			<note>
 				<title>Nota</title>
 				<para>Es importante que se utilicen diferentes nombres para cada uno de los Managers que se van a unir al cluster. Lo más aconsejable es seguir una numeración consecutiva (ej.:rbmanager01,rbmanager02) o bien, algún nombre que identifique su rol (ej.: rbmanagermaster, rbmanagerslave01,rbmanagerslave02).</para>
@@ -251,7 +252,7 @@
 			<para>5) <literal>Insert DNS Secondary (optional).</literal> Indicar DNS secundario de manera opcional. Se aconseja introducir un DNS alternativo que sustituya al DNS primario en caso de fallo del servidor.</para>
 			<para>Una vez introducidos estos valores, el sistema le avisará de que los cambios han sido aplicados con éxito mediante el siguiente mensaje rotulado en verde: <literal>DNS and domain settings applied successfully.</literal></para>
 			<para><emphasis role="bold">Creación de bonding</emphasis></para>
-			<para> El siguiente paso es insertar la siguiente información: <literal> NTP server [pool.ntp.org]:_</literal> Si existe algún NTP server en su red, se debe indicar. En caso contrario, se asignará uno por defecto.</para>
+			<para> El siguiente paso es indicar el servidor de hora: <literal> NTP server [pool.ntp.org]:_</literal> Si existe algún NTP server en su red, se debe indicar. En caso contrario, se asignará uno por defecto.</para>
 			<para>A continuación, el sistema le pedirá que introduzca la IP de gestión: <literal>Insert managment IP address:_.</literal></para>
 			<mediaobject>
 				<imageobject>
@@ -275,7 +276,7 @@
 				</listitem>
 				<listitem>
 					<para><literal>Insert default gateway for this management interface (Y/n):_</literal></para>
-					<para>La opción que viene predeterminada por defecto aparece en mayúscula. Recuerde que si desea añadir la pasarela definida por defecto tan solo tiene que pulsar la tecla <keycap>Enter</keycap>.</para>
+					<para>La opción que viene predeterminada aparece en mayúscula. Recuerde que si desea añadir esta pasarela tan solo tiene que pulsar la tecla <keycap>Enter</keycap>.</para>
 					<para>En caso de que desee insertar una nueva pasarlela para esta interfaz de gestión, teclee <keycap>n</keycap>.</para>
 				</listitem>
 				<listitem>
@@ -356,7 +357,7 @@
 					<para>Pantalla principal del asistente de instalación del manager redBorder Horama</para>
 				</caption>
 			</mediaobject>
-			<para>Tras realizar los ajustes básicos e instalación de los paquetes, el sistema se reiniciará de manera automática. A continuación, hacer Login, insertar Password e introducir el comando <literal>rbsysconf</literal> para acceder a la pantalla principal del <emphasis role="bold"> redBorder configuration menu.</emphasis></para>		
+			<para>Tras realizar los ajustes básicos e instalación de los paquetes, el sistema se reiniciará de manera automática. A continuación, hacer Login, insertar Password e introducir el comando <literal>rb_sysconf</literal> para acceder a la pantalla principal del <emphasis role="bold"> redBorder configuration menu.</emphasis></para>		
 			<note>
 				<title>Nota</title>
 				<para>La password que seleccione en este caso puede ser diferente de la indicada para el primer Manager. No obstate, se aconseja unificar las contraseñas para evitar confusiones.</para>
@@ -374,9 +375,10 @@
 			</mediaobject>
 			<para>Seleccione la opción <keycap>w)</keycap><literal>start simple wizard</literal> para comenzar el proceso de instalación de un segundo Manager. Se recomienda dejar seleccionada la opción por defecto <literal>Selected Mode: cluster.</literal></para>
 			<para>El proceso de instalación de este segundo Manager es idéntico al empleado para la instalación del Manager maestro. En las siguientes pantallas observará que se configuran los mismos elementos: <emphasis role="bold">Hostname, dominio, DNS primario (puede ser diferente al del primer Manager) y secundario y NTP server.</emphasis></para>
+			<!--Revisar conceptos master/esclavo-->
 			<important>
 				<title>Importante</title>
-				<para>Es importante que se utilicen diferentes nombres para cada uno de los Managers que se van a unir al cluster. Lo más aconsejable es seguir una numeración consecutiva (ej.:rbmanager01,rbmanager02) o bien, algún nombre que identifique su rol (ej.: rbmanagermaster, rbmanagerslave01,rbmanagerslave02).</para>
+				<para>Es importante que se utilicen diferentes nombres para cada uno de los Managers que se van a unir al cluster. Lo más aconsejable es seguir una numeración consecutiva (ej.:rbmanager01,rbmanager02) o bien, algún nombre que identifique su rol (ej.: rbmanagermaster, rbmanagerslave01,rbmanagerslave02).</para> 
 			</important>
 			<para>El siguiente paso es la creación de dos bonding: de gestión (bonding 0) y de sincronismo (bonding 1). Indicar (o seleccionar el valor dado por defecto) los siguientes valores:</para>
 			<itemizedlist mark="circle">

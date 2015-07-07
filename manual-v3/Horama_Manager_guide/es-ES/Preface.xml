@@ -111,7 +111,7 @@
 			<para>Existen algunas diferencias entre las versiones Community y Enterprise que se deben tener en cuenta a la hora de realizar la instalación del Manager.</para>
 			<para><emphasis role="bold">Monoproducto frente a integración</emphasis></para>
 			<para>En caso de que haya descargado la versión Community de redBorder Manager Horama, tendrá una plataforma base con uno de los dos sabores o aplicaciones disponibles de redBorder: IPS o Flow. Esto significa que no podrá visualizar de manera integrada la gestión de eventos (IPS) con el flujo de su red (Flow) o insertar en el Manager cualquier otra redBorder App.</para>
-			<para>En versiones posteriores de redBorder Horama, el usuario podrá desarrollar sus propias Apps e integrarlas en el Manager para la visualización unificada e integrada de los datos recogidos por ellas y los sensores de la redBorder App inserta en su Manager redBorder Horama.</para>
+			<para>En versiones posteriores de redBorder, el usuario podrá desarrollar sus propias Apps e integrarlas en el Manager.</para>
 			<para>Los usuarios de la versión Community en el área de menú (tanto la zona de visualización como de configuración) del panel de Administración del Manager visualizarán datos de un solo un tipo de sensores dependiendo de lo que haya asociado al Manager: colectores netflow o sondas IPS.</para>
 			<para><emphasis role="bold">Un único servidor frente a Cluster</emphasis></para>
 			<para>La versión Community no permite crear clusters, por lo que únicamente podrá instalar un Manager sin posibilidad de escalado horizontal.</para>
